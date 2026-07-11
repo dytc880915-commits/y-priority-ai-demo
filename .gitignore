@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.vite-review.*
+.dev-server.pid
+tsconfig.tsbuildinfo
+playwright-report/
+test-results/

@@ -1,0 +1,6657 @@
+{
+  "summary": {
+    "generatedAt": "2026-07-11 18:44:38",
+    "totalSaeolRows": 3748176,
+    "totalKeywordRows": 2344903,
+    "totalAnalyzedRows": 6093079,
+    "period": {
+      "saeol": {
+        "min": "2020-01",
+        "max": "2025-12"
+      },
+      "keyword": {
+        "min": "2020-01",
+        "max": "2024-10"
+      }
+    },
+    "safetyRelatedCount": 110384,
+    "safetyRelatedShare": 2.95,
+    "categoryOtherShare": 1.91,
+    "priorityIssueCount": 6,
+    "priorityYear": 2025,
+    "priorityPreviousYear": 2024,
+    "priorityComparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+    "priorityMinimumCurrentCount": 20,
+    "priorityMinimumTotalCount": 100,
+    "priorityDataSource": "용인시 새올 민원 처리 현황",
+    "rowCountLabel": "분석 처리 행 수(두 공개 데이터셋 간 중복 가능)",
+    "latestCompleteMonth": "2025-11",
+    "excludedPartialMonths": [
+      "2025-12"
+    ]
+  },
+  "yearlyComplaints": [
+    {
+      "year": 2020,
+      "count": 1306839
+    },
+    {
+      "year": 2021,
+      "count": 1038900
+    },
+    {
+      "year": 2022,
+      "count": 720733
+    },
+    {
+      "year": 2023,
+      "count": 261113
+    },
+    {
+      "year": 2024,
+      "count": 193255
+    },
+    {
+      "year": 2025,
+      "count": 227336
+    }
+  ],
+  "monthlyComplaints": [
+    {
+      "month": "2020-01",
+      "count": 181298,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-02",
+      "count": 109276,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-03",
+      "count": 121222,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-04",
+      "count": 97614,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-05",
+      "count": 100726,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-06",
+      "count": 95582,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-07",
+      "count": 176171,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-08",
+      "count": 81552,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-09",
+      "count": 78782,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-10",
+      "count": 65662,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-11",
+      "count": 88711,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-12",
+      "count": 110243,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-01",
+      "count": 141431,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-02",
+      "count": 133993,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-03",
+      "count": 179458,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-04",
+      "count": 87397,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-05",
+      "count": 54936,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-06",
+      "count": 51476,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-07",
+      "count": 69006,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-08",
+      "count": 62344,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-09",
+      "count": 60930,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-10",
+      "count": 62190,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-11",
+      "count": 52242,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-12",
+      "count": 83497,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-01",
+      "count": 81587,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-02",
+      "count": 72567,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-03",
+      "count": 74601,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-04",
+      "count": 61170,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-05",
+      "count": 102528,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-06",
+      "count": 78242,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-07",
+      "count": 86274,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-08",
+      "count": 76277,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-09",
+      "count": 27917,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-10",
+      "count": 18849,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-11",
+      "count": 21426,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-12",
+      "count": 19295,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-01",
+      "count": 21257,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-02",
+      "count": 23043,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-03",
+      "count": 26920,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-04",
+      "count": 22593,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-05",
+      "count": 31282,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-06",
+      "count": 20995,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-07",
+      "count": 19197,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-08",
+      "count": 19574,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-09",
+      "count": 17460,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-10",
+      "count": 19516,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-11",
+      "count": 19586,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-12",
+      "count": 19690,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-01",
+      "count": 24991,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-02",
+      "count": 21251,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-03",
+      "count": 20451,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-04",
+      "count": 19568,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-05",
+      "count": 19576,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-06",
+      "count": 17228,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-07",
+      "count": 18465,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-08",
+      "count": 17046,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-09",
+      "count": 15699,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-10",
+      "count": 18980,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-01",
+      "count": 20324,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-02",
+      "count": 23702,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-03",
+      "count": 22329,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-04",
+      "count": 22005,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-05",
+      "count": 19854,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-06",
+      "count": 19587,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-07",
+      "count": 21652,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-08",
+      "count": 19223,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-09",
+      "count": 20519,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-10",
+      "count": 16667,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-11",
+      "count": 19962,
+      "status": "완전 집계"
+    }
+  ],
+  "monthlyObserved": [
+    {
+      "month": "2020-01",
+      "count": 181298,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-02",
+      "count": 109276,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-03",
+      "count": 121222,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-04",
+      "count": 97614,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-05",
+      "count": 100726,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-06",
+      "count": 95582,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-07",
+      "count": 176171,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-08",
+      "count": 81552,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-09",
+      "count": 78782,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-10",
+      "count": 65662,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-11",
+      "count": 88711,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2020-12",
+      "count": 110243,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-01",
+      "count": 141431,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-02",
+      "count": 133993,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-03",
+      "count": 179458,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-04",
+      "count": 87397,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-05",
+      "count": 54936,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-06",
+      "count": 51476,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-07",
+      "count": 69006,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-08",
+      "count": 62344,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-09",
+      "count": 60930,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-10",
+      "count": 62190,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-11",
+      "count": 52242,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2021-12",
+      "count": 83497,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-01",
+      "count": 81587,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-02",
+      "count": 72567,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-03",
+      "count": 74601,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-04",
+      "count": 61170,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-05",
+      "count": 102528,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-06",
+      "count": 78242,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-07",
+      "count": 86274,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-08",
+      "count": 76277,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-09",
+      "count": 27917,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-10",
+      "count": 18849,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-11",
+      "count": 21426,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2022-12",
+      "count": 19295,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-01",
+      "count": 21257,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-02",
+      "count": 23043,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-03",
+      "count": 26920,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-04",
+      "count": 22593,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-05",
+      "count": 31282,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-06",
+      "count": 20995,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-07",
+      "count": 19197,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-08",
+      "count": 19574,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-09",
+      "count": 17460,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-10",
+      "count": 19516,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-11",
+      "count": 19586,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2023-12",
+      "count": 19690,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-01",
+      "count": 24991,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-02",
+      "count": 21251,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-03",
+      "count": 20451,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-04",
+      "count": 19568,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-05",
+      "count": 19576,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-06",
+      "count": 17228,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-07",
+      "count": 18465,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-08",
+      "count": 17046,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-09",
+      "count": 15699,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2024-10",
+      "count": 18980,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-01",
+      "count": 20324,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-02",
+      "count": 23702,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-03",
+      "count": 22329,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-04",
+      "count": 22005,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-05",
+      "count": 19854,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-06",
+      "count": 19587,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-07",
+      "count": 21652,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-08",
+      "count": 19223,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-09",
+      "count": 20519,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-10",
+      "count": 16667,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-11",
+      "count": 19962,
+      "status": "완전 집계"
+    },
+    {
+      "month": "2025-12",
+      "count": 1512,
+      "status": "부분 집계 제외"
+    }
+  ],
+  "categorySummary": [
+    {
+      "category": "행정/인허가",
+      "count": 2956254,
+      "share": 78.87,
+      "previousCount": 60734,
+      "currentCount": 65095,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 7.18,
+      "safetyRelated": false
+    },
+    {
+      "category": "복지/보건",
+      "count": 391656,
+      "share": 10.45,
+      "previousCount": 64856,
+      "currentCount": 70338,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 8.45,
+      "safetyRelated": false
+    },
+    {
+      "category": "환경/청소",
+      "count": 218450,
+      "share": 5.83,
+      "previousCount": 40346,
+      "currentCount": 38073,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": -5.63,
+      "safetyRelated": false
+    },
+    {
+      "category": "도로/교통",
+      "count": 101411,
+      "share": 2.71,
+      "previousCount": 15383,
+      "currentCount": 16272,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 5.78,
+      "safetyRelated": true
+    },
+    {
+      "category": "기타",
+      "count": 71432,
+      "share": 1.91,
+      "previousCount": 10534,
+      "currentCount": 14543,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 38.06,
+      "safetyRelated": false
+    },
+    {
+      "category": "안전/방범",
+      "count": 5961,
+      "share": 0.16,
+      "previousCount": 997,
+      "currentCount": 1024,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 2.71,
+      "safetyRelated": true
+    },
+    {
+      "category": "재난/침수",
+      "count": 3012,
+      "share": 0.08,
+      "previousCount": 405,
+      "currentCount": 517,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 27.65,
+      "safetyRelated": true
+    }
+  ],
+  "departmentBurden": [
+    {
+      "department": "자치행정실 민원여권과",
+      "count": 1016051,
+      "share": 27.11,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "기흥구 건축과",
+      "count": 647887,
+      "share": 17.29,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "처인구 건축과",
+      "count": 451715,
+      "share": 12.05,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "수지구 건축허가과",
+      "count": 354825,
+      "share": 9.47,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.01
+    },
+    {
+      "department": "기흥구 산업환경과",
+      "count": 85782,
+      "share": 2.29,
+      "topCategory": "환경/청소",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "처인구 사회복지과",
+      "count": 79008,
+      "share": 2.11,
+      "topCategory": "복지/보건",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "기흥구 가정복지과",
+      "count": 66874,
+      "share": 1.78,
+      "topCategory": "복지/보건",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "수지구 사회복지과",
+      "count": 58554,
+      "share": 1.56,
+      "topCategory": "복지/보건",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "기흥구 사회복지과",
+      "count": 45493,
+      "share": 1.21,
+      "topCategory": "복지/보건",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "수지구 산업환경과",
+      "count": 44112,
+      "share": 1.18,
+      "topCategory": "환경/청소",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "주택국 주택과",
+      "count": 41723,
+      "share": 1.11,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.06
+    },
+    {
+      "department": "처인구 산업과",
+      "count": 38988,
+      "share": 1.04,
+      "topCategory": "기타",
+      "safetyShare": 3.4
+    },
+    {
+      "department": "처인구 환경위생과",
+      "count": 37650,
+      "share": 1.0,
+      "topCategory": "환경/청소",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "주택국 주택관리과",
+      "count": 35348,
+      "share": 0.94,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "처인구 건축허가1과",
+      "count": 28456,
+      "share": 0.76,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.24
+    },
+    {
+      "department": "처인구 민원지적과",
+      "count": 24817,
+      "share": 0.66,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.04
+    },
+    {
+      "department": "처인구 건설과",
+      "count": 24300,
+      "share": 0.65,
+      "topCategory": "행정/인허가",
+      "safetyShare": 30.12
+    },
+    {
+      "department": "복지여성국 아동보육과",
+      "count": 21434,
+      "share": 0.57,
+      "topCategory": "복지/보건",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "주택국 주택정비과",
+      "count": 21353,
+      "share": 0.57,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "처인구 건축허가2과",
+      "count": 19992,
+      "share": 0.53,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.16
+    },
+    {
+      "department": "처인구 도시미관과",
+      "count": 18039,
+      "share": 0.48,
+      "topCategory": "환경/청소",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "처인구 모현읍",
+      "count": 15443,
+      "share": 0.41,
+      "topCategory": "행정/인허가",
+      "safetyShare": 0.0
+    },
+    {
+      "department": "기흥구 교통과",
+      "count": 14626,
+      "share": 0.39,
+      "topCategory": "도로/교통",
+      "safetyShare": 100.0
+    },
+    {
+      "department": "교통건설국 대중교통과",
+      "count": 13945,
+      "share": 0.37,
+      "topCategory": "도로/교통",
+      "safetyShare": 100.0
+    },
+    {
+      "department": "차량등록사업소",
+      "count": 13696,
+      "share": 0.37,
+      "topCategory": "도로/교통",
+      "safetyShare": 100.0
+    }
+  ],
+  "keywordTrends": [
+    {
+      "keyword": "자동차세 선납",
+      "count": 5614,
+      "count2023": 2879,
+      "count2024": 2735,
+      "growthRate": -5.0,
+      "category": "기타"
+    },
+    {
+      "keyword": "선납 자동",
+      "count": 5142,
+      "count2023": 2642,
+      "count2024": 2500,
+      "growthRate": -5.37,
+      "category": "기타"
+    },
+    {
+      "keyword": "보육 양육",
+      "count": 70293,
+      "count2023": 17670,
+      "count2024": 14127,
+      "growthRate": -20.05,
+      "category": "복지/보건"
+    },
+    {
+      "keyword": "양육 수당",
+      "count": 70449,
+      "count2023": 17716,
+      "count2024": 14160,
+      "growthRate": -20.07,
+      "category": "기타"
+    },
+    {
+      "keyword": "예방 접종",
+      "count": 30637,
+      "count2023": 12896,
+      "count2024": 9906,
+      "growthRate": -23.19,
+      "category": "기타"
+    }
+  ],
+  "priorityIssues": [
+    {
+      "issue": "침수·배수 관리 수요",
+      "category": "재난/침수",
+      "count": 2786,
+      "previousCount": 375,
+      "currentCount": 488,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 30.13,
+      "dominantDepartment": "처인구 건설과",
+      "departmentConcentration": 48.8,
+      "impact": "집중호우·재산 피해",
+      "matchedKeywords": [
+        "침수",
+        "배수",
+        "빗물",
+        "우수",
+        "맨홀",
+        "하천"
+      ],
+      "score": 66.3,
+      "scoreParts": {
+        "volume": 13.9,
+        "momentum": 7.5,
+        "persistence": 20.0,
+        "safety": 15.0,
+        "departmentConcentration": 4.9,
+        "dataQuality": 5.0
+      },
+      "componentValues": {
+        "volume": 0.5572,
+        "momentum": 0.3013,
+        "persistence": 1.0,
+        "safety": 1.0,
+        "departmentConcentration": 0.4882,
+        "dataQuality": 1.0
+      },
+      "rationale": "2024-01~2024-10 대비 2025-01~2025-10 기준 488건, 동일기간 대비 +30.1%, 주요 영향은 집중호우·재산 피해입니다."
+    },
+    {
+      "issue": "복지·돌봄 서비스 수요",
+      "category": "복지/보건",
+      "count": 367256,
+      "previousCount": 61495,
+      "currentCount": 67103,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 9.12,
+      "dominantDepartment": "처인구 사회복지과",
+      "departmentConcentration": 21.5,
+      "impact": "취약계층 생활 지원",
+      "matchedKeywords": [
+        "복지",
+        "보육",
+        "양육",
+        "수당",
+        "아동",
+        "노인",
+        "장애",
+        "돌봄"
+      ],
+      "score": 63.7,
+      "scoreParts": {
+        "volume": 25.0,
+        "momentum": 2.3,
+        "persistence": 20.0,
+        "safety": 9.3,
+        "departmentConcentration": 2.2,
+        "dataQuality": 5.0
+      },
+      "componentValues": {
+        "volume": 1.0,
+        "momentum": 0.0912,
+        "persistence": 1.0,
+        "safety": 0.62,
+        "departmentConcentration": 0.2151,
+        "dataQuality": 1.0
+      },
+      "rationale": "2024-01~2024-10 대비 2025-01~2025-10 기준 67,103건, 동일기간 대비 +9.1%, 주요 영향은 취약계층 생활 지원입니다."
+    },
+    {
+      "issue": "도로·교통 시설 수요",
+      "category": "도로/교통",
+      "count": 101411,
+      "previousCount": 15383,
+      "currentCount": 16272,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 5.78,
+      "dominantDepartment": "기흥구 교통과",
+      "departmentConcentration": 14.4,
+      "impact": "차량·보행 안전",
+      "matchedKeywords": [
+        "도로",
+        "교통",
+        "주정차",
+        "주차",
+        "포트홀",
+        "차도",
+        "보행",
+        "인도",
+        "횡단보도",
+        "차량"
+      ],
+      "score": 62.9,
+      "scoreParts": {
+        "volume": 21.8,
+        "momentum": 1.4,
+        "persistence": 20.0,
+        "safety": 13.2,
+        "departmentConcentration": 1.4,
+        "dataQuality": 5.0
+      },
+      "componentValues": {
+        "volume": 0.8725,
+        "momentum": 0.0578,
+        "persistence": 1.0,
+        "safety": 0.88,
+        "departmentConcentration": 0.1442,
+        "dataQuality": 1.0
+      },
+      "rationale": "2024-01~2024-10 대비 2025-01~2025-10 기준 16,272건, 동일기간 대비 +5.8%, 주요 영향은 차량·보행 안전입니다."
+    },
+    {
+      "issue": "쓰레기 무단투기·미수거",
+      "category": "환경/청소",
+      "count": 28809,
+      "previousCount": 4438,
+      "currentCount": 4697,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 5.84,
+      "dominantDepartment": "처인구 도시미관과",
+      "departmentConcentration": 55.4,
+      "impact": "위생·생활환경",
+      "matchedKeywords": [
+        "무단투기",
+        "쓰레기",
+        "폐기물",
+        "미수거",
+        "분리수거"
+      ],
+      "score": 59.7,
+      "scoreParts": {
+        "volume": 19.0,
+        "momentum": 1.5,
+        "persistence": 20.0,
+        "safety": 8.7,
+        "departmentConcentration": 5.5,
+        "dataQuality": 5.0
+      },
+      "componentValues": {
+        "volume": 0.7607,
+        "momentum": 0.0584,
+        "persistence": 1.0,
+        "safety": 0.58,
+        "departmentConcentration": 0.5542,
+        "dataQuality": 1.0
+      },
+      "rationale": "2024-01~2024-10 대비 2025-01~2025-10 기준 4,697건, 동일기간 대비 +5.8%, 주요 영향은 위생·생활환경입니다."
+    },
+    {
+      "issue": "공원·하천 시설 관리",
+      "category": "환경/청소",
+      "count": 2112,
+      "previousCount": 341,
+      "currentCount": 428,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": 25.51,
+      "dominantDepartment": "기흥구 자치행정과",
+      "departmentConcentration": 38.4,
+      "impact": "공공시설 이용 안전",
+      "matchedKeywords": [
+        "공원",
+        "산책로",
+        "등산로",
+        "놀이시설",
+        "체육시설",
+        "제초"
+      ],
+      "score": 57.1,
+      "scoreParts": {
+        "volume": 13.6,
+        "momentum": 6.4,
+        "persistence": 20.0,
+        "safety": 8.2,
+        "departmentConcentration": 3.8,
+        "dataQuality": 5.0
+      },
+      "componentValues": {
+        "volume": 0.5454,
+        "momentum": 0.2551,
+        "persistence": 1.0,
+        "safety": 0.55,
+        "departmentConcentration": 0.3845,
+        "dataQuality": 1.0
+      },
+      "rationale": "2024-01~2024-10 대비 2025-01~2025-10 기준 428건, 동일기간 대비 +25.5%, 주요 영향은 공공시설 이용 안전입니다."
+    },
+    {
+      "issue": "소음·악취 생활불편",
+      "category": "환경/청소",
+      "count": 492,
+      "previousCount": 72,
+      "currentCount": 69,
+      "comparisonYears": [
+        2024,
+        2025
+      ],
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "growthRate": -4.17,
+      "dominantDepartment": "처인구 환경위생과",
+      "departmentConcentration": 41.5,
+      "impact": "건강·생활불편",
+      "matchedKeywords": [
+        "소음",
+        "악취",
+        "매연"
+      ],
+      "score": 45.9,
+      "scoreParts": {
+        "volume": 9.6,
+        "momentum": 0.0,
+        "persistence": 20.0,
+        "safety": 7.2,
+        "departmentConcentration": 4.1,
+        "dataQuality": 5.0
+      },
+      "componentValues": {
+        "volume": 0.3823,
+        "momentum": 0.0,
+        "persistence": 1.0,
+        "safety": 0.48,
+        "departmentConcentration": 0.4146,
+        "dataQuality": 1.0
+      },
+      "rationale": "2024-01~2024-10 대비 2025-01~2025-10 기준 69건, 동일기간 대비 -4.2%, 주요 영향은 건강·생활불편입니다."
+    }
+  ],
+  "anomalySignals": [
+    {
+      "issue": "불법·질서 단속 수요",
+      "category": "안전/방범",
+      "month": "2025-11",
+      "count": 2,
+      "baselineAverage": 0.2,
+      "zScore": 4.92,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 0.2건, z-score 4.92, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "쓰레기 무단투기·미수거",
+      "category": "환경/청소",
+      "month": "2025-11",
+      "count": 521,
+      "baselineAverage": 459.6,
+      "zScore": 0.92,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 459.6건, z-score 0.92, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "공원·하천 시설 관리",
+      "category": "환경/청소",
+      "month": "2025-11",
+      "count": 48,
+      "baselineAverage": 40.4,
+      "zScore": 0.59,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 40.4건, z-score 0.59, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "소음·악취 생활불편",
+      "category": "환경/청소",
+      "month": "2025-11",
+      "count": 7,
+      "baselineAverage": 6.9,
+      "zScore": 0.02,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 6.9건, z-score 0.02, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "가로등·보안등 관리 수요",
+      "category": "조명/CCTV",
+      "month": "2025-11",
+      "count": 0,
+      "baselineAverage": 0.0,
+      "zScore": 0.0,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 0.0건, z-score 0.00, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "CCTV·방범 인프라 수요",
+      "category": "조명/CCTV",
+      "month": "2025-11",
+      "count": 0,
+      "baselineAverage": 0.0,
+      "zScore": 0.0,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 0.0건, z-score 0.00, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "불법 광고물·현수막",
+      "category": "환경/청소",
+      "month": "2025-11",
+      "count": 0,
+      "baselineAverage": 0.0,
+      "zScore": 0.0,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 0.0건, z-score 0.00, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "침수·배수 관리 수요",
+      "category": "재난/침수",
+      "month": "2025-11",
+      "count": 45,
+      "baselineAverage": 46.8,
+      "zScore": -0.1,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 46.8건, z-score -0.10, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "복지·돌봄 서비스 수요",
+      "category": "복지/보건",
+      "month": "2025-11",
+      "count": 5615,
+      "baselineAverage": 6449.1,
+      "zScore": -0.61,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 6449.1건, z-score -0.61, 전년 동월 데이터 없음"
+    },
+    {
+      "issue": "도로·교통 시설 수요",
+      "category": "도로/교통",
+      "month": "2025-11",
+      "count": 1501,
+      "baselineAverage": 1611.8,
+      "zScore": -0.61,
+      "previousYearSameMonth": null,
+      "yearOverYearRate": null,
+      "status": "정상",
+      "reason": "과거 12개월 평균 1611.8건, z-score -0.61, 전년 동월 데이터 없음"
+    }
+  ],
+  "aiClusters": [
+    {
+      "clusterId": "AI-01",
+      "label": "보육료 및 양육수당 지원신청(변경)",
+      "representativeTitle": "보육료 및 양육수당 지원신청(변경)",
+      "topTerms": [
+        "변경신",
+        "경신고",
+        "건축물",
+        "변경",
+        "(변경",
+        "변경)"
+      ],
+      "memberCount": 136,
+      "totalFrequency": 180798,
+      "dominantCategory": "행정/인허가",
+      "categoryAgreement": 0.471,
+      "confidence": 0.166,
+      "reviewRequired": true,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-02",
+      "label": "통신판매업자의 신고-시.군.구",
+      "representativeTitle": "통신판매업자의 신고-시.군.구",
+      "topTerms": [
+        "업신고",
+        "신고",
+        "영업신",
+        "판매업",
+        "신고-",
+        "식품관"
+      ],
+      "memberCount": 75,
+      "totalFrequency": 76852,
+      "dominantCategory": "기타",
+      "categoryAgreement": 0.587,
+      "confidence": 0.259,
+      "reviewRequired": true,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-03",
+      "label": "보육시설종사자경력(재직)증명서",
+      "representativeTitle": "보육시설종사자경력(재직)증명서",
+      "topTerms": [
+        "증명서",
+        "육시설",
+        ")증명",
+        "체육시",
+        "시설업",
+        "종사자"
+      ],
+      "memberCount": 11,
+      "totalFrequency": 42561,
+      "dominantCategory": "행정/인허가",
+      "categoryAgreement": 0.364,
+      "confidence": 0.436,
+      "reviewRequired": true,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-04",
+      "label": "기초연금 지급 신청",
+      "representativeTitle": "기초연금 지급 신청",
+      "topTerms": [
+        "급신청",
+        "발급신",
+        "사면허",
+        "건설기",
+        "설기계",
+        "연금지"
+      ],
+      "memberCount": 14,
+      "totalFrequency": 32820,
+      "dominantCategory": "행정/인허가",
+      "categoryAgreement": 0.571,
+      "confidence": 0.459,
+      "reviewRequired": false,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-05",
+      "label": "장애인등록증재교부",
+      "representativeTitle": "장애인등록증재교부",
+      "topTerms": [
+        "재교부",
+        "장애인",
+        "증재교",
+        "등록증",
+        "록증재",
+        "교부신"
+      ],
+      "memberCount": 21,
+      "totalFrequency": 24274,
+      "dominantCategory": "행정/인허가",
+      "categoryAgreement": 0.619,
+      "confidence": 0.364,
+      "reviewRequired": false,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-06",
+      "label": "이륜자동차 사용신고",
+      "representativeTitle": "이륜자동차 사용신고",
+      "topTerms": [
+        "자동차",
+        "이륜자",
+        "륜자동",
+        "동차운",
+        "동차사",
+        "차사용"
+      ],
+      "memberCount": 36,
+      "totalFrequency": 23151,
+      "dominantCategory": "행정/인허가",
+      "categoryAgreement": 0.389,
+      "confidence": 0.325,
+      "reviewRequired": true,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-07",
+      "label": "개장신고",
+      "representativeTitle": "개장신고",
+      "topTerms": [
+        "장신고",
+        "옥외광",
+        "외광고",
+        "광고물",
+        "고물등",
+        "기간연"
+      ],
+      "memberCount": 13,
+      "totalFrequency": 14015,
+      "dominantCategory": "환경/청소",
+      "categoryAgreement": 0.385,
+      "confidence": 0.48,
+      "reviewRequired": true,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    },
+    {
+      "clusterId": "AI-08",
+      "label": "농지대장 등본교부-경작사실확인",
+      "representativeTitle": "농지대장 등본교부-경작사실확인",
+      "topTerms": [
+        ")신청",
+        "·변경",
+        "산업단",
+        "업단지",
+        "-단순",
+        "질의"
+      ],
+      "memberCount": 11,
+      "totalFrequency": 8418,
+      "dominantCategory": "기타",
+      "categoryAgreement": 0.545,
+      "confidence": 0.451,
+      "reviewRequired": false,
+      "algorithm": "토큰·문자 3-gram TF-IDF + 결정적 코사인 k-means"
+    }
+  ],
+  "dataQuality": {
+    "latestObservedMonth": "2025-12",
+    "latestObservedCount": 1512,
+    "latestCompleteMonth": "2025-11",
+    "excludedPartialMonths": [
+      "2025-12"
+    ],
+    "baselineMedian": 19962.0,
+    "latestToBaselineRatio": 0.0757,
+    "threshold": 0.35,
+    "reason": "2025-12 집계량이 직전 3개월 중앙값의 7.6%로 부분 집계 기준 35% 미만",
+    "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+    "comparisonCutoffMonth": 10,
+    "latestCompleteMonthForTrend": "2025-11",
+    "previousYearLatestAvailableMonth": "2024-10",
+    "samePeriodComparison": true,
+    "missingTitleRows": 0,
+    "missingMonthRows": 0,
+    "usableRowRatio": 1.0,
+    "qualityChecks": [],
+    "fileManifest": [
+      {
+        "file": "gg_south_5crime.csv",
+        "bytes": 1756,
+        "sha256": "364bb94459a648af471e01a2510449e9780d684bfc74fd0585d1ebd1b3f6da7e",
+        "sourceType": "공공데이터포털 원문 파일"
+      },
+      {
+        "file": "yongin_disaster_cctv.csv",
+        "bytes": 18227,
+        "sha256": "3d7607d711758acb70fa50cff6e871ca4d415c092fec06bd06532f3e8886d8de",
+        "sourceType": "공공데이터포털 원문 파일"
+      },
+      {
+        "file": "yongin_keyword_minwon.zip",
+        "bytes": 3502226,
+        "sha256": "9726a287e10fec66e6abf0a22c44918ea22967046a66083ae53bf39af882664e",
+        "sourceType": "공공데이터포털 원문 파일"
+      },
+      {
+        "file": "yongin_saeol_minwon.zip",
+        "bytes": 8024463,
+        "sha256": "fcdf855c7dff76919c4d6f7c3f85d4fd1511775f73801baed0eff22581bbc3da",
+        "sourceType": "공공데이터포털 원문 파일"
+      }
+    ],
+    "ruleUnclassifiedRows": 71432,
+    "ruleUnclassifiedShare": 1.91,
+    "districtEvidence": {
+      "method": "처리부서명 우선, 민원명 보조의 명시적 구 토큰 일치",
+      "districts": [
+        "처인구",
+        "기흥구",
+        "수지구"
+      ],
+      "matchedRows": 2496014,
+      "unknownRows": 1252162,
+      "coverage": 66.59,
+      "evidenceSourceCounts": {
+        "지역 미상": 1252162,
+        "처리부서명 명시": 2496014
+      },
+      "limitations": "주소 컬럼이 없어 지역 미상 행을 임의 배분하지 않음"
+    }
+  },
+  "districtAnalysis": [
+    {
+      "district": "처인구",
+      "evidenceCount": 895417,
+      "evidenceShareOfSaeol": 23.89,
+      "shareOfDistrictEvidence": 35.87,
+      "previousCount": 66241,
+      "currentCount": 74179,
+      "growthRate": 11.98,
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "topCategory": "행정/인허가",
+      "topDepartment": "처인구 건축과",
+      "monthlyComplaints": [
+        {
+          "month": "2020-01",
+          "count": 6,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-02",
+          "count": 4,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-03",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-04",
+          "count": 3,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-05",
+          "count": 1,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-06",
+          "count": 4,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-07",
+          "count": 3,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-08",
+          "count": 4,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-09",
+          "count": 4,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-10",
+          "count": 15511,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-11",
+          "count": 24553,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-12",
+          "count": 37459,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-01",
+          "count": 43648,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-02",
+          "count": 32397,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-03",
+          "count": 41981,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-04",
+          "count": 26429,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-05",
+          "count": 23125,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-06",
+          "count": 20352,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-07",
+          "count": 25778,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-08",
+          "count": 29342,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-09",
+          "count": 27645,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-10",
+          "count": 20992,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-11",
+          "count": 22645,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-12",
+          "count": 43822,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-01",
+          "count": 27536,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-02",
+          "count": 21481,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-03",
+          "count": 22536,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-04",
+          "count": 20810,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-05",
+          "count": 30494,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-06",
+          "count": 23709,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-07",
+          "count": 26047,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-08",
+          "count": 20373,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-09",
+          "count": 8912,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-10",
+          "count": 6705,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-11",
+          "count": 6994,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-12",
+          "count": 6429,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-01",
+          "count": 6547,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-02",
+          "count": 7627,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-03",
+          "count": 9596,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-04",
+          "count": 7919,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-05",
+          "count": 10708,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-06",
+          "count": 7513,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-07",
+          "count": 6370,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-08",
+          "count": 6655,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-09",
+          "count": 5720,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-10",
+          "count": 7134,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-11",
+          "count": 6813,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-12",
+          "count": 6868,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-01",
+          "count": 7712,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-02",
+          "count": 6497,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-03",
+          "count": 7277,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-04",
+          "count": 6849,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-05",
+          "count": 7531,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-06",
+          "count": 6209,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-07",
+          "count": 6646,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-08",
+          "count": 5742,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-09",
+          "count": 5318,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-10",
+          "count": 6460,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-01",
+          "count": 6802,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-02",
+          "count": 8084,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-03",
+          "count": 8358,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-04",
+          "count": 8227,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-05",
+          "count": 7411,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-06",
+          "count": 7385,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-07",
+          "count": 7907,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-08",
+          "count": 6942,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-09",
+          "count": 7329,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-10",
+          "count": 5734,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-11",
+          "count": 7269,
+          "status": "완전 집계"
+        }
+      ],
+      "categorySummary": [
+        {
+          "category": "행정/인허가",
+          "count": 648331,
+          "share": 72.41,
+          "previousCount": 26456,
+          "currentCount": 28440,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 7.5,
+          "safetyRelated": false
+        },
+        {
+          "category": "복지/보건",
+          "count": 114682,
+          "share": 12.81,
+          "previousCount": 19014,
+          "currentCount": 22843,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 20.14,
+          "safetyRelated": false
+        },
+        {
+          "category": "환경/청소",
+          "count": 61191,
+          "share": 6.83,
+          "previousCount": 9420,
+          "currentCount": 9366,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -0.57,
+          "safetyRelated": false
+        },
+        {
+          "category": "기타",
+          "count": 43615,
+          "share": 4.87,
+          "previousCount": 7507,
+          "currentCount": 9725,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 29.55,
+          "safetyRelated": false
+        },
+        {
+          "category": "도로/교통",
+          "count": 23849,
+          "share": 2.66,
+          "previousCount": 3288,
+          "currentCount": 3171,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -3.56,
+          "safetyRelated": true
+        },
+        {
+          "category": "안전/방범",
+          "count": 2045,
+          "share": 0.23,
+          "previousCount": 333,
+          "currentCount": 319,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -4.2,
+          "safetyRelated": true
+        },
+        {
+          "category": "재난/침수",
+          "count": 1704,
+          "share": 0.19,
+          "previousCount": 223,
+          "currentCount": 315,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 41.26,
+          "safetyRelated": true
+        }
+      ],
+      "departmentBurden": [
+        {
+          "department": "처인구 건축과",
+          "count": 451715,
+          "share": 50.45,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 사회복지과",
+          "count": 79008,
+          "share": 8.82,
+          "topCategory": "복지/보건",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 산업과",
+          "count": 38988,
+          "share": 4.35,
+          "topCategory": "기타",
+          "safetyShare": 3.4
+        },
+        {
+          "department": "처인구 환경위생과",
+          "count": 37650,
+          "share": 4.2,
+          "topCategory": "환경/청소",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 건축허가1과",
+          "count": 28456,
+          "share": 3.18,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.24
+        },
+        {
+          "department": "처인구 민원지적과",
+          "count": 24817,
+          "share": 2.77,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.04
+        },
+        {
+          "department": "처인구 건설과",
+          "count": 24300,
+          "share": 2.71,
+          "topCategory": "행정/인허가",
+          "safetyShare": 30.12
+        },
+        {
+          "department": "처인구 건축허가2과",
+          "count": 19992,
+          "share": 2.23,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.16
+        },
+        {
+          "department": "처인구 도시미관과",
+          "count": 18039,
+          "share": 2.01,
+          "topCategory": "환경/청소",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 모현읍",
+          "count": 15443,
+          "share": 1.72,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 세무2과",
+          "count": 13398,
+          "share": 1.5,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 교통과",
+          "count": 12085,
+          "share": 1.35,
+          "topCategory": "도로/교통",
+          "safetyShare": 100.0
+        },
+        {
+          "department": "처인구 도시건축1과",
+          "count": 11599,
+          "share": 1.3,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.23
+        },
+        {
+          "department": "처인구 포곡읍",
+          "count": 11381,
+          "share": 1.27,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "처인구 도시건축2과",
+          "count": 10891,
+          "share": 1.22,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.17
+        }
+      ],
+      "priorityIssues": [
+        {
+          "issue": "침수·배수 관리 수요",
+          "category": "재난/침수",
+          "count": 1704,
+          "previousCount": 223,
+          "currentCount": 315,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 41.26,
+          "dominantDepartment": "처인구 건설과",
+          "departmentConcentration": 79.8,
+          "impact": "집중호우·재산 피해",
+          "matchedKeywords": [
+            "침수",
+            "배수",
+            "빗물",
+            "우수",
+            "맨홀",
+            "하천"
+          ],
+          "score": 72.7,
+          "scoreParts": {
+            "volume": 14.4,
+            "momentum": 10.3,
+            "persistence": 20.0,
+            "safety": 15.0,
+            "departmentConcentration": 8.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.5764,
+            "momentum": 0.4126,
+            "persistence": 1.0,
+            "safety": 1.0,
+            "departmentConcentration": 0.7981,
+            "dataQuality": 1.0
+          },
+          "rationale": "처인구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 315건, 동일기간 대비 +41.3%입니다."
+        },
+        {
+          "issue": "복지·돌봄 서비스 수요",
+          "category": "복지/보건",
+          "count": 107199,
+          "previousCount": 17938,
+          "currentCount": 21723,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 21.1,
+          "dominantDepartment": "처인구 사회복지과",
+          "departmentConcentration": 73.7,
+          "impact": "취약계층 생활 지원",
+          "matchedKeywords": [
+            "복지",
+            "보육",
+            "양육",
+            "수당",
+            "아동",
+            "노인",
+            "장애",
+            "돌봄"
+          ],
+          "score": 71.9,
+          "scoreParts": {
+            "volume": 25.0,
+            "momentum": 5.3,
+            "persistence": 20.0,
+            "safety": 9.3,
+            "departmentConcentration": 7.4,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 1.0,
+            "momentum": 0.211,
+            "persistence": 1.0,
+            "safety": 0.62,
+            "departmentConcentration": 0.737,
+            "dataQuality": 1.0
+          },
+          "rationale": "처인구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 21,723건, 동일기간 대비 +21.1%입니다."
+        },
+        {
+          "issue": "쓰레기 무단투기·미수거",
+          "category": "환경/청소",
+          "count": 16004,
+          "previousCount": 2435,
+          "currentCount": 2624,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 7.76,
+          "dominantDepartment": "처인구 도시미관과",
+          "departmentConcentration": 99.8,
+          "impact": "위생·생활환경",
+          "matchedKeywords": [
+            "무단투기",
+            "쓰레기",
+            "폐기물",
+            "미수거",
+            "분리수거"
+          ],
+          "score": 65.3,
+          "scoreParts": {
+            "volume": 19.7,
+            "momentum": 1.9,
+            "persistence": 20.0,
+            "safety": 8.7,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.7884,
+            "momentum": 0.0776,
+            "persistence": 1.0,
+            "safety": 0.58,
+            "departmentConcentration": 0.9976,
+            "dataQuality": 1.0
+          },
+          "rationale": "처인구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 2,624건, 동일기간 대비 +7.8%입니다."
+        },
+        {
+          "issue": "도로·교통 시설 수요",
+          "category": "도로/교통",
+          "count": 23849,
+          "previousCount": 3288,
+          "currentCount": 3171,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -3.56,
+          "dominantDepartment": "처인구 교통과",
+          "departmentConcentration": 50.7,
+          "impact": "차량·보행 안전",
+          "matchedKeywords": [
+            "도로",
+            "교통",
+            "주정차",
+            "주차",
+            "포트홀",
+            "차도",
+            "보행",
+            "인도",
+            "횡단보도",
+            "차량"
+          ],
+          "score": 63.5,
+          "scoreParts": {
+            "volume": 20.2,
+            "momentum": 0.0,
+            "persistence": 20.0,
+            "safety": 13.2,
+            "departmentConcentration": 5.1,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.8073,
+            "momentum": 0.0,
+            "persistence": 1.0,
+            "safety": 0.88,
+            "departmentConcentration": 0.5067,
+            "dataQuality": 1.0
+          },
+          "rationale": "처인구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 3,171건, 동일기간 대비 -3.6%입니다."
+        },
+        {
+          "issue": "공원·하천 시설 관리",
+          "category": "환경/청소",
+          "count": 522,
+          "previousCount": 84,
+          "currentCount": 109,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 29.76,
+          "dominantDepartment": "처인구 자치행정과",
+          "departmentConcentration": 96.4,
+          "impact": "공공시설 이용 안전",
+          "matchedKeywords": [
+            "공원",
+            "산책로",
+            "등산로",
+            "놀이시설",
+            "체육시설",
+            "제초"
+          ],
+          "score": 62.1,
+          "scoreParts": {
+            "volume": 11.8,
+            "momentum": 7.4,
+            "persistence": 20.0,
+            "safety": 8.2,
+            "departmentConcentration": 9.6,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.4707,
+            "momentum": 0.2976,
+            "persistence": 1.0,
+            "safety": 0.55,
+            "departmentConcentration": 0.9636,
+            "dataQuality": 1.0
+          },
+          "rationale": "처인구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 109건, 동일기간 대비 +29.8%입니다."
+        },
+        {
+          "issue": "소음·악취 생활불편",
+          "category": "환경/청소",
+          "count": 204,
+          "previousCount": 26,
+          "currentCount": 30,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 15.38,
+          "dominantDepartment": "처인구 환경위생과",
+          "departmentConcentration": 100.0,
+          "impact": "건강·생활불편",
+          "matchedKeywords": [
+            "소음",
+            "악취",
+            "매연"
+          ],
+          "score": 54.6,
+          "scoreParts": {
+            "volume": 8.6,
+            "momentum": 3.8,
+            "persistence": 20.0,
+            "safety": 7.2,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.3439,
+            "momentum": 0.1538,
+            "persistence": 1.0,
+            "safety": 0.48,
+            "departmentConcentration": 1.0,
+            "dataQuality": 1.0
+          },
+          "rationale": "처인구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 30건, 동일기간 대비 +15.4%입니다."
+        }
+      ],
+      "dataQuality": {
+        "basis": "처리부서명 또는 민원명에 구 이름이 한 개 명시된 행만 포함",
+        "unknownRowsExcluded": 1252162,
+        "districtEvidenceCoverage": 66.59
+      }
+    },
+    {
+      "district": "기흥구",
+      "evidenceCount": 1031264,
+      "evidenceShareOfSaeol": 27.51,
+      "shareOfDistrictEvidence": 41.32,
+      "previousCount": 60573,
+      "currentCount": 58382,
+      "growthRate": -3.62,
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "topCategory": "행정/인허가",
+      "topDepartment": "기흥구 건축과",
+      "monthlyComplaints": [
+        {
+          "month": "2020-01",
+          "count": 6,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-02",
+          "count": 4,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-03",
+          "count": 3,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-04",
+          "count": 5,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-05",
+          "count": 1,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-06",
+          "count": 6,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-07",
+          "count": 6,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-08",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-09",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-10",
+          "count": 18900,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-11",
+          "count": 34665,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-12",
+          "count": 40352,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-01",
+          "count": 59041,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-02",
+          "count": 62060,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-03",
+          "count": 70289,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-04",
+          "count": 33900,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-05",
+          "count": 27998,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-06",
+          "count": 27372,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-07",
+          "count": 38998,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-08",
+          "count": 28750,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-09",
+          "count": 30001,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-10",
+          "count": 38029,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-11",
+          "count": 25967,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-12",
+          "count": 35747,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-01",
+          "count": 28892,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-02",
+          "count": 20278,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-03",
+          "count": 30084,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-04",
+          "count": 19677,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-05",
+          "count": 40286,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-06",
+          "count": 29348,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-07",
+          "count": 28124,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-08",
+          "count": 31693,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-09",
+          "count": 8740,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-10",
+          "count": 5364,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-11",
+          "count": 5486,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-12",
+          "count": 5550,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-01",
+          "count": 6882,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-02",
+          "count": 7146,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-03",
+          "count": 8252,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-04",
+          "count": 6778,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-05",
+          "count": 10152,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-06",
+          "count": 6157,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-07",
+          "count": 6136,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-08",
+          "count": 6055,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-09",
+          "count": 5586,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-10",
+          "count": 5896,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-11",
+          "count": 5991,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-12",
+          "count": 6056,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-01",
+          "count": 8591,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-02",
+          "count": 6793,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-03",
+          "count": 6241,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-04",
+          "count": 6150,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-05",
+          "count": 5753,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-06",
+          "count": 5148,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-07",
+          "count": 5504,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-08",
+          "count": 5395,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-09",
+          "count": 4974,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-10",
+          "count": 6024,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-01",
+          "count": 6393,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-02",
+          "count": 7029,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-03",
+          "count": 6129,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-04",
+          "count": 6126,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-05",
+          "count": 5553,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-06",
+          "count": 5371,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-07",
+          "count": 5957,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-08",
+          "count": 5412,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-09",
+          "count": 5648,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-10",
+          "count": 4764,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-11",
+          "count": 5202,
+          "status": "완전 집계"
+        }
+      ],
+      "categorySummary": [
+        {
+          "category": "행정/인허가",
+          "count": 752092,
+          "share": 72.93,
+          "previousCount": 11393,
+          "currentCount": 11317,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -0.67,
+          "safetyRelated": false
+        },
+        {
+          "category": "복지/보건",
+          "count": 152964,
+          "share": 14.83,
+          "previousCount": 24823,
+          "currentCount": 26139,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 5.3,
+          "safetyRelated": false
+        },
+        {
+          "category": "환경/청소",
+          "count": 96322,
+          "share": 9.34,
+          "previousCount": 19951,
+          "currentCount": 16614,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -16.73,
+          "safetyRelated": false
+        },
+        {
+          "category": "도로/교통",
+          "count": 20570,
+          "share": 1.99,
+          "previousCount": 2935,
+          "currentCount": 2680,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -8.69,
+          "safetyRelated": true
+        },
+        {
+          "category": "기타",
+          "count": 6864,
+          "share": 0.67,
+          "previousCount": 1041,
+          "currentCount": 1178,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 13.16,
+          "safetyRelated": false
+        },
+        {
+          "category": "안전/방범",
+          "count": 2289,
+          "share": 0.22,
+          "previousCount": 398,
+          "currentCount": 415,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 4.27,
+          "safetyRelated": true
+        },
+        {
+          "category": "재난/침수",
+          "count": 163,
+          "share": 0.02,
+          "previousCount": 32,
+          "currentCount": 39,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 21.88,
+          "safetyRelated": true
+        }
+      ],
+      "departmentBurden": [
+        {
+          "department": "기흥구 건축과",
+          "count": 647887,
+          "share": 62.82,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 산업환경과",
+          "count": 85782,
+          "share": 8.32,
+          "topCategory": "환경/청소",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 가정복지과",
+          "count": 66874,
+          "share": 6.48,
+          "topCategory": "복지/보건",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 사회복지과",
+          "count": 45493,
+          "share": 4.41,
+          "topCategory": "복지/보건",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 교통과",
+          "count": 14626,
+          "share": 1.42,
+          "topCategory": "도로/교통",
+          "safetyShare": 100.0
+        },
+        {
+          "department": "기흥구 민원지적과",
+          "count": 10785,
+          "share": 1.05,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.01
+        },
+        {
+          "department": "기흥구 도시미관과",
+          "count": 10091,
+          "share": 0.98,
+          "topCategory": "환경/청소",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구보건소 보건행정과",
+          "count": 9376,
+          "share": 0.91,
+          "topCategory": "복지/보건",
+          "safetyShare": 24.36
+        },
+        {
+          "department": "기흥구 구갈동",
+          "count": 8991,
+          "share": 0.87,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 건설과",
+          "count": 8950,
+          "share": 0.87,
+          "topCategory": "행정/인허가",
+          "safetyShare": 41.92
+        },
+        {
+          "department": "기흥구 영덕1동",
+          "count": 7482,
+          "share": 0.73,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 동백2동",
+          "count": 7349,
+          "share": 0.71,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 구성동",
+          "count": 7325,
+          "share": 0.71,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 신갈동",
+          "count": 7158,
+          "share": 0.69,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "기흥구 보정동",
+          "count": 7055,
+          "share": 0.68,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        }
+      ],
+      "priorityIssues": [
+        {
+          "issue": "복지·돌봄 서비스 수요",
+          "category": "복지/보건",
+          "count": 142658,
+          "previousCount": 23386,
+          "currentCount": 24826,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 6.16,
+          "dominantDepartment": "기흥구 가정복지과",
+          "departmentConcentration": 46.9,
+          "impact": "취약계층 생활 지원",
+          "matchedKeywords": [
+            "복지",
+            "보육",
+            "양육",
+            "수당",
+            "아동",
+            "노인",
+            "장애",
+            "돌봄"
+          ],
+          "score": 65.5,
+          "scoreParts": {
+            "volume": 25.0,
+            "momentum": 1.5,
+            "persistence": 20.0,
+            "safety": 9.3,
+            "departmentConcentration": 4.7,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 1.0,
+            "momentum": 0.0616,
+            "persistence": 1.0,
+            "safety": 0.62,
+            "departmentConcentration": 0.4688,
+            "dataQuality": 1.0
+          },
+          "rationale": "기흥구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 24,826건, 동일기간 대비 +6.2%입니다."
+        },
+        {
+          "issue": "도로·교통 시설 수요",
+          "category": "도로/교통",
+          "count": 20570,
+          "previousCount": 2935,
+          "currentCount": 2680,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -8.69,
+          "dominantDepartment": "기흥구 교통과",
+          "departmentConcentration": 71.1,
+          "impact": "차량·보행 안전",
+          "matchedKeywords": [
+            "도로",
+            "교통",
+            "주정차",
+            "주차",
+            "포트홀",
+            "차도",
+            "보행",
+            "인도",
+            "횡단보도",
+            "차량"
+          ],
+          "score": 64.8,
+          "scoreParts": {
+            "volume": 19.5,
+            "momentum": 0.0,
+            "persistence": 20.0,
+            "safety": 13.2,
+            "departmentConcentration": 7.1,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.7801,
+            "momentum": 0.0,
+            "persistence": 1.0,
+            "safety": 0.88,
+            "departmentConcentration": 0.711,
+            "dataQuality": 1.0
+          },
+          "rationale": "기흥구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 2,680건, 동일기간 대비 -8.7%입니다."
+        },
+        {
+          "issue": "침수·배수 관리 수요",
+          "category": "재난/침수",
+          "count": 163,
+          "previousCount": 32,
+          "currentCount": 39,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 21.88,
+          "dominantDepartment": "기흥구 건설과",
+          "departmentConcentration": 81.0,
+          "impact": "집중호우·재산 피해",
+          "matchedKeywords": [
+            "침수",
+            "배수",
+            "빗물",
+            "우수",
+            "맨홀",
+            "하천"
+          ],
+          "score": 62.7,
+          "scoreParts": {
+            "volume": 9.1,
+            "momentum": 5.5,
+            "persistence": 20.0,
+            "safety": 15.0,
+            "departmentConcentration": 8.1,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.3645,
+            "momentum": 0.2188,
+            "persistence": 1.0,
+            "safety": 1.0,
+            "departmentConcentration": 0.8098,
+            "dataQuality": 1.0
+          },
+          "rationale": "기흥구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 39건, 동일기간 대비 +21.9%입니다."
+        },
+        {
+          "issue": "쓰레기 무단투기·미수거",
+          "category": "환경/청소",
+          "count": 7228,
+          "previousCount": 1127,
+          "currentCount": 1045,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -7.28,
+          "dominantDepartment": "기흥구 도시미관과",
+          "departmentConcentration": 100.0,
+          "impact": "위생·생활환경",
+          "matchedKeywords": [
+            "무단투기",
+            "쓰레기",
+            "폐기물",
+            "미수거",
+            "분리수거"
+          ],
+          "score": 60.9,
+          "scoreParts": {
+            "volume": 17.2,
+            "momentum": 0.0,
+            "persistence": 20.0,
+            "safety": 8.7,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.687,
+            "momentum": 0.0,
+            "persistence": 1.0,
+            "safety": 0.58,
+            "departmentConcentration": 0.9997,
+            "dataQuality": 1.0
+          },
+          "rationale": "기흥구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 1,045건, 동일기간 대비 -7.3%입니다."
+        },
+        {
+          "issue": "공원·하천 시설 관리",
+          "category": "환경/청소",
+          "count": 832,
+          "previousCount": 138,
+          "currentCount": 167,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 21.01,
+          "dominantDepartment": "기흥구 자치행정과",
+          "departmentConcentration": 97.6,
+          "impact": "공공시설 이용 안전",
+          "matchedKeywords": [
+            "공원",
+            "산책로",
+            "등산로",
+            "놀이시설",
+            "체육시설",
+            "제초"
+          ],
+          "score": 60.9,
+          "scoreParts": {
+            "volume": 12.7,
+            "momentum": 5.3,
+            "persistence": 20.0,
+            "safety": 8.2,
+            "departmentConcentration": 9.8,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.5063,
+            "momentum": 0.2101,
+            "persistence": 1.0,
+            "safety": 0.55,
+            "departmentConcentration": 0.976,
+            "dataQuality": 1.0
+          },
+          "rationale": "기흥구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 167건, 동일기간 대비 +21.0%입니다."
+        },
+        {
+          "issue": "소음·악취 생활불편",
+          "category": "환경/청소",
+          "count": 94,
+          "previousCount": 20,
+          "currentCount": 17,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -15.0,
+          "dominantDepartment": "기흥구 산업환경과",
+          "departmentConcentration": 100.0,
+          "impact": "건강·생활불편",
+          "matchedKeywords": [
+            "소음",
+            "악취",
+            "매연"
+          ],
+          "score": 49.3,
+          "scoreParts": {
+            "volume": 7.1,
+            "momentum": 0.0,
+            "persistence": 20.0,
+            "safety": 7.2,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.2856,
+            "momentum": 0.0,
+            "persistence": 1.0,
+            "safety": 0.48,
+            "departmentConcentration": 1.0,
+            "dataQuality": 1.0
+          },
+          "rationale": "기흥구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 17건, 동일기간 대비 -15.0%입니다."
+        }
+      ],
+      "dataQuality": {
+        "basis": "처리부서명 또는 민원명에 구 이름이 한 개 명시된 행만 포함",
+        "unknownRowsExcluded": 1252162,
+        "districtEvidenceCoverage": 66.59
+      }
+    },
+    {
+      "district": "수지구",
+      "evidenceCount": 569333,
+      "evidenceShareOfSaeol": 15.19,
+      "shareOfDistrictEvidence": 22.81,
+      "previousCount": 38262,
+      "currentCount": 40580,
+      "growthRate": 6.06,
+      "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+      "topCategory": "행정/인허가",
+      "topDepartment": "수지구 건축허가과",
+      "monthlyComplaints": [
+        {
+          "month": "2020-01",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-02",
+          "count": 10,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-03",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-04",
+          "count": 9,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-05",
+          "count": 3,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-06",
+          "count": 1,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-07",
+          "count": 3,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-08",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-09",
+          "count": 2,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-10",
+          "count": 16799,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-11",
+          "count": 26091,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2020-12",
+          "count": 28316,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-01",
+          "count": 34451,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-02",
+          "count": 35660,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-03",
+          "count": 62935,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-04",
+          "count": 23433,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-05",
+          "count": 158,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-06",
+          "count": 96,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-07",
+          "count": 93,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-08",
+          "count": 104,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-09",
+          "count": 72,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-10",
+          "count": 85,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-11",
+          "count": 85,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2021-12",
+          "count": 109,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-01",
+          "count": 20689,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-02",
+          "count": 27309,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-03",
+          "count": 17913,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-04",
+          "count": 17218,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-05",
+          "count": 27964,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-06",
+          "count": 22086,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-07",
+          "count": 28475,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-08",
+          "count": 20975,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-09",
+          "count": 7112,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-10",
+          "count": 3677,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-11",
+          "count": 3711,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2022-12",
+          "count": 3649,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-01",
+          "count": 4851,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-02",
+          "count": 5272,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-03",
+          "count": 5741,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-04",
+          "count": 4925,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-05",
+          "count": 7604,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-06",
+          "count": 4376,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-07",
+          "count": 3869,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-08",
+          "count": 4291,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-09",
+          "count": 3706,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-10",
+          "count": 3873,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-11",
+          "count": 3932,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2023-12",
+          "count": 3820,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-01",
+          "count": 5413,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-02",
+          "count": 5020,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-03",
+          "count": 3868,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-04",
+          "count": 3582,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-05",
+          "count": 3521,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-06",
+          "count": 3282,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-07",
+          "count": 3427,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-08",
+          "count": 3448,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-09",
+          "count": 3056,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2024-10",
+          "count": 3645,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-01",
+          "count": 4112,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-02",
+          "count": 4997,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-03",
+          "count": 4110,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-04",
+          "count": 4118,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-05",
+          "count": 3621,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-06",
+          "count": 3739,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-07",
+          "count": 4416,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-08",
+          "count": 3881,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-09",
+          "count": 4076,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-10",
+          "count": 3510,
+          "status": "완전 집계"
+        },
+        {
+          "month": "2025-11",
+          "count": 4569,
+          "status": "완전 집계"
+        }
+      ],
+      "categorySummary": [
+        {
+          "category": "행정/인허가",
+          "count": 404984,
+          "share": 71.13,
+          "previousCount": 7769,
+          "currentCount": 8602,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 10.72,
+          "safetyRelated": false
+        },
+        {
+          "category": "복지/보건",
+          "count": 93435,
+          "share": 16.41,
+          "previousCount": 17206,
+          "currentCount": 17726,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 3.02,
+          "safetyRelated": false
+        },
+        {
+          "category": "환경/청소",
+          "count": 49081,
+          "share": 8.62,
+          "previousCount": 9436,
+          "currentCount": 10376,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 9.96,
+          "safetyRelated": false
+        },
+        {
+          "category": "도로/교통",
+          "count": 16196,
+          "share": 2.84,
+          "previousCount": 2904,
+          "currentCount": 2813,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -3.13,
+          "safetyRelated": true
+        },
+        {
+          "category": "기타",
+          "count": 4028,
+          "share": 0.71,
+          "previousCount": 671,
+          "currentCount": 777,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 15.8,
+          "safetyRelated": false
+        },
+        {
+          "category": "안전/방범",
+          "count": 1387,
+          "share": 0.24,
+          "previousCount": 247,
+          "currentCount": 249,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 0.81,
+          "safetyRelated": true
+        },
+        {
+          "category": "재난/침수",
+          "count": 222,
+          "share": 0.04,
+          "previousCount": 29,
+          "currentCount": 37,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 27.59,
+          "safetyRelated": true
+        }
+      ],
+      "departmentBurden": [
+        {
+          "department": "수지구 건축허가과",
+          "count": 354825,
+          "share": 62.32,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.01
+        },
+        {
+          "department": "수지구 사회복지과",
+          "count": 58554,
+          "share": 10.28,
+          "topCategory": "복지/보건",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 산업환경과",
+          "count": 44112,
+          "share": 7.75,
+          "topCategory": "환경/청소",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 가정복지과",
+          "count": 12539,
+          "share": 2.2,
+          "topCategory": "복지/보건",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 교통과",
+          "count": 10801,
+          "share": 1.9,
+          "topCategory": "도로/교통",
+          "safetyShare": 100.0
+        },
+        {
+          "department": "수지구 민원지적과",
+          "count": 8608,
+          "share": 1.51,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 동천동",
+          "count": 6947,
+          "share": 1.22,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 도시건축과",
+          "count": 6862,
+          "share": 1.21,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.13
+        },
+        {
+          "department": "수지구 성복동",
+          "count": 6725,
+          "share": 1.18,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구보건소 보건행정과",
+          "count": 5988,
+          "share": 1.05,
+          "topCategory": "복지/보건",
+          "safetyShare": 23.08
+        },
+        {
+          "department": "수지구 세무과",
+          "count": 5676,
+          "share": 1.0,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 건설도로과",
+          "count": 5589,
+          "share": 0.98,
+          "topCategory": "도로/교통",
+          "safetyShare": 100.0
+        },
+        {
+          "department": "수지구 도시미관과",
+          "count": 5047,
+          "share": 0.89,
+          "topCategory": "환경/청소",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 신봉동",
+          "count": 4630,
+          "share": 0.81,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        },
+        {
+          "department": "수지구 풍덕천1동",
+          "count": 4625,
+          "share": 0.81,
+          "topCategory": "행정/인허가",
+          "safetyShare": 0.0
+        }
+      ],
+      "priorityIssues": [
+        {
+          "issue": "쓰레기 무단투기·미수거",
+          "category": "환경/청소",
+          "count": 3441,
+          "previousCount": 523,
+          "currentCount": 692,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 32.31,
+          "dominantDepartment": "수지구 도시미관과",
+          "departmentConcentration": 100.0,
+          "impact": "위생·생활환경",
+          "matchedKeywords": [
+            "무단투기",
+            "쓰레기",
+            "폐기물",
+            "미수거",
+            "분리수거"
+          ],
+          "score": 68.6,
+          "scoreParts": {
+            "volume": 16.8,
+            "momentum": 8.1,
+            "persistence": 20.0,
+            "safety": 8.7,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.6718,
+            "momentum": 0.3231,
+            "persistence": 1.0,
+            "safety": 0.58,
+            "departmentConcentration": 1.0,
+            "dataQuality": 1.0
+          },
+          "rationale": "수지구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 692건, 동일기간 대비 +32.3%입니다."
+        },
+        {
+          "issue": "복지·돌봄 서비스 수요",
+          "category": "복지/보건",
+          "count": 86816,
+          "previousCount": 16359,
+          "currentCount": 16925,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 3.46,
+          "dominantDepartment": "수지구 사회복지과",
+          "departmentConcentration": 67.4,
+          "impact": "취약계층 생활 지원",
+          "matchedKeywords": [
+            "복지",
+            "보육",
+            "양육",
+            "수당",
+            "아동",
+            "노인",
+            "장애",
+            "돌봄"
+          ],
+          "score": 66.9,
+          "scoreParts": {
+            "volume": 25.0,
+            "momentum": 0.9,
+            "persistence": 20.0,
+            "safety": 9.3,
+            "departmentConcentration": 6.7,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 1.0,
+            "momentum": 0.0346,
+            "persistence": 1.0,
+            "safety": 0.62,
+            "departmentConcentration": 0.6745,
+            "dataQuality": 1.0
+          },
+          "rationale": "수지구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 16,925건, 동일기간 대비 +3.5%입니다."
+        },
+        {
+          "issue": "침수·배수 관리 수요",
+          "category": "재난/침수",
+          "count": 222,
+          "previousCount": 29,
+          "currentCount": 37,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 27.59,
+          "dominantDepartment": "수지구 건설도로과",
+          "departmentConcentration": 100.0,
+          "impact": "집중호우·재산 피해",
+          "matchedKeywords": [
+            "침수",
+            "배수",
+            "빗물",
+            "우수",
+            "맨홀",
+            "하천"
+          ],
+          "score": 66.2,
+          "scoreParts": {
+            "volume": 9.3,
+            "momentum": 6.9,
+            "persistence": 20.0,
+            "safety": 15.0,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.3736,
+            "momentum": 0.2759,
+            "persistence": 1.0,
+            "safety": 1.0,
+            "departmentConcentration": 1.0,
+            "dataQuality": 1.0
+          },
+          "rationale": "수지구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 37건, 동일기간 대비 +27.6%입니다."
+        },
+        {
+          "issue": "도로·교통 시설 수요",
+          "category": "도로/교통",
+          "count": 16196,
+          "previousCount": 2904,
+          "currentCount": 2813,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -3.13,
+          "dominantDepartment": "수지구 교통과",
+          "departmentConcentration": 66.7,
+          "impact": "차량·보행 안전",
+          "matchedKeywords": [
+            "도로",
+            "교통",
+            "주정차",
+            "주차",
+            "포트홀",
+            "차도",
+            "보행",
+            "인도",
+            "횡단보도",
+            "차량"
+          ],
+          "score": 65.3,
+          "scoreParts": {
+            "volume": 20.4,
+            "momentum": 0.0,
+            "persistence": 20.0,
+            "safety": 13.2,
+            "departmentConcentration": 6.7,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.8157,
+            "momentum": 0.0,
+            "persistence": 1.0,
+            "safety": 0.88,
+            "departmentConcentration": 0.6669,
+            "dataQuality": 1.0
+          },
+          "rationale": "수지구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 2,813건, 동일기간 대비 -3.1%입니다."
+        },
+        {
+          "issue": "공원·하천 시설 관리",
+          "category": "환경/청소",
+          "count": 594,
+          "previousCount": 103,
+          "currentCount": 115,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": 11.65,
+          "dominantDepartment": "수지구 자치행정과",
+          "departmentConcentration": 89.9,
+          "impact": "공공시설 이용 안전",
+          "matchedKeywords": [
+            "공원",
+            "산책로",
+            "등산로",
+            "놀이시설",
+            "체육시설",
+            "제초"
+          ],
+          "score": 57.4,
+          "scoreParts": {
+            "volume": 12.2,
+            "momentum": 2.9,
+            "persistence": 20.0,
+            "safety": 8.2,
+            "departmentConcentration": 9.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.4882,
+            "momentum": 0.1165,
+            "persistence": 1.0,
+            "safety": 0.55,
+            "departmentConcentration": 0.899,
+            "dataQuality": 1.0
+          },
+          "rationale": "수지구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 115건, 동일기간 대비 +11.7%입니다."
+        },
+        {
+          "issue": "소음·악취 생활불편",
+          "category": "환경/청소",
+          "count": 71,
+          "previousCount": 14,
+          "currentCount": 4,
+          "comparisonYears": [
+            2024,
+            2025
+          ],
+          "comparisonPeriod": "2024-01~2024-10 대비 2025-01~2025-10",
+          "growthRate": -71.43,
+          "dominantDepartment": "수지구 산업환경과",
+          "departmentConcentration": 100.0,
+          "impact": "건강·생활불편",
+          "matchedKeywords": [
+            "소음",
+            "악취",
+            "매연"
+          ],
+          "score": 46.3,
+          "scoreParts": {
+            "volume": 4.1,
+            "momentum": 0.0,
+            "persistence": 20.0,
+            "safety": 7.2,
+            "departmentConcentration": 10.0,
+            "dataQuality": 5.0
+          },
+          "componentValues": {
+            "volume": 0.1653,
+            "momentum": 0.0,
+            "persistence": 1.0,
+            "safety": 0.48,
+            "departmentConcentration": 1.0,
+            "dataQuality": 1.0
+          },
+          "rationale": "수지구 명시 행의 2024-01~2024-10 대비 2025-01~2025-10 기준 4건, 동일기간 대비 -71.4%입니다."
+        }
+      ],
+      "dataQuality": {
+        "basis": "처리부서명 또는 민원명에 구 이름이 한 개 명시된 행만 포함",
+        "unknownRowsExcluded": 1252162,
+        "districtEvidenceCoverage": 66.59
+      }
+    }
+  ],
+  "cctvPoints": [
+    {
+      "name": "기흥역 사거리",
+      "district": "기흥구",
+      "address": "기흥구 구갈동 505",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.275918,
+      "lng": 127.116191
+    },
+    {
+      "name": "신기마을 삼거리",
+      "district": "처인구",
+      "address": "처인구 남동 391-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.220283,
+      "lng": 127.209376
+    },
+    {
+      "name": "서울공원묘지",
+      "district": "처인구",
+      "address": "처인구 이동읍 서리 1141",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.219252,
+      "lng": 127.171197
+    },
+    {
+      "name": "북리고개",
+      "district": "처인구",
+      "address": "처인구 남사읍 북리 산 20-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.142138,
+      "lng": 127.162108
+    },
+    {
+      "name": "곱든고개 2",
+      "district": "처인구",
+      "address": "처인구 원삼면 사암리 산 129",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.183289,
+      "lng": 127.286817
+    },
+    {
+      "name": "정수리고개2",
+      "district": "처인구",
+      "address": "처인구 양지면 대대리 산 218-9",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.266552,
+      "lng": 127.282795
+    },
+    {
+      "name": "효자고개",
+      "district": "처인구",
+      "address": "처인구 삼가동 37-4",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.249659,
+      "lng": 127.159247
+    },
+    {
+      "name": "추계산장 앞 삼거리",
+      "district": "처인구",
+      "address": "처인구 양지면 추계리 32-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.254474,
+      "lng": 127.327332
+    },
+    {
+      "name": "창리저수지 배수로",
+      "district": "처인구",
+      "address": "처인구 남사읍 창리 328-3",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.140298,
+      "lng": 127.17963
+    },
+    {
+      "name": "장촌1교차로",
+      "district": "처인구",
+      "address": "처인구 이동읍 묵리 188-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.161634,
+      "lng": 127.253445
+    },
+    {
+      "name": "동백 마성간 도로 2/마성2리 1교차로",
+      "district": "처인구",
+      "address": "처인구 포곡읍 마성리 242-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.281358,
+      "lng": 127.187587
+    },
+    {
+      "name": "영통아울렛 앞",
+      "district": "기흥구",
+      "address": "기흥구 영덕동 943-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.267394,
+      "lng": 127.075676
+    },
+    {
+      "name": "아차지고개",
+      "district": "기흥구",
+      "address": "기흥구 청덕동 431-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.294707,
+      "lng": 127.111099
+    },
+    {
+      "name": "동백 마성간 도로 1/동막교차로",
+      "district": "기흥구",
+      "address": "기흥구 동백동 369-13",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.28872,
+      "lng": 127.156608
+    },
+    {
+      "name": "동백죽전간도로",
+      "district": "기흥구",
+      "address": "기흥구 보정동 1376",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.320551,
+      "lng": 127.123412
+    },
+    {
+      "name": "흥덕중학교 앞",
+      "district": "기흥구",
+      "address": "기흥구 영덕동 1163",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.277403,
+      "lng": 127.079072
+    },
+    {
+      "name": "삼막곡 교차로",
+      "district": "기흥구",
+      "address": "기흥구 보정동 992-14",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.295634,
+      "lng": 127.099835
+    },
+    {
+      "name": "죽전동 대지고개",
+      "district": "수지구",
+      "address": "수지구 죽전동 산27-47",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.326732,
+      "lng": 127.129314
+    },
+    {
+      "name": "죽전아울렛 앞",
+      "district": "수지구",
+      "address": "수지구 죽전동 876-8",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.333963,
+      "lng": 127.109207
+    },
+    {
+      "name": "서천동 아이파크앞",
+      "district": "기흥구",
+      "address": "기흥구 서천동 294-11",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.245246,
+      "lng": 127.071888
+    },
+    {
+      "name": "내대지고개",
+      "district": "수지구",
+      "address": "수지구 죽전동 산27-42",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.32925,
+      "lng": 127.128888
+    },
+    {
+      "name": "현암고교삼거리",
+      "district": "수지구",
+      "address": "수지구 죽전동 1463",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.329235,
+      "lng": 127.132741
+    },
+    {
+      "name": "외대사거리",
+      "district": "처인구",
+      "address": "처인구 모현읍 왕산리 799-21",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.337384,
+      "lng": 127.249458
+    },
+    {
+      "name": "전대교차로",
+      "district": "처인구",
+      "address": "처인구 포곡읍 전대리 471-8",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.285841,
+      "lng": 127.208445
+    },
+    {
+      "name": "좌전고개(평창사거리)",
+      "district": "처인구",
+      "address": "처인구 양지면 평창리 646-13",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.215338,
+      "lng": 127.321313
+    },
+    {
+      "name": "서리터널 삼거리",
+      "district": "처인구",
+      "address": "처인구 이동읍 서리 215-4",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.198942,
+      "lng": 127.182404
+    },
+    {
+      "name": "용인고가차도",
+      "district": "처인구",
+      "address": "처인구 김량장동 70-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.232855,
+      "lng": 127.207372
+    },
+    {
+      "name": "운곡교차로/선봉대사거리",
+      "district": "처인구",
+      "address": "처인구 역북동 208-14",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.2473,
+      "lng": 127.189856
+    },
+    {
+      "name": "지곡초교 삼거리",
+      "district": "기흥구",
+      "address": "기흥구 지곡동 445-5",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.254404,
+      "lng": 127.13516
+    },
+    {
+      "name": "청명 IC/하갈교차로",
+      "district": "기흥구",
+      "address": "기흥구 하갈동 255-34",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.255821,
+      "lng": 127.094496
+    },
+    {
+      "name": "노블카운티 앞",
+      "district": "기흥구",
+      "address": "기흥구 하갈동 490-7",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.248962,
+      "lng": 127.08249
+    },
+    {
+      "name": "동백119안전센터앞사거리",
+      "district": "기흥구",
+      "address": "기흥구 중동 871",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.277396,
+      "lng": 127.15446
+    },
+    {
+      "name": "말구리고개1",
+      "district": "수지구",
+      "address": "수지구 동천동 687-5",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.345108,
+      "lng": 127.059178
+    },
+    {
+      "name": "풍덕고가밑 삼거리",
+      "district": "기흥구",
+      "address": "기흥구 보정동 294-5",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.3225,
+      "lng": 127.102839
+    },
+    {
+      "name": "청덕고가",
+      "district": "기흥구",
+      "address": "기흥구 청덕동 588",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.29336,
+      "lng": 127.148653
+    },
+    {
+      "name": "경부고속도로 하부",
+      "district": "기흥구",
+      "address": "기흥구 고매동 397-16",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.229991,
+      "lng": 127.106305
+    },
+    {
+      "name": "김량대교",
+      "district": "처인구",
+      "address": "처인구 마평동 758-61",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.2375,
+      "lng": 127.210269
+    },
+    {
+      "name": "방축세월교",
+      "district": "처인구",
+      "address": "처인구 유방동 480-10",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.263386,
+      "lng": 127.214946
+    },
+    {
+      "name": "전대2교",
+      "district": "처인구",
+      "address": "처인구 포곡읍 전대리 546-99",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.28857,
+      "lng": 127.215223
+    },
+    {
+      "name": "송전2교",
+      "district": "처인구",
+      "address": "처인구 이동읍 송전리787-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.142941,
+      "lng": 127.199093
+    },
+    {
+      "name": "삼계1리 세월교",
+      "district": "처인구",
+      "address": "처인구 포곡읍 삼계리 671",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.283426,
+      "lng": 127.23028
+    },
+    {
+      "name": "갈담리 독점교",
+      "district": "처인구",
+      "address": "처인구 모현읍 갈담리 657-30",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.318823,
+      "lng": 127.241314
+    },
+    {
+      "name": "외수곡보",
+      "district": "처인구",
+      "address": "처인구 백암면 근삼리 1046",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.156497,
+      "lng": 127.375648
+    },
+    {
+      "name": "초부교",
+      "district": "처인구",
+      "address": "처인구 모현읍 초부리 447-10",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.313033,
+      "lng": 127.238295
+    },
+    {
+      "name": "금북교",
+      "district": "처인구",
+      "address": "처인구 김량장동 473-47",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.237823,
+      "lng": 127.206928
+    },
+    {
+      "name": "근창리 세월교",
+      "district": "처인구",
+      "address": "처인구 백암면 백암리 641-16",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.165905,
+      "lng": 127.371238
+    },
+    {
+      "name": "윗말1교",
+      "district": "처인구",
+      "address": "처인구 모현읍 매산리 326-7",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.334887,
+      "lng": 127.221803
+    },
+    {
+      "name": "월촌교",
+      "district": "처인구",
+      "address": "처인구 모현읍 일산리 228",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.337949,
+      "lng": 127.237435
+    },
+    {
+      "name": "진목교",
+      "district": "처인구",
+      "address": "처인구 남사읍 봉명리 795-7",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.10702,
+      "lng": 127.132929
+    },
+    {
+      "name": "전궁교",
+      "district": "처인구",
+      "address": "처인구 남사읍 전궁리430-2",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.111429,
+      "lng": 127.15222
+    },
+    {
+      "name": "삼거교(탄천 하천 주차장)",
+      "district": "기흥구",
+      "address": "기흥구 마북동 374-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.295101,
+      "lng": 127.111244
+    },
+    {
+      "name": "이현 세월교",
+      "district": "기흥구",
+      "address": "기흥구 보정동 614-26",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.311208,
+      "lng": 127.104527
+    },
+    {
+      "name": "기흥역지웰푸르지오구름다리",
+      "district": "기흥구",
+      "address": "기흥구 구갈동 480",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.30211,
+      "lng": 127.104384
+    },
+    {
+      "name": "구성1교",
+      "district": "기흥구",
+      "address": "기흥구 마북동 558-5",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.302155,
+      "lng": 127.104547
+    },
+    {
+      "name": "구상갈교",
+      "district": "기흥구",
+      "address": "기흥구 신갈동 27-2",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.270469,
+      "lng": 127.106429
+    },
+    {
+      "name": "기흥장례식장 앞",
+      "district": "기흥구",
+      "address": "기흥구 하갈동 583-18",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.253167,
+      "lng": 127.103033
+    },
+    {
+      "name": "고기동 제1경보국",
+      "district": "수지구",
+      "address": "수지구 고기동 228-6",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.361979,
+      "lng": 127.052794
+    },
+    {
+      "name": "고기동 제2경보국",
+      "district": "수지구",
+      "address": "수지구 고기동 232-3",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.359059,
+      "lng": 127.048246
+    },
+    {
+      "name": "죽전 세월교",
+      "district": "수지구",
+      "address": "수지구 죽전동 1295",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.324456,
+      "lng": 127.10983
+    },
+    {
+      "name": "죽전교",
+      "district": "수지구",
+      "address": "수지구 죽전동 1423",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.326476,
+      "lng": 127.110611
+    },
+    {
+      "name": "대지교",
+      "district": "수지구",
+      "address": "수지구 죽전동 544-10",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.331551,
+      "lng": 127.113313
+    },
+    {
+      "name": "고기계곡 제3경보국",
+      "district": "수지구",
+      "address": "수지구 고기동 224-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.359913,
+      "lng": 127.055148
+    },
+    {
+      "name": "고기계곡 제4경보국",
+      "district": "수지구",
+      "address": "수지구 고기동 244-2",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.357768,
+      "lng": 127.050939
+    },
+    {
+      "name": "백암교",
+      "district": "처인구",
+      "address": "처인구 백암면 백암리 641-92",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.164072,
+      "lng": 127.371657
+    },
+    {
+      "name": "죽능교",
+      "district": "처인구",
+      "address": "처인구 원삼면 죽능리 954-7",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.148663,
+      "lng": 127.311503
+    },
+    {
+      "name": "포은교",
+      "district": "처인구",
+      "address": "처인구 모현읍 능원리 730",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.341495,
+      "lng": 127.175643
+    },
+    {
+      "name": "학일2호저수지",
+      "district": "처인구",
+      "address": "처인구 원삼면 학일리 산 16-1",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.143321,
+      "lng": 127.285945
+    },
+    {
+      "name": "좌항2호저수지",
+      "district": "처인구",
+      "address": "처인구 원삼면 좌항리 산 26-5",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.143321,
+      "lng": 127.285945
+    },
+    {
+      "name": "삼계교",
+      "district": "처인구",
+      "address": "처인구 포곡읍 전대리 547-15",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.209884,
+      "lng": 127.320874
+    },
+    {
+      "name": "삼계리2 세월교",
+      "district": "처인구",
+      "address": "처인구 포곡읍 삼계리 434",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.279538,
+      "lng": 127.223795
+    },
+    {
+      "name": "초현교",
+      "district": "처인구",
+      "address": "처인구 포곡읍 삼계리 602-2",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.295703,
+      "lng": 127.233172
+    },
+    {
+      "name": "고기계곡상류(고기교)",
+      "district": "처인구",
+      "address": "수지구 고기동 755(고기동 453-8)",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.302876,
+      "lng": 127.235191
+    },
+    {
+      "name": "서분당IC 하부/동막천고기계곡",
+      "district": "수지구",
+      "address": "수지구 고기동 755-45(고기동 182-2)",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.360042,
+      "lng": 127.044186
+    },
+    {
+      "name": "보정장례식장앞",
+      "district": "수지구",
+      "address": "기흥구 보정동 544-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.359956,
+      "lng": 127.064125
+    },
+    {
+      "name": "죽전고가차도옆",
+      "district": "기흥구",
+      "address": "기흥구 보정동 1090",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.319656,
+      "lng": 127.105515
+    },
+    {
+      "name": "삼막곡저수지",
+      "district": "기흥구",
+      "address": "기흥구 보정동 1153",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.321346,
+      "lng": 127.108189
+    },
+    {
+      "name": "신원저수지",
+      "district": "기흥구",
+      "address": "처인구 포곡읍 신원리 595-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.295491,
+      "lng": 127.095827
+    },
+    {
+      "name": "마북동세월교",
+      "district": "처인구",
+      "address": "기흥구 마북동 611",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.317202,
+      "lng": 127.206997
+    },
+    {
+      "name": "영덕세월교",
+      "district": "기흥구",
+      "address": "기흥구 영덕동 10-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.298927,
+      "lng": 127.107188
+    },
+    {
+      "name": "마가저수지",
+      "district": "기흥구",
+      "address": "처인구 포곡읍 마성리 598-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.268045,
+      "lng": 127.100835
+    },
+    {
+      "name": "유실저수지",
+      "district": "처인구",
+      "address": "처인구 포곡읍 유운리 산9",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.33139,
+      "lng": 127.191553
+    },
+    {
+      "name": "창리저수지",
+      "district": "처인구",
+      "address": "처인구 남사읍 창리 산 29-4",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.303949,
+      "lng": 127.213022
+    },
+    {
+      "name": "완장1호저수지",
+      "district": "처인구",
+      "address": "처인구 남사읍 완장리 산120-2",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.141321,
+      "lng": 127.183917
+    },
+    {
+      "name": "요덕저수지",
+      "district": "처인구",
+      "address": "처인구 이동읍 송전리 1059",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.169527,
+      "lng": 127.166685
+    },
+    {
+      "name": "상덕저수지",
+      "district": "처인구",
+      "address": "처인구 이동읍 서리 1173",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.138305,
+      "lng": 127.220242
+    },
+    {
+      "name": "맹리저수지(척골지)",
+      "district": "처인구",
+      "address": "처인구 원삼면 맹리 산29-36",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.215279,
+      "lng": 127.164344
+    },
+    {
+      "name": "통삼저수지",
+      "district": "처인구",
+      "address": "처인구 남사읍 통삼리 51",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.209675,
+      "lng": 127.333074
+    },
+    {
+      "name": "학일1호저수지",
+      "district": "처인구",
+      "address": "처인구 원삼면 학일리 104",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.122033,
+      "lng": 127.134561
+    },
+    {
+      "name": "신기저수지",
+      "district": "처인구",
+      "address": "처인구 남동 산87-3",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.158499,
+      "lng": 127.2846
+    },
+    {
+      "name": "대대리저수지",
+      "district": "처인구",
+      "address": "처인구 양지면 대대리 산194-1",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.219685,
+      "lng": 127.192418
+    },
+    {
+      "name": "곱등고개 1",
+      "district": "처인구",
+      "address": "처인구 해곡동 산64-7",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.261071,
+      "lng": 127.2707
+    },
+    {
+      "name": "주북리고개1",
+      "district": "처인구",
+      "address": "처인구 양지면 주북리 산134-4",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.184713,
+      "lng": 127.28329
+    },
+    {
+      "name": "주북리고개2",
+      "district": "처인구",
+      "address": "처인구 양지면 양지리 산115-10",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.238108,
+      "lng": 127.267308
+    },
+    {
+      "name": "임원마을",
+      "district": "처인구",
+      "address": "처인구 유방동 1007-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.23686,
+      "lng": 127.271295
+    },
+    {
+      "name": "정수리고개1",
+      "district": "처인구",
+      "address": "처인구 양지면 대대리 산221-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.253595,
+      "lng": 127.220076
+    },
+    {
+      "name": "고매동 경부고속도로 하부",
+      "district": "처인구",
+      "address": "기흥구 고매동 397-4",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.266435,
+      "lng": 127.282781
+    },
+    {
+      "name": "정평천 정평1교",
+      "district": "기흥구",
+      "address": "수지구 신봉동 772-15",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.229991,
+      "lng": 127.106305
+    },
+    {
+      "name": "문수산터널 입구",
+      "district": "수지구",
+      "address": "처인구 원삼면 학일리 산96-6",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.322856,
+      "lng": 127.079208
+    },
+    {
+      "name": "한금로 고갯길/양지-포곡",
+      "district": "처인구",
+      "address": "처인구 양지면 주북리 산12-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.154989,
+      "lng": 127.277387
+    },
+    {
+      "name": "주한로 고갯길1/양지대대리-1",
+      "district": "처인구",
+      "address": "처인구 양지면 주북리 73-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.259599,
+      "lng": 127.238644
+    },
+    {
+      "name": "주한로 고갯길2/양지대대리-2",
+      "district": "처인구",
+      "address": "처인구 양지면 대대리 산375-10",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.251719,
+      "lng": 127.26828
+    },
+    {
+      "name": "지삼로 고갯길1/지곡동고개",
+      "district": "처인구",
+      "address": "처인구 삼가동 386-7",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.253704,
+      "lng": 127.267149
+    },
+    {
+      "name": "지삼로 고갯길2/지곡동고개",
+      "district": "처인구",
+      "address": "기흥구 지곡동 616-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.233371,
+      "lng": 127.155435
+    },
+    {
+      "name": "말구리고개2",
+      "district": "기흥구",
+      "address": "수지구 고기동 산187",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.231861,
+      "lng": 127.151764
+    },
+    {
+      "name": "말구리고개3",
+      "district": "수지구",
+      "address": "수지구 동천동 838",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.349833,
+      "lng": 127.054456
+    },
+    {
+      "name": "동천터널 입구",
+      "district": "수지구",
+      "address": "수지구 동천동 965",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.348113,
+      "lng": 127.056171
+    },
+    {
+      "name": "손곡천 그린교",
+      "district": "수지구",
+      "address": "수지구 동천동 763-71",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.331408,
+      "lng": 127.089612
+    },
+    {
+      "name": "성복천 성복1교",
+      "district": "수지구",
+      "address": "수지구 성복동 82-6",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.339105,
+      "lng": 127.093915
+    },
+    {
+      "name": "신역동교차로",
+      "district": "수지구",
+      "address": "기흥구 신갈동 388-562",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.3153,
+      "lng": 127.077255
+    },
+    {
+      "name": "통미마을삼거리",
+      "district": "기흥구",
+      "address": "기흥구 보라동 381-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.283448,
+      "lng": 127.104327
+    },
+    {
+      "name": "기선교 하부(송담주유소 옆)",
+      "district": "기흥구",
+      "address": "처인구 운학동 813",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.257368,
+      "lng": 127.104324
+    },
+    {
+      "name": "삼삼교",
+      "district": "처인구",
+      "address": "처인구 운학동 636-11",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.22558,
+      "lng": 127.221176
+    },
+    {
+      "name": "샘골 세월교",
+      "district": "처인구",
+      "address": "처인구 이동읍 천리 777-12",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.219689,
+      "lng": 127.22859
+    },
+    {
+      "name": "주북1교/예원마을입구",
+      "district": "처인구",
+      "address": "처인구 양지면 주북리 1113-8",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.194328,
+      "lng": 127.205003
+    },
+    {
+      "name": "이동저수지 배수구",
+      "district": "처인구",
+      "address": "처인구 남사읍 방아리 802-8",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.25429,
+      "lng": 127.239097
+    },
+    {
+      "name": "진위천/진위천-성은천",
+      "district": "처인구",
+      "address": "처인구 남사읍 진목리 965-9",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.110027,
+      "lng": 127.181662
+    },
+    {
+      "name": "기흥저수지 배수구",
+      "district": "처인구",
+      "address": "기흥구 농서동 360-4",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.106826,
+      "lng": 127.138317
+    },
+    {
+      "name": "내대지마을 5단지입구",
+      "district": "기흥구",
+      "address": "수지구 죽전동 1466",
+      "purpose": "저수지",
+      "status": "운영",
+      "lat": 37.223418,
+      "lng": 127.093311
+    },
+    {
+      "name": "신봉공원",
+      "district": "수지구",
+      "address": "수지구 신봉동 836",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.327735,
+      "lng": 127.134472
+    },
+    {
+      "name": "고기교/고기교인근",
+      "district": "수지구",
+      "address": "수지구 고기동 755-45",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.327306,
+      "lng": 127.061526
+    },
+    {
+      "name": "광곡천 소교량",
+      "district": "수지구",
+      "address": "처인구 원삼면 사암리 1284",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.358954,
+      "lng": 127.067233
+    },
+    {
+      "name": "왕산교 하부도로-1",
+      "district": "처인구",
+      "address": "처인구 모현읍 일산리 586-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.190298,
+      "lng": 127.29484
+    },
+    {
+      "name": "왕산교 하부도로-2",
+      "district": "처인구",
+      "address": "처인구 모현읍 일산리 586-1",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.337315,
+      "lng": 127.247546
+    },
+    {
+      "name": "좌찬고개",
+      "district": "처인구",
+      "address": "처인구 원삼면 좌항리 산34-23",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.338102,
+      "lng": 127.247888
+    },
+    {
+      "name": "곱등고개-2",
+      "district": "처인구",
+      "address": "처인구 원삼면 사암리 산157-5",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.206121,
+      "lng": 127.319319
+    },
+    {
+      "name": "석성로-마성IC 연결램프",
+      "district": "처인구",
+      "address": "처인구 포곡읍 마성리 600-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.182044,
+      "lng": 127.28886
+    },
+    {
+      "name": "보정동 제2 공영주차장",
+      "district": "처인구",
+      "address": "기흥구 보정동 238-2",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.281728,
+      "lng": 127.182123
+    },
+    {
+      "name": "신갈제1고가차도 하부",
+      "district": "기흥구",
+      "address": "기흥구 신갈동 483-4",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.320671,
+      "lng": 127.106136
+    },
+    {
+      "name": "현대아파트 삼거리",
+      "district": "기흥구",
+      "address": "기흥구 신갈동 243-17",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.269252,
+      "lng": 127.10239
+    },
+    {
+      "name": "뜨락공원 앞",
+      "district": "기흥구",
+      "address": "기흥구 청덕동 608",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.286753,
+      "lng": 127.107032
+    },
+    {
+      "name": "수지레스피아 통로",
+      "district": "기흥구",
+      "address": "수지구 죽전동 1003-42",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 37.290853,
+      "lng": 127.144785
+    },
+    {
+      "name": "마성로방향/전대리393-1",
+      "district": "수지구",
+      "address": "처인구 포곡읍 전대리 393-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.328714,
+      "lng": 127.104295
+    },
+    {
+      "name": "보정동 993/삼막곡제2지하차도",
+      "district": "기흥구",
+      "address": "기흥구 보정동 993",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.352937,
+      "lng": 127.220245
+    },
+    {
+      "name": "청덕동 588/청덕고가",
+      "district": "기흥구",
+      "address": "기흥구 청덕동 588",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.294821,
+      "lng": 127.097471
+    },
+    {
+      "name": "상현교차로 교통섬",
+      "district": "기흥구",
+      "address": "수지구 상현동 352-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.294588,
+      "lng": 127.148303
+    },
+    {
+      "name": "어청교",
+      "district": "수지구",
+      "address": "수지구 풍덕천동 591-10",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.303284,
+      "lng": 127.074375
+    },
+    {
+      "name": "한숲꽃내음 어린이공원 앞",
+      "district": "수지구",
+      "address": "처인구 남사읍 완장리 948",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 37.314282,
+      "lng": 127.08102
+    },
+    {
+      "name": "화수공간 삼거리",
+      "district": "기흥구",
+      "address": "처인구 이동읍 어비리 산90-9",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 127.1053,
+      "lng": 37.3158
+    },
+    {
+      "name": "사리째고개 터널 후면도로변",
+      "district": "수지구",
+      "address": "처인구 남사읍 완장리 799-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 127.0832308,
+      "lng": 37.3187608
+    },
+    {
+      "name": "모현스위첸아파트 101동 후면도로",
+      "district": "수지구",
+      "address": "처인구 모현읍 왕산리 247-1",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 127.0832746,
+      "lng": 37.3104114
+    },
+    {
+      "name": "마북천 현대홈타운입구",
+      "district": "수지구",
+      "address": "기흥구 마북동 229-5",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 127.0905,
+      "lng": 37.3167
+    },
+    {
+      "name": "마북천 한성CC사거리",
+      "district": "수지구",
+      "address": "기흥구 마북동 182-16",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 127.0924,
+      "lng": 37.3265
+    },
+    {
+      "name": "서용인IC입구 사거리",
+      "district": "처인구",
+      "address": "처인구 삼가동129-15",
+      "purpose": "도로",
+      "status": "운영",
+      "lat": 127.1636,
+      "lng": 37.2455
+    },
+    {
+      "name": "용인휴 캠핑장 입구앞",
+      "district": "처인구",
+      "address": "처인구 원삼면 목신리910-25 (목신리53)",
+      "purpose": "하천",
+      "status": "운영",
+      "lat": 127.3093,
+      "lng": 37.1165
+    }
+  ],
+  "crimeSummary": [
+    {
+      "station": "용인동부",
+      "살인 발생": 9,
+      "살인 검거": 9,
+      "강도 발생": 0,
+      "강도 검거": 0,
+      "강간 강제추행 발생": 201,
+      "강간 강제추행 검거": 179,
+      "절도 발생": 1866,
+      "절도 검거": 1363,
+      "폭력 발생": 2327,
+      "폭력 검거": 1957,
+      "totalIncidents": 4403
+    },
+    {
+      "station": "용인서부",
+      "살인 발생": 3,
+      "살인 검거": 3,
+      "강도 발생": 1,
+      "강도 검거": 1,
+      "강간 강제추행 발생": 68,
+      "강간 강제추행 검거": 59,
+      "절도 발생": 867,
+      "절도 검거": 511,
+      "폭력 발생": 1156,
+      "폭력 검거": 968,
+      "totalIncidents": 2095
+    }
+  ],
+  "sampleReports": [
+    {
+      "id": "DEMO-019",
+      "title": "빗물받이 막힘 의심",
+      "category": "재난/침수",
+      "issue": "침수·배수 관리 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 69,
+      "status": "현장 확인 권장",
+      "sourceChannel": "홈페이지 민원",
+      "targetDepartment": "건설과",
+      "photoLabel": "배수구 사진",
+      "photoMock": "mock-photo-08",
+      "summary": "집중호우 전 현장 점검 후보입니다.",
+      "clusterSize": 14,
+      "evidence": "공개 CSV에서 침수·배수 관리 수요 관련 488건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-019",
+        "category": "재난/침수",
+        "riskScore": 69,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "배수구 사진"
+          }
+        ],
+        "routing": {
+          "department": "건설과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-013",
+      "title": "빗물받이 막힘 의심",
+      "category": "재난/침수",
+      "issue": "침수·배수 관리 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 68,
+      "status": "반복 민원 묶음",
+      "sourceChannel": "생활행정톡",
+      "targetDepartment": "건설과",
+      "photoLabel": "배수구 사진",
+      "photoMock": "mock-photo-02",
+      "summary": "집중호우 전 현장 점검 후보입니다.",
+      "clusterSize": 12,
+      "evidence": "공개 CSV에서 침수·배수 관리 수요 관련 488건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-013",
+        "category": "재난/침수",
+        "riskScore": 68,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "배수구 사진"
+          }
+        ],
+        "routing": {
+          "department": "건설과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-007",
+      "title": "빗물받이 막힘 의심",
+      "category": "재난/침수",
+      "issue": "침수·배수 관리 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 67,
+      "status": "부서 배정 대기",
+      "sourceChannel": "AI 보이스봇",
+      "targetDepartment": "건설과",
+      "photoLabel": "배수구 사진",
+      "photoMock": "mock-photo-08",
+      "summary": "집중호우 전 현장 점검 후보입니다.",
+      "clusterSize": 14,
+      "evidence": "공개 CSV에서 침수·배수 관리 수요 관련 488건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-007",
+        "category": "재난/침수",
+        "riskScore": 67,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "배수구 사진"
+          }
+        ],
+        "routing": {
+          "department": "건설과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-001",
+      "title": "빗물받이 막힘 의심",
+      "category": "재난/침수",
+      "issue": "침수·배수 관리 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 66,
+      "status": "우선 점검 후보",
+      "sourceChannel": "안전신문고",
+      "targetDepartment": "건설과",
+      "photoLabel": "배수구 사진",
+      "photoMock": "mock-photo-02",
+      "summary": "집중호우 전 현장 점검 후보입니다.",
+      "clusterSize": 12,
+      "evidence": "공개 CSV에서 침수·배수 관리 수요 관련 488건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-001",
+        "category": "재난/침수",
+        "riskScore": 66,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "배수구 사진"
+          }
+        ],
+        "routing": {
+          "department": "건설과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-025",
+      "title": "빗물받이 막힘 의심",
+      "category": "재난/침수",
+      "issue": "침수·배수 관리 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 65,
+      "status": "AI 검토 필요",
+      "sourceChannel": "용인시 챗봇",
+      "targetDepartment": "건설과",
+      "photoLabel": "배수구 사진",
+      "photoMock": "mock-photo-02",
+      "summary": "집중호우 전 현장 점검 후보입니다.",
+      "clusterSize": 12,
+      "evidence": "공개 CSV에서 침수·배수 관리 수요 관련 488건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-025",
+        "category": "재난/침수",
+        "riskScore": 65,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "배수구 사진"
+          }
+        ],
+        "routing": {
+          "department": "건설과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-009",
+      "title": "도로 시설 불편 제보",
+      "category": "도로/교통",
+      "issue": "도로·교통 시설 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 63,
+      "status": "현장 확인 권장",
+      "sourceChannel": "홈페이지 민원",
+      "targetDepartment": "교통과",
+      "photoLabel": "도로 사진",
+      "photoMock": "mock-photo-10",
+      "summary": "차량과 보행 안전을 위한 현장 확인 후보입니다.",
+      "clusterSize": 18,
+      "evidence": "공개 CSV에서 도로·교통 시설 수요 관련 16,272건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-009",
+        "category": "도로/교통",
+        "riskScore": 63,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "도로 사진"
+          }
+        ],
+        "routing": {
+          "department": "교통과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-003",
+      "title": "도로 시설 불편 제보",
+      "category": "도로/교통",
+      "issue": "도로·교통 시설 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 62,
+      "status": "반복 민원 묶음",
+      "sourceChannel": "생활행정톡",
+      "targetDepartment": "교통과",
+      "photoLabel": "도로 사진",
+      "photoMock": "mock-photo-04",
+      "summary": "차량과 보행 안전을 위한 현장 확인 후보입니다.",
+      "clusterSize": 20,
+      "evidence": "공개 CSV에서 도로·교통 시설 수요 관련 16,272건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-003",
+        "category": "도로/교통",
+        "riskScore": 62,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "도로 사진"
+          }
+        ],
+        "routing": {
+          "department": "교통과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-027",
+      "title": "도로 시설 불편 제보",
+      "category": "도로/교통",
+      "issue": "도로·교통 시설 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 61,
+      "status": "부서 배정 대기",
+      "sourceChannel": "AI 보이스봇",
+      "targetDepartment": "교통과",
+      "photoLabel": "도로 사진",
+      "photoMock": "mock-photo-04",
+      "summary": "차량과 보행 안전을 위한 현장 확인 후보입니다.",
+      "clusterSize": 20,
+      "evidence": "공개 CSV에서 도로·교통 시설 수요 관련 16,272건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-027",
+        "category": "도로/교통",
+        "riskScore": 61,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "도로 사진"
+          }
+        ],
+        "routing": {
+          "department": "교통과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-021",
+      "title": "도로 시설 불편 제보",
+      "category": "도로/교통",
+      "issue": "도로·교통 시설 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 60,
+      "status": "우선 점검 후보",
+      "sourceChannel": "안전신문고",
+      "targetDepartment": "교통과",
+      "photoLabel": "도로 사진",
+      "photoMock": "mock-photo-10",
+      "summary": "차량과 보행 안전을 위한 현장 확인 후보입니다.",
+      "clusterSize": 18,
+      "evidence": "공개 CSV에서 도로·교통 시설 수요 관련 16,272건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-021",
+        "category": "도로/교통",
+        "riskScore": 60,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "도로 사진"
+          }
+        ],
+        "routing": {
+          "department": "교통과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-015",
+      "title": "도로 시설 불편 제보",
+      "category": "도로/교통",
+      "issue": "도로·교통 시설 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 59,
+      "status": "AI 검토 필요",
+      "sourceChannel": "용인시 챗봇",
+      "targetDepartment": "교통과",
+      "photoLabel": "도로 사진",
+      "photoMock": "mock-photo-04",
+      "summary": "차량과 보행 안전을 위한 현장 확인 후보입니다.",
+      "clusterSize": 20,
+      "evidence": "공개 CSV에서 도로·교통 시설 수요 관련 16,272건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-015",
+        "category": "도로/교통",
+        "riskScore": 59,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "도로 사진"
+          }
+        ],
+        "routing": {
+          "department": "교통과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-029",
+      "title": "공원 시설 정비 제보",
+      "category": "환경/청소",
+      "issue": "공원·하천 시설 관리",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 58,
+      "status": "현장 확인 권장",
+      "sourceChannel": "홈페이지 민원",
+      "targetDepartment": "공원조성과",
+      "photoLabel": "시설 사진",
+      "photoMock": "mock-photo-06",
+      "summary": "시민 이용 동선과 안전을 함께 점검합니다.",
+      "clusterSize": 12,
+      "evidence": "공개 CSV에서 공원·하천 시설 관리 관련 428건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-029",
+        "category": "환경/청소",
+        "riskScore": 58,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "시설 사진"
+          }
+        ],
+        "routing": {
+          "department": "공원조성과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-014",
+      "title": "복지·돌봄 이용 문의",
+      "category": "복지/보건",
+      "issue": "복지·돌봄 서비스 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 57,
+      "status": "현장 확인 권장",
+      "sourceChannel": "홈페이지 민원",
+      "targetDepartment": "사회복지과",
+      "photoLabel": "안내문 사진",
+      "photoMock": "mock-photo-03",
+      "summary": "반복 문의를 사전 안내와 담당 창구 개선으로 연결합니다.",
+      "clusterSize": 22,
+      "evidence": "공개 CSV에서 복지·돌봄 서비스 수요 관련 67,103건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-014",
+        "category": "복지/보건",
+        "riskScore": 57,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "안내문 사진"
+          }
+        ],
+        "routing": {
+          "department": "사회복지과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-023",
+      "title": "공원 시설 정비 제보",
+      "category": "환경/청소",
+      "issue": "공원·하천 시설 관리",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 57,
+      "status": "반복 민원 묶음",
+      "sourceChannel": "생활행정톡",
+      "targetDepartment": "공원조성과",
+      "photoLabel": "시설 사진",
+      "photoMock": "mock-photo-12",
+      "summary": "시민 이용 동선과 안전을 함께 점검합니다.",
+      "clusterSize": 14,
+      "evidence": "공개 CSV에서 공원·하천 시설 관리 관련 428건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-023",
+        "category": "환경/청소",
+        "riskScore": 57,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "시설 사진"
+          }
+        ],
+        "routing": {
+          "department": "공원조성과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-004",
+      "title": "쓰레기 무단투기 반복",
+      "category": "환경/청소",
+      "issue": "쓰레기 무단투기·미수거",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 56,
+      "status": "현장 확인 권장",
+      "sourceChannel": "홈페이지 민원",
+      "targetDepartment": "도시미관과",
+      "photoLabel": "폐기물 사진",
+      "photoMock": "mock-photo-05",
+      "summary": "반복 발생 지점으로 묶어 순찰·수거 동선을 조정합니다.",
+      "clusterSize": 15,
+      "evidence": "공개 CSV에서 쓰레기 무단투기·미수거 관련 4,697건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-004",
+        "category": "환경/청소",
+        "riskScore": 56,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "폐기물 사진"
+          }
+        ],
+        "routing": {
+          "department": "도시미관과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-008",
+      "title": "복지·돌봄 이용 문의",
+      "category": "복지/보건",
+      "issue": "복지·돌봄 서비스 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 56,
+      "status": "반복 민원 묶음",
+      "sourceChannel": "생활행정톡",
+      "targetDepartment": "사회복지과",
+      "photoLabel": "안내문 사진",
+      "photoMock": "mock-photo-09",
+      "summary": "반복 문의를 사전 안내와 담당 창구 개선으로 연결합니다.",
+      "clusterSize": 20,
+      "evidence": "공개 CSV에서 복지·돌봄 서비스 수요 관련 67,103건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-008",
+        "category": "복지/보건",
+        "riskScore": 56,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "안내문 사진"
+          }
+        ],
+        "routing": {
+          "department": "사회복지과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-017",
+      "title": "공원 시설 정비 제보",
+      "category": "환경/청소",
+      "issue": "공원·하천 시설 관리",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 56,
+      "status": "부서 배정 대기",
+      "sourceChannel": "AI 보이스봇",
+      "targetDepartment": "공원조성과",
+      "photoLabel": "시설 사진",
+      "photoMock": "mock-photo-06",
+      "summary": "시민 이용 동선과 안전을 함께 점검합니다.",
+      "clusterSize": 12,
+      "evidence": "공개 CSV에서 공원·하천 시설 관리 관련 428건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-017",
+        "category": "환경/청소",
+        "riskScore": 56,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "시설 사진"
+          }
+        ],
+        "routing": {
+          "department": "공원조성과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-002",
+      "title": "복지·돌봄 이용 문의",
+      "category": "복지/보건",
+      "issue": "복지·돌봄 서비스 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 55,
+      "status": "부서 배정 대기",
+      "sourceChannel": "AI 보이스봇",
+      "targetDepartment": "사회복지과",
+      "photoLabel": "안내문 사진",
+      "photoMock": "mock-photo-03",
+      "summary": "반복 문의를 사전 안내와 담당 창구 개선으로 연결합니다.",
+      "clusterSize": 22,
+      "evidence": "공개 CSV에서 복지·돌봄 서비스 수요 관련 67,103건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-002",
+        "category": "복지/보건",
+        "riskScore": 55,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "안내문 사진"
+          }
+        ],
+        "routing": {
+          "department": "사회복지과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-011",
+      "title": "공원 시설 정비 제보",
+      "category": "환경/청소",
+      "issue": "공원·하천 시설 관리",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 55,
+      "status": "우선 점검 후보",
+      "sourceChannel": "안전신문고",
+      "targetDepartment": "공원조성과",
+      "photoLabel": "시설 사진",
+      "photoMock": "mock-photo-12",
+      "summary": "시민 이용 동선과 안전을 함께 점검합니다.",
+      "clusterSize": 14,
+      "evidence": "공개 CSV에서 공원·하천 시설 관리 관련 428건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-011",
+        "category": "환경/청소",
+        "riskScore": 55,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "시설 사진"
+          }
+        ],
+        "routing": {
+          "department": "공원조성과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-028",
+      "title": "쓰레기 무단투기 반복",
+      "category": "환경/청소",
+      "issue": "쓰레기 무단투기·미수거",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 55,
+      "status": "반복 민원 묶음",
+      "sourceChannel": "생활행정톡",
+      "targetDepartment": "도시미관과",
+      "photoLabel": "폐기물 사진",
+      "photoMock": "mock-photo-05",
+      "summary": "반복 발생 지점으로 묶어 순찰·수거 동선을 조정합니다.",
+      "clusterSize": 15,
+      "evidence": "공개 CSV에서 쓰레기 무단투기·미수거 관련 4,697건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-028",
+        "category": "환경/청소",
+        "riskScore": 55,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "폐기물 사진"
+          }
+        ],
+        "routing": {
+          "department": "도시미관과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-005",
+      "title": "공원 시설 정비 제보",
+      "category": "환경/청소",
+      "issue": "공원·하천 시설 관리",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 54,
+      "status": "AI 검토 필요",
+      "sourceChannel": "용인시 챗봇",
+      "targetDepartment": "공원조성과",
+      "photoLabel": "시설 사진",
+      "photoMock": "mock-photo-06",
+      "summary": "시민 이용 동선과 안전을 함께 점검합니다.",
+      "clusterSize": 12,
+      "evidence": "공개 CSV에서 공원·하천 시설 관리 관련 428건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-005",
+        "category": "환경/청소",
+        "riskScore": 54,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "시설 사진"
+          }
+        ],
+        "routing": {
+          "department": "공원조성과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-022",
+      "title": "쓰레기 무단투기 반복",
+      "category": "환경/청소",
+      "issue": "쓰레기 무단투기·미수거",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 54,
+      "status": "부서 배정 대기",
+      "sourceChannel": "AI 보이스봇",
+      "targetDepartment": "도시미관과",
+      "photoLabel": "폐기물 사진",
+      "photoMock": "mock-photo-11",
+      "summary": "반복 발생 지점으로 묶어 순찰·수거 동선을 조정합니다.",
+      "clusterSize": 17,
+      "evidence": "공개 CSV에서 쓰레기 무단투기·미수거 관련 4,697건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-022",
+        "category": "환경/청소",
+        "riskScore": 54,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "폐기물 사진"
+          }
+        ],
+        "routing": {
+          "department": "도시미관과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-026",
+      "title": "복지·돌봄 이용 문의",
+      "category": "복지/보건",
+      "issue": "복지·돌봄 서비스 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 54,
+      "status": "우선 점검 후보",
+      "sourceChannel": "안전신문고",
+      "targetDepartment": "사회복지과",
+      "photoLabel": "안내문 사진",
+      "photoMock": "mock-photo-03",
+      "summary": "반복 문의를 사전 안내와 담당 창구 개선으로 연결합니다.",
+      "clusterSize": 22,
+      "evidence": "공개 CSV에서 복지·돌봄 서비스 수요 관련 67,103건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-026",
+        "category": "복지/보건",
+        "riskScore": 54,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "안내문 사진"
+          }
+        ],
+        "routing": {
+          "department": "사회복지과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-016",
+      "title": "쓰레기 무단투기 반복",
+      "category": "환경/청소",
+      "issue": "쓰레기 무단투기·미수거",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 53,
+      "status": "우선 점검 후보",
+      "sourceChannel": "안전신문고",
+      "targetDepartment": "도시미관과",
+      "photoLabel": "폐기물 사진",
+      "photoMock": "mock-photo-05",
+      "summary": "반복 발생 지점으로 묶어 순찰·수거 동선을 조정합니다.",
+      "clusterSize": 15,
+      "evidence": "공개 CSV에서 쓰레기 무단투기·미수거 관련 4,697건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-016",
+        "category": "환경/청소",
+        "riskScore": 53,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "폐기물 사진"
+          }
+        ],
+        "routing": {
+          "department": "도시미관과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-020",
+      "title": "복지·돌봄 이용 문의",
+      "category": "복지/보건",
+      "issue": "복지·돌봄 서비스 수요",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 53,
+      "status": "AI 검토 필요",
+      "sourceChannel": "용인시 챗봇",
+      "targetDepartment": "사회복지과",
+      "photoLabel": "안내문 사진",
+      "photoMock": "mock-photo-09",
+      "summary": "반복 문의를 사전 안내와 담당 창구 개선으로 연결합니다.",
+      "clusterSize": 20,
+      "evidence": "공개 CSV에서 복지·돌봄 서비스 수요 관련 67,103건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-020",
+        "category": "복지/보건",
+        "riskScore": 53,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "안내문 사진"
+          }
+        ],
+        "routing": {
+          "department": "사회복지과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-024",
+      "title": "소음·악취 반복 제보",
+      "category": "환경/청소",
+      "issue": "소음·악취 생활불편",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 53,
+      "status": "현장 확인 권장",
+      "sourceChannel": "홈페이지 민원",
+      "targetDepartment": "환경위생과",
+      "photoLabel": "현장 사진",
+      "photoMock": "mock-photo-01",
+      "summary": "반복 시간대와 위치를 묶어 점검 후보로 분류합니다.",
+      "clusterSize": 8,
+      "evidence": "공개 CSV에서 소음·악취 생활불편 관련 69건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-024",
+        "category": "환경/청소",
+        "riskScore": 53,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "현장 사진"
+          }
+        ],
+        "routing": {
+          "department": "환경위생과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-010",
+      "title": "쓰레기 무단투기 반복",
+      "category": "환경/청소",
+      "issue": "쓰레기 무단투기·미수거",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 52,
+      "status": "AI 검토 필요",
+      "sourceChannel": "용인시 챗봇",
+      "targetDepartment": "도시미관과",
+      "photoLabel": "폐기물 사진",
+      "photoMock": "mock-photo-11",
+      "summary": "반복 발생 지점으로 묶어 순찰·수거 동선을 조정합니다.",
+      "clusterSize": 17,
+      "evidence": "공개 CSV에서 쓰레기 무단투기·미수거 관련 4,697건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-010",
+        "category": "환경/청소",
+        "riskScore": 52,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "폐기물 사진"
+          }
+        ],
+        "routing": {
+          "department": "도시미관과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-018",
+      "title": "소음·악취 반복 제보",
+      "category": "환경/청소",
+      "issue": "소음·악취 생활불편",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 52,
+      "status": "반복 민원 묶음",
+      "sourceChannel": "생활행정톡",
+      "targetDepartment": "환경위생과",
+      "photoLabel": "현장 사진",
+      "photoMock": "mock-photo-07",
+      "summary": "반복 시간대와 위치를 묶어 점검 후보로 분류합니다.",
+      "clusterSize": 10,
+      "evidence": "공개 CSV에서 소음·악취 생활불편 관련 69건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-018",
+        "category": "환경/청소",
+        "riskScore": 52,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "현장 사진"
+          }
+        ],
+        "routing": {
+          "department": "환경위생과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-012",
+      "title": "소음·악취 반복 제보",
+      "category": "환경/청소",
+      "issue": "소음·악취 생활불편",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 51,
+      "status": "부서 배정 대기",
+      "sourceChannel": "AI 보이스봇",
+      "targetDepartment": "환경위생과",
+      "photoLabel": "현장 사진",
+      "photoMock": "mock-photo-01",
+      "summary": "반복 시간대와 위치를 묶어 점검 후보로 분류합니다.",
+      "clusterSize": 8,
+      "evidence": "공개 CSV에서 소음·악취 생활불편 관련 69건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-012",
+        "category": "환경/청소",
+        "riskScore": 51,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "현장 사진"
+          }
+        ],
+        "routing": {
+          "department": "환경위생과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-006",
+      "title": "소음·악취 반복 제보",
+      "category": "환경/청소",
+      "issue": "소음·악취 생활불편",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 50,
+      "status": "우선 점검 후보",
+      "sourceChannel": "안전신문고",
+      "targetDepartment": "환경위생과",
+      "photoLabel": "현장 사진",
+      "photoMock": "mock-photo-07",
+      "summary": "반복 시간대와 위치를 묶어 점검 후보로 분류합니다.",
+      "clusterSize": 10,
+      "evidence": "공개 CSV에서 소음·악취 생활불편 관련 69건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-006",
+        "category": "환경/청소",
+        "riskScore": 50,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "현장 사진"
+          }
+        ],
+        "routing": {
+          "department": "환경위생과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    },
+    {
+      "id": "DEMO-030",
+      "title": "소음·악취 반복 제보",
+      "category": "환경/청소",
+      "issue": "소음·악취 생활불편",
+      "district": "위치 입력 필요",
+      "lat": null,
+      "lng": null,
+      "risk": 49,
+      "status": "AI 검토 필요",
+      "sourceChannel": "용인시 챗봇",
+      "targetDepartment": "환경위생과",
+      "photoLabel": "현장 사진",
+      "photoMock": "mock-photo-07",
+      "summary": "반복 시간대와 위치를 묶어 점검 후보로 분류합니다.",
+      "clusterSize": 10,
+      "evidence": "공개 CSV에서 소음·악취 생활불편 관련 69건 확인",
+      "integrationPayload": {
+        "externalReportId": "DEMO-030",
+        "category": "환경/청소",
+        "riskScore": 49,
+        "location": null,
+        "attachments": [
+          {
+            "type": "image",
+            "mock": true,
+            "label": "현장 사진"
+          }
+        ],
+        "routing": {
+          "department": "환경위생과",
+          "priority": "normal"
+        }
+      },
+      "synthetic": true,
+      "syntheticBasis": "실제 민원 CSV의 이슈 규모를 바탕으로 만든 위치 미포함 업무흐름 예시"
+    }
+  ],
+  "intakeMockSummary": {
+    "mockReportCount": 30,
+    "highRiskCount": 0,
+    "averageRisk": 57.3,
+    "categoryDistribution": [
+      {
+        "category": "환경/청소",
+        "count": 15
+      },
+      {
+        "category": "재난/침수",
+        "count": 5
+      },
+      {
+        "category": "도로/교통",
+        "count": 5
+      },
+      {
+        "category": "복지/보건",
+        "count": 5
+      }
+    ],
+    "districtDistribution": [
+      {
+        "district": "위치 입력 필요",
+        "count": 30
+      }
+    ],
+    "integrationFields": [
+      "externalReportId",
+      "category",
+      "riskScore",
+      "location (실제 연동 시 입력)",
+      "attachments[].type",
+      "routing.department",
+      "routing.priority"
+    ]
+  },
+  "methodology": {
+    "classification": "공개 키워드 규칙 기준선 + 토큰·문자 3-gram TF-IDF 코사인 군집",
+    "anomalyDetection": "최신 완전월과 과거 12개월 기준선의 z-score·전년 동월 증감 결합",
+    "priorityFormula": "동일기간 규모 25%, 증가 25%, 지속성 20%, 안전 영향 15%, 부서 부담 10%, 데이터 신뢰도 5%",
+    "limits": [
+      "두 민원 데이터셋 간 중복 가능",
+      "군집은 빈도 상위 민원명 표본 기반",
+      "민원 상세 위치 좌표 없음",
+      "신고 사진 원본 없음",
+      "합성 제보에는 위치를 생성하지 않음",
+      "범죄 상세 주소 없음",
+      "범죄 예측에는 사용하지 않음"
+    ]
+  }
+}
