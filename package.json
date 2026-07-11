@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "lint": "tsc --noEmit",
-    "test:ui": "node scripts/smoke.mjs"
+    "test:ui": "node scripts/smoke.mjs",
+    "generate:qr": "node scripts/generate-qr.mjs",
+    "verify:qr": "node scripts/verify-qr.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.3",
@@ -20,8 +22,13 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
+    "@types/pngjs": "^6.0.5",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "playwright": "^1.49.1"
+    "jsqr": "^1.4.0",
+    "playwright": "^1.49.1",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4"
   }
 }
