@@ -45,6 +45,7 @@ try {
   assert(keyboardFocus && ['A', 'BUTTON', 'INPUT', 'SELECT'].includes(keyboardFocus.tag), 'keyboard focus did not reach an interactive control')
   assert(keyboardFocus.outlineStyle !== 'none' && keyboardFocus.outlineWidth !== '0px', 'keyboard focus indicator is not visible')
 
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: '우선순위' }).click()
   const overallFirst = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
   await page.locator('.context-bar button', { hasText: '처인구' }).click()
   await page.waitForTimeout(100)
@@ -54,6 +55,7 @@ try {
   assert(overallFirst !== districtFirst || (await page.locator('#overview .trend-panel h3').textContent())?.includes('처인구'), 'district data did not update')
   await page.locator('.context-bar button', { hasText: '전체' }).click()
 
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: 'CSV 불러오기' }).click()
   const validCsv = path.join(projectRoot, 'data', 'extracted', 'yongin_saeol_minwon', '새올 민원 처리 현황(2025).csv')
   await page.locator('input[type=file]').setInputFiles(validCsv)
   await page.locator('.csv-result.valid').waitFor({ timeout: 5000 })
@@ -66,6 +68,7 @@ try {
   assert(await page.locator('.csv-result').evaluate((element) => element.classList.contains('invalid')), 'invalid CSV accepted')
 
   await page.reload({ waitUntil: 'networkidle' })
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: '우선순위' }).click()
   const firstRankBefore = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
   await page.locator('.weight-controls input').first().fill('50')
   await page.locator('.weight-controls input').first().dispatchEvent('change')
@@ -83,13 +86,13 @@ try {
   const reportDocument = decodeURIComponent(reportHref.split(',')[1] ?? '')
   assert(reportDocument.includes('@media print') && reportDocument.includes('.no-print'), 'print-ready report CSS missing')
 
-  await page.locator('#cluster-review').scrollIntoViewIfNeeded()
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: 'AI 검토' }).click()
   await page.locator('.review-form input').first().fill('테스트 검토 군집')
   await page.locator('.review-form label.wide input').fill('자동 테스트 변경 근거')
   await page.locator('.review-actions button').click()
   assert((await page.locator('.review-diff > div:last-child b').textContent()) === '테스트 검토 군집', 'cluster review edit not applied')
   await page.reload({ waitUntil: 'networkidle' })
-  await page.locator('#cluster-review').scrollIntoViewIfNeeded()
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: 'AI 검토' }).click()
   assert((await page.locator('.review-list button').first().locator('strong').textContent()) === '테스트 검토 군집', 'cluster review did not persist')
   const downloadPromise = page.waitForEvent('download')
   await page.locator('.review-history button', { hasText: 'CSV' }).click()
@@ -97,7 +100,7 @@ try {
   assert((await reviewDownload.suggestedFilename()).endsWith('.csv'), 'review CSV export failed')
   await page.locator('.review-history button', { hasText: '초기화' }).click()
 
-  await page.locator('#validation').scrollIntoViewIfNeeded()
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: '사용자 검증' }).click()
   await page.locator('.validation-setup input').first().fill('행정 업무 경험자')
   await page.locator('.validation-rating select').nth(0).selectOption('4')
   await page.locator('.validation-rating select').nth(1).selectOption('5')
@@ -112,7 +115,7 @@ try {
   const validationDownload = await validationDownloadPromise
   assert((await validationDownload.suggestedFilename()).endsWith('.csv'), 'validation CSV export failed')
 
-  await page.locator('#outcomes').scrollIntoViewIfNeeded()
+  await page.getByRole('navigation', { name: 'Y:Q 업무 화면' }).getByRole('button', { name: '성과 추적' }).click()
   const outcomeInputs = page.locator('.outcome-inputs input')
   await outcomeInputs.nth(0).fill('자동 검증 이슈')
   await outcomeInputs.nth(1).fill('100')

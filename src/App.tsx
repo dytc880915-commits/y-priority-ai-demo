@@ -556,7 +556,8 @@ function ValidationWorkbench() {
 }
 
 export default function App() {
-  const [activeNav, setActiveNav] = useState('overview')
+  const initialPage = typeof window !== 'undefined' && navItems.some((item) => item.id === window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'overview'
+  const [activeNav, setActiveNav] = useState(initialPage)
   const [weights, setWeights] = useState(defaultWeights)
   const [selectedDistrict, setSelectedDistrict] = useState('전체')
   const [selectedIssueName, setSelectedIssueName] = useState(data.priorityIssues[0]?.issue ?? '')
@@ -582,6 +583,19 @@ export default function App() {
   }, [rankedIssues, selectedIssueName])
   useEffect(() => { localStorage.setItem('y-priority-cluster-reviews', JSON.stringify(clusterReviews)) }, [clusterReviews])
   useEffect(() => { localStorage.setItem('y-priority-review-history', JSON.stringify(reviewHistory)) }, [reviewHistory])
+  useEffect(() => {
+    const syncPageFromHash = () => {
+      const next = window.location.hash.slice(1)
+      if (navItems.some((item) => item.id === next)) setActiveNav(next)
+    }
+    window.addEventListener('hashchange', syncPageFromHash)
+    return () => window.removeEventListener('hashchange', syncPageFromHash)
+  }, [])
+  const navigateTo = (id: string) => {
+    setActiveNav(id)
+    if (window.location.hash !== `#${id}`) window.history.pushState(null, '', `#${id}`)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const demoSteps = [
     { id: 'csv-input', title: '최신 CSV 투입', description: '발표 시점에 확보한 민원 CSV의 인코딩과 필수 컬럼을 검사합니다.' },
     { id: 'priority', title: '우선검토 큐 갱신', description: '로컬 분석 결과에서 TOP 5와 근거를 확인하고 정책 기준에 따라 가중치를 조정합니다.' },
@@ -590,11 +604,11 @@ export default function App() {
   const goDemo = (index: number) => {
     const bounded = Math.max(0, Math.min(index, demoSteps.length - 1))
     if (bounded === 1) setWeights((current) => rebalanceWeights(current, 'volume', 50))
-    setDemoIndex(bounded); setActiveNav(demoSteps[bounded].id)
-    window.setTimeout(() => scrollToSection(demoSteps[bounded].id), 40)
+    setDemoIndex(bounded)
+    navigateTo(demoSteps[bounded].id)
   }
   const nextDemo = () => goDemo(demoIndex < 0 ? 0 : Math.min(demoIndex + 1, demoSteps.length - 1))
-  const stopDemo = () => { setDemoIndex(-1); setWeights(defaultWeights); setActiveNav('overview'); scrollToSection('overview') }
+  const stopDemo = () => { setDemoIndex(-1); setWeights(defaultWeights); navigateTo('overview') }
   const saveReview = (next: ClusterReview) => {
     const before = clusterReviews.find((review) => review.clusterId === next.clusterId)
     if (!before) return
@@ -612,24 +626,24 @@ export default function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand"><img src={yonginBrand} alt="용인시 공식 통합도시브랜드" /><div><strong>Y:Q</strong><span>용인 생활이슈 우선검토 AI</span></div></div>
-        <nav>{navItems.map((item) => <button key={item.id} type="button" className={activeNav === item.id ? 'active' : ''} onClick={() => { setActiveNav(item.id); scrollToSection(item.id) }}><item.icon />{item.label}</button>)}</nav>
+        <nav aria-label="Y:Q 업무 화면">{navItems.map((item) => <button key={item.id} type="button" aria-current={activeNav === item.id ? 'page' : undefined} className={activeNav === item.id ? 'active' : ''} onClick={() => navigateTo(item.id)}><item.icon />{item.label}</button>)}</nav>
         <div className="source-summary"><span>현재 검증 데이터</span><strong>{formatNumber(data.summary.totalAnalyzedRows)}행</strong><p>두 공개 데이터셋 간 중복 가능</p><button type="button" onClick={nextDemo}><ChartLine /> 3분 시연 {demoIndex < 0 ? '시작' : `${demoIndex + 1}/3`}</button></div>
       </aside>
-      <main>
+      <main data-active-page={activeNav}>
         <header className="topbar"><div><span className="product-kicker">YONGIN ACTION QUEUE</span><h1>민원 현황을 공무원의 실행 대기열로</h1><p>시민용 접수·현황 공개와 공무원용 문서 AI 사이에서, 이번 주 우선검토·협업·보고 순서를 제안합니다.</p></div><div><span><CalendarCheck /> {data.summary.generatedAt}</span><span><Lock /> 공개 CSV 기반 MVP</span></div></header>
         <div className="context-bar"><div><span>분석 지역</span><div role="group" aria-label="현재 분석 지역">{['전체', ...data.districtAnalysis.map((row) => row.district)].map((district) => <button key={district} type="button" aria-pressed={selectedDistrict === district} onClick={() => setSelectedDistrict(district)}>{district}</button>)}</div></div><p>{selectedDistrict === '전체' ? '전체 공개 새올 처리 행 기준' : `${selectedDistrict}가 처리부서명 또는 민원명에 명시된 행만 사용`} · {data.summary.priorityComparisonPeriod}</p></div>
-        <section className="weekly-briefing" aria-labelledby="weekly-briefing-title">
-          <div className="briefing-heading"><div><span>이번 주 행정 브리핑 · {selectedDistrict}</span><h2 id="weekly-briefing-title">우선검토 큐 TOP 5</h2><p>AI가 제안한 순서이며 담당자가 근거를 확인하고 수정·승인합니다.</p></div><div className="briefing-actions"><button type="button" onClick={nextDemo}><ChartLine /> 3분 실무 시연</button><button type="button" className="secondary" onClick={() => scrollToSection('report')}>관리자 보고 준비</button></div></div>
+        <section hidden={activeNav !== 'overview'} className="weekly-briefing" aria-labelledby="weekly-briefing-title">
+          <div className="briefing-heading"><div><span>이번 주 행정 브리핑 · {selectedDistrict}</span><h2 id="weekly-briefing-title">우선검토 큐 TOP 5</h2><p>AI가 제안한 순서이며 담당자가 근거를 확인하고 수정·승인합니다.</p></div><div className="briefing-actions"><button type="button" onClick={nextDemo}><ChartLine /> 3분 실무 시연</button><button type="button" className="secondary" onClick={() => navigateTo('report')}>관리자 보고 준비</button></div></div>
           <div className="briefing-layout">
-            <div className="action-queue">{rankedIssues.slice(0, 5).map((issue, index) => <button key={issue.issue} type="button" className={selectedIssue?.issue === issue.issue ? 'selected' : ''} onClick={() => { setSelectedIssueName(issue.issue); scrollToSection('detail') }}><b>{String(index + 1).padStart(2, '0')}</b><span><strong>{issue.issue}</strong><small>{issue.rationale}</small></span><em>{formatPercent(issue.growthRate)}</em><i>{issue.dominantDepartment}</i><u>{issue.adjustedScore.toFixed(1)}점</u></button>)}</div>
+            <div className="action-queue">{rankedIssues.slice(0, 5).map((issue, index) => <button key={issue.issue} type="button" className={selectedIssue?.issue === issue.issue ? 'selected' : ''} onClick={() => { setSelectedIssueName(issue.issue); navigateTo('detail') }}><b>{String(index + 1).padStart(2, '0')}</b><span><strong>{issue.issue}</strong><small>{issue.rationale}</small></span><em>{formatPercent(issue.growthRate)}</em><i>{issue.dominantDepartment}</i><u>{issue.adjustedScore.toFixed(1)}점</u></button>)}</div>
             <aside className="manager-brief"><span>관리자 3문장 브리핑</span><h3>{rankedIssues[0]?.issue ?? '검토 후보 없음'}</h3><p><b>왜 지금</b>{rankedIssues[0] ? `${formatNumber(rankedIssues[0].currentCount)}건, ${formatPercent(rankedIssues[0].growthRate)} 변화가 확인됐습니다.` : '분석 가능한 후보가 없습니다.'}</p><p><b>누구와</b>{rankedIssues[0]?.dominantDepartment ?? '담당부서 검토 필요'} 중심의 협업 검토가 필요합니다.</p><p><b>다음 행동</b>대표 원자료 확인 후 회의 안건과 실행 검토서를 생성합니다.</p><small>자동 결정 아님 · {data.summary.priorityComparisonPeriod}</small></aside>
           </div>
           <div className="system-handoff"><span>시민 접점<small>조아용·콜센터·국민신문고·새올</small></span><i>→</i><span>시민용 공개<small>데이터로 보는 용인</small></span><i>→</i><strong>Y:Q<small>우선검토·협업·보고</small></strong><i>→</i><span>후속 업무 AI<small>법규·AI 기자·출장보고</small></span><i>→</i><span>성과 환류<small>민원·만족도·검토시간</small></span></div>
         </section>
-        <div className="workflow-steps" aria-label="공무원 실무 흐름"><span>01 데이터 검증</span><i /><span>02 Y:Q 생성</span><i /><span>03 담당자 검토</span><i /><span>04 부서 협업</span><i /><span>05 보고·성과 환류</span></div>
-        <section className="truth-banner"><CircleWarning /><div><strong>의사결정 보조, 자동 결정 아님</strong><span>부분 집계 월은 제외하고 양쪽에 존재하는 동일기간만 비교합니다. AI 군집은 낮은 신뢰도를 숨기지 않고 담당자 검토 대상으로 표시합니다.</span></div></section>
+        <div hidden={activeNav !== 'overview'} className="workflow-steps" aria-label="공무원 실무 흐름"><span>01 데이터 검증</span><i /><span>02 Y:Q 생성</span><i /><span>03 담당자 검토</span><i /><span>04 부서 협업</span><i /><span>05 보고·성과 환류</span></div>
+        <section hidden={activeNav !== 'overview'} className="truth-banner"><CircleWarning /><div><strong>의사결정 보조, 자동 결정 아님</strong><span>부분 집계 월은 제외하고 양쪽에 존재하는 동일기간만 비교합니다. AI 군집은 낮은 신뢰도를 숨기지 않고 담당자 검토 대상으로 표시합니다.</span></div></section>
 
-        <section id="overview" className="section-block overview-block">
+        <section hidden={activeNav !== 'overview'} id="overview" className="section-block overview-block">
           <div className="section-title"><span>실무자 브리핑</span><h2>이번 주 회의에서 먼저 검토할 것</h2><p>최신 완전월은 {data.summary.latestCompleteMonth}, 우선순위 비교는 {data.summary.priorityComparisonPeriod}입니다.</p></div>
           <div className="kpi-grid"><Kpi title="분석 처리 행" value={formatNumber(data.summary.totalAnalyzedRows)} detail="고유 민원 수가 아닌 처리 행 합계" /><Kpi title="부분 집계 제외" value={data.summary.excludedPartialMonths.join(', ')} detail="정상 월·증가율·순위에서 제외" tone="amber" /><Kpi title="규칙 미분류" value={`${data.dataQuality.ruleUnclassifiedShare.toFixed(1)}%`} detail="AI 군집 검토 후보" tone="green" /><Kpi title="우선 검토 후보" value={`${rankedIssues.length}개`} detail={`1위 ${rankedIssues[0]?.issue}`} tone="slate" /></div>
           <div className="trend-panel"><div><h3>{selectedDistrict} 완전 집계 월별 흐름</h3><p>{data.summary.excludedPartialMonths.join(', ')} 제외 · 단위: 건</p></div><LineChart points={sourceMonthly} /></div>
@@ -643,7 +657,7 @@ export default function App() {
         <section id="quality" className="section-block"><div className="section-title"><span>데이터 품질</span><h2>부분 월과 비교기간을 분석 전에 차단</h2><p>원본 파일과 산출물 사이의 판단 근거를 재현할 수 있습니다.</p></div><QualityPanel quality={data.dataQuality} /></section>
         <section id="signals" className="section-block"><div className="section-title"><span>변화 신호</span><h2>규칙 기준선과 로컬 AI를 함께 검토</h2><p>급증 여부는 최신 완전월 기준이며, 군집은 빈도 상위 민원명의 유사 표현을 탐색합니다.</p></div>{selectedDistrict !== '전체' ? <p className="scope-notice"><CircleWarning /> 이상징후와 AI 군집은 지역 판정 행만으로 재학습하지 않고 전체 원본 기준을 유지합니다.</p> : null}<div className="two-column"><div><div className="subheading"><h3>급증 이상징후</h3><span>{data.methodology.anomalyDetection}</span></div><SignalTable signals={data.anomalySignals} /></div><div><div className="subheading"><h3>유사 민원 군집</h3><span>{data.methodology.classification}</span></div><ClusterList clusters={data.aiClusters} /></div></div></section>
         <section id="cluster-review" className="section-block"><div className="section-title"><span>사람 중심 AI 검토</span><h2>군집을 수정·승인하고 변경 근거를 남깁니다</h2><p>AI 결과를 자동 확정하지 않으며 모든 변경은 브라우저 로컬 저장소와 내보내기 파일에 기록됩니다.</p></div><ClusterReviewWorkbench reviews={clusterReviews} history={reviewHistory} onSave={saveReview} onReset={resetReviews} onExport={exportReviews} /></section>
-        <section id="priority" className="section-block"><div className="section-title"><span>우선순위 · {selectedDistrict}</span><h2>정책 목적에 맞게 가중치를 조정</h2><p>기본 산식을 숨기지 않고 순위 변화와 점수 기여도를 즉시 확인합니다.</p></div><WeightControls weights={weights} onChange={(key, value) => setWeights((current) => rebalanceWeights(current, key, value))} onReset={() => setWeights(defaultWeights)} />{rankedIssues.length && selectedIssue ? <PriorityTable issues={rankedIssues} selected={selectedIssue.issue} onSelect={(issue) => { setSelectedIssueName(issue.issue); scrollToSection('detail') }} /> : <p className="empty-state">현재 지역에서 기준을 충족하는 우선 검토 이슈가 없습니다.</p>}</section>
+        <section id="priority" className="section-block"><div className="section-title"><span>우선순위 · {selectedDistrict}</span><h2>정책 목적에 맞게 가중치를 조정</h2><p>기본 산식을 숨기지 않고 순위 변화와 점수 기여도를 즉시 확인합니다.</p></div><WeightControls weights={weights} onChange={(key, value) => setWeights((current) => rebalanceWeights(current, key, value))} onReset={() => setWeights(defaultWeights)} />{rankedIssues.length && selectedIssue ? <PriorityTable issues={rankedIssues} selected={selectedIssue.issue} onSelect={(issue) => { setSelectedIssueName(issue.issue); navigateTo('detail') }} /> : <p className="empty-state">현재 지역에서 기준을 충족하는 우선 검토 이슈가 없습니다.</p>}</section>
         <section id="detail" className="section-block"><div className="section-title"><span>이슈 상세</span><h2>점수보다 먼저 확인할 근거와 질문</h2><p>후속 조치는 확정 처방이 아니라 담당부서 원자료 검토 후보입니다.</p></div>{selectedIssue ? <IssueDetail issue={selectedIssue} weights={weights} /> : <p className="empty-state">먼저 우선 검토 이슈를 선택하세요.</p>}</section>
         <section id="report" className="section-block"><div className="section-title"><span>실행 보고서</span><h2>회의 안건으로 바로 전달할 수 있는 형식</h2><p>브라우저 인쇄 기능으로 PDF 저장하거나 UTF-8 HTML 원본을 보관합니다.</p></div>{selectedIssue ? <ReportPanel issue={selectedIssue} weights={weights} /> : <p className="empty-state">보고서를 생성할 이슈가 없습니다.</p>}</section>
         <section id="validation" className="section-block"><div className="section-title"><span>사용자 검증 워크벤치</span><h2>기존 방식과 실제 과업 완료시간을 비교</h2><p>실제 응답만 기록하며 기준 시간이 없으면 비워 둡니다. 예시 응답은 성과로 집계하지 않습니다.</p></div><ValidationWorkbench /></section>
