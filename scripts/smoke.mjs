@@ -13,19 +13,26 @@ try {
     sections: [...document.querySelectorAll('main > section[id]')].map((node) => ({ id: node.id, visible: getComputedStyle(node).display !== 'none' })),
     overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
   }))
-  assert(initial.sections.length === 7, 'expected seven integrated workflow pages')
+  assert(initial.sections.length === 8, 'expected eight integrated workflow pages')
   assert(initial.sections.filter((item) => item.visible).length === 1, 'only one workflow page should be visible')
-  assert(await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button').count() === 7, 'sidebar should expose seven pages')
+  assert(await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button').count() === 8, 'sidebar should expose eight pages')
   assert(!initial.overflow, 'desktop overflow')
   const overview = await page.locator('#overview').textContent()
-  assert(overview?.includes('68,753건'), 'official latest total missing')
   assert(overview?.includes('6,093,079행'), 'public portal baseline total missing')
+  assert(overview?.includes('6,435건'), 'separate 2026 confirmation layer missing')
   assert(await page.locator('#overview .rank-row').count() >= 10, 'integrated briefing rows missing')
 
-  await page.getByRole('button', { name: '민원 변화' }).click()
+  await page.getByRole('button', { name: '장기 민원 분석' }).click()
   assert(new URL(page.url()).hash === '#trend', 'hash navigation failed')
   assert(await page.locator('#trend svg').count() === 2, 'separate baseline/latest charts missing')
   assert(await page.locator('#trend .keyword-band span').count() >= 10, 'official keywords missing')
+
+  await page.getByRole('button', { name: '2026 공개 민원' }).click()
+  const official2026 = await page.locator('#official2026').textContent()
+  assert(official2026?.includes('68,753건'), 'official latest total missing')
+  assert(official2026?.includes('2,893건'), 'latest welfare match missing')
+  assert(official2026?.includes('공개 범위 미확인'), 'latest unconfirmed state missing')
+  assert(await page.locator('#official2026 .latest-check-table > div').count() === 7, 'latest check table missing')
 
   await page.getByRole('button', { name: '부서·지역' }).click()
   assert(await page.locator('#operations .bar-row').count() === 10, 'department burden rows missing')
@@ -39,6 +46,7 @@ try {
 
   await page.getByRole('button', { name: '검토 큐' }).click()
   assert(await page.locator('#priority .decision-list button').count() === 6, 'priority queue missing')
+  assert((await page.locator('#priority .decision-list').textContent())?.includes('즉시 검토'), 'combined review status missing')
   await page.locator('#priority .review-actions button', { hasText: '승인' }).click()
   assert((await page.locator('#priority .decision-list button').first().textContent())?.includes('승인'), 'review status not applied')
   await page.reload({ waitUntil: 'networkidle' })
@@ -64,7 +72,7 @@ try {
   assert(mobile.targets.every((height) => height >= 44), 'mobile nav target below 44px')
   assert(errors.length === 0, `console errors: ${errors.join(' | ')}`)
   console.log('OK integrated dashboard smoke passed')
-  console.log('pages=7')
+  console.log('pages=8')
   console.log('public_baseline_rows=6093079')
   console.log('official_latest=2026-05:68753')
   console.log('context=population+economy+sns+news')
