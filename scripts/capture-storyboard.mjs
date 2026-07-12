@@ -31,6 +31,10 @@ await page.reload({ waitUntil: 'networkidle' })
 
 await capture('01-overview-app.png')
 
+await navigate('서비스 연계', 'ecosystem')
+await focus('ecosystem', 0)
+await capture('01b-ecosystem-app.png')
+
 await navigate('데이터 품질', 'quality')
 await capture('02-quality-app.png')
 
@@ -67,6 +71,9 @@ await navigate('실행 보고서', 'report')
 await capture('11-report-app.png')
 await navigate('사용자 검증', 'validation')
 await capture('12-validation-app.png')
+await navigate('성과 추적', 'outcomes')
+await focus('outcomes', 0)
+await capture('12b-outcomes-app.png')
 
 await page.locator('.source-summary button').click()
 await page.waitForTimeout(650)

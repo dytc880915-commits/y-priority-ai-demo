@@ -29,7 +29,8 @@ try {
     rows: document.querySelectorAll('tbody tr').length,
     clusters: document.querySelectorAll('.cluster-list article').length,
   }))
-  assert(desktop.sections.length === 12, 'expected twelve workflow sections')
+  assert(desktop.sections.length === 13, 'expected thirteen workflow sections')
+  assert(desktop.sections.includes('ecosystem'), 'service ecosystem section missing')
   assert(!desktop.overflow, 'desktop page overflow')
   assert(desktop.weights.reduce((sum, value) => sum + value, 0) === 100, 'default weights do not total 100')
   assert(desktop.rows === 6, 'priority rows missing')
