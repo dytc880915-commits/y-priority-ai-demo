@@ -163,6 +163,14 @@ const navItems = [
   { id: 'outcomes', label: '성과 추적', icon: ChartLine },
   { id: 'reference', label: '참고 데이터', icon: Lock },
 ]
+const navGroups = [
+  { id: 'briefing', label: '주간 브리핑', icon: ChartLine, defaultPage: 'overview', pages: ['overview', 'ecosystem'] },
+  { id: 'data', label: '데이터 준비', icon: Download, defaultPage: 'csv-input', pages: ['csv-input', 'quality', 'reference'] },
+  { id: 'analysis', label: '변화 분석', icon: CircleWarning, defaultPage: 'district', pages: ['district', 'signals'] },
+  { id: 'decision', label: '우선검토', icon: Check, defaultPage: 'priority', pages: ['priority', 'cluster-review', 'detail'] },
+  { id: 'reporting', label: '실행 보고', icon: BookOpen, defaultPage: 'report', pages: ['report'] },
+  { id: 'evaluation', label: '성과 검증', icon: CalendarCheck, defaultPage: 'validation', pages: ['validation', 'outcomes'] },
+]
 
 function formatNumber(value: number) {
   return new Intl.NumberFormat('ko-KR').format(value)
@@ -622,16 +630,18 @@ export default function App() {
     const rows = clusterReviews.map((review) => headers.map((key) => csvCell(review[key as keyof ClusterReview])).join(','))
     downloadText(`\uFEFF${headers.join(',')}\n${rows.join('\n')}`, 'YQ-AI-군집검토이력.csv', 'text/csv;charset=utf-8')
   }
+  const activeGroup = navGroups.find((group) => group.pages.includes(activeNav)) ?? navGroups[0]
   return (
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand"><img src={yonginBrand} alt="용인시 공식 통합도시브랜드" /><div><strong>Y:Q</strong><span>용인 생활이슈 우선검토 AI</span></div></div>
-        <nav aria-label="Y:Q 업무 화면">{navItems.map((item) => <button key={item.id} type="button" aria-current={activeNav === item.id ? 'page' : undefined} className={activeNav === item.id ? 'active' : ''} onClick={() => navigateTo(item.id)}><item.icon />{item.label}</button>)}</nav>
+        <nav aria-label="Y:Q 주요 업무">{navGroups.map((group) => <button key={group.id} type="button" aria-current={activeGroup.id === group.id ? 'page' : undefined} className={activeGroup.id === group.id ? 'active' : ''} onClick={() => navigateTo(group.defaultPage)}><group.icon />{group.label}</button>)}</nav>
         <div className="source-summary"><span>현재 검증 데이터</span><strong>{formatNumber(data.summary.totalAnalyzedRows)}행</strong><p>두 공개 데이터셋 간 중복 가능</p><button type="button" onClick={nextDemo}><ChartLine /> 3분 시연 {demoIndex < 0 ? '시작' : `${demoIndex + 1}/3`}</button></div>
       </aside>
       <main data-active-page={activeNav}>
         <header className="topbar"><div><span className="product-kicker">YONGIN ACTION QUEUE</span><h1>민원 현황을 공무원의 실행 대기열로</h1><p>시민용 접수·현황 공개와 공무원용 문서 AI 사이에서, 이번 주 우선검토·협업·보고 순서를 제안합니다.</p></div><div><span><CalendarCheck /> {data.summary.generatedAt}</span><span><Lock /> 공개 CSV 기반 MVP</span></div></header>
         <div className="context-bar"><div><span>분석 지역</span><div role="group" aria-label="현재 분석 지역">{['전체', ...data.districtAnalysis.map((row) => row.district)].map((district) => <button key={district} type="button" aria-pressed={selectedDistrict === district} onClick={() => setSelectedDistrict(district)}>{district}</button>)}</div></div><p>{selectedDistrict === '전체' ? '전체 공개 새올 처리 행 기준' : `${selectedDistrict}가 처리부서명 또는 민원명에 명시된 행만 사용`} · {data.summary.priorityComparisonPeriod}</p></div>
+        <nav className="subpage-tabs" aria-label={`${activeGroup.label} 세부 화면`}>{activeGroup.pages.map((pageId) => { const item = navItems.find((candidate) => candidate.id === pageId); return item ? <button key={item.id} type="button" aria-current={activeNav === item.id ? 'page' : undefined} onClick={() => navigateTo(item.id)}>{item.label}</button> : null })}</nav>
         <section hidden={activeNav !== 'overview'} className="weekly-briefing" aria-labelledby="weekly-briefing-title">
           <div className="briefing-heading"><div><span>이번 주 행정 브리핑 · {selectedDistrict}</span><h2 id="weekly-briefing-title">우선검토 큐 TOP 5</h2><p>AI가 제안한 순서이며 담당자가 근거를 확인하고 수정·승인합니다.</p></div><div className="briefing-actions"><button type="button" onClick={nextDemo}><ChartLine /> 3분 실무 시연</button><button type="button" className="secondary" onClick={() => navigateTo('report')}>관리자 보고 준비</button></div></div>
           <div className="briefing-layout">
