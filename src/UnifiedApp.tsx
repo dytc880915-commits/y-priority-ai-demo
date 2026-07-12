@@ -30,6 +30,16 @@ const pages: Array<{ id: PageId; label: string; icon: typeof ChartLine }> = [
   { id: "report", label: "실행 보고", icon: BookOpen },
   { id: "sources", label: "데이터 근거", icon: Download },
 ];
+const pageMeta: Record<PageId, { title: string; description: string }> = {
+  overview: { title: "장기 민원 우선검토 현황", description: "2020~2025년 민원 원자료의 규모·증가·반복·부서 부담을 확인합니다." },
+  trend: { title: "장기 민원 추세 분석", description: "전체는 공통 1~10월 연도별, 특정 연도는 월별로 비교합니다." },
+  official2026: { title: "2026년 공개 민원 분석", description: "용인시 공개 상세 6,435건을 장기점수와 분리해 최신 확인등급으로 분석합니다." },
+  operations: { title: "부서·지역 업무 부담", description: "처리부서와 민원명에 명시된 근거만 사용해 업무량과 지역 변화를 비교합니다." },
+  context: { title: "도시 맥락 지표", description: "인구·경제·뉴스·SNS 지표를 민원 원인이 아닌 검토 맥락으로 확인합니다." },
+  priority: { title: "통합 검토 큐", description: "장기 기준점수와 2026 최신 확인등급을 나란히 보고 담당자가 판단합니다." },
+  report: { title: "의사결정 메모", description: "선택 이슈의 장기 근거, 최신 확인, 담당자 상태를 보고서로 정리합니다." },
+  sources: { title: "데이터 근거와 한계", description: "사용 데이터의 출처·기간·역할과 해석 제한을 확인합니다." },
+};
 const liveUrl = "https://live-proxy-sooty.vercel.app/api/yongin-dashboard";
 const number = (value: number) => new Intl.NumberFormat("ko-KR").format(value);
 const month = (value: string) =>
@@ -299,13 +309,15 @@ export default function UnifiedApp() {
       </aside>
       <main data-active-page={active}>
         <header className="topbar integrated-topbar">
-          <div>
-            <span className="product-kicker">Y:Q WORKSPACE</span>
-            <h1>용인시 민원 검토 대시보드</h1>
-            <p>
-              장기 민원, 최신 공개 현황, 부서·지역 근거와 담당자 검토 상태를
-              관리합니다.
-            </p>
+          <div className="workspace-heading">
+            <span className="product-kicker">Y:Q · {pages.find((page) => page.id === active)?.label}</span>
+            <h1>{pageMeta[active].title}</h1>
+            <p>{pageMeta[active].description}</p>
+            <div className="compact-meta">
+              <span><b>장기</b> 2020~2025</span>
+              <span><b>최신</b> {month(official.latestMonth)}</span>
+              <span><b>원칙</b> 기준선·최신 집계 분리</span>
+            </div>
           </div>
           <button
             className="official-refresh"
@@ -321,21 +333,6 @@ export default function UnifiedApp() {
             {refresh.message}
           </div>
         )}
-        <div className="data-period-strip">
-          <span>
-            <b>장기 기준선</b> 새올 {data.baseline.period.saeol.min}~
-            {data.baseline.period.saeol.max} · 키워드{" "}
-            {data.baseline.period.keyword.min}~
-            {data.baseline.period.keyword.max}
-          </span>
-          <span>
-            <b>최신 현황</b> {month(official.latestMonth)}
-          </span>
-          <span>
-            <b>원칙</b> 기준선과 최신 집계를 직접 합산하지 않음
-          </span>
-        </div>
-
         <section id="overview" className="section-block">
           <div className="section-title">
             <span>공공데이터 기반 핵심 분석</span>
