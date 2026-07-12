@@ -24,8 +24,14 @@ try {
 
   await page.getByRole('button', { name: '장기 민원 분석' }).click()
   assert(new URL(page.url()).hash === '#trend', 'hash navigation failed')
-  assert(await page.locator('#trend svg').count() === 2, 'separate baseline/latest charts missing')
-  assert(await page.locator('#trend .keyword-band span').count() >= 10, 'official keywords missing')
+  assert(await page.locator('#trend svg').count() === 1, 'long-term trend chart missing')
+  assert(await page.locator('#trend .point-label').count() === 11, 'monthly data labels missing')
+  assert(await page.locator('#trend .axis-tick').count() === 5, 'y-axis labels missing')
+  assert(await page.locator('#trend .trend-table > div').count() === 12, 'monthly comparison table missing')
+  await page.locator('#trend .trend-filter-bar button', { hasText: '처인구' }).click()
+  assert((await page.locator('#trend .trend-visual h3').textContent())?.includes('처인구'), 'district trend filter failed')
+  await page.locator('#trend .trend-filter-bar button', { hasText: '2024' }).click()
+  assert(await page.locator('#trend .point-label').count() === 10, 'year trend filter failed')
 
   await page.getByRole('button', { name: '2026 공개 민원' }).click()
   const official2026 = await page.locator('#official2026').textContent()

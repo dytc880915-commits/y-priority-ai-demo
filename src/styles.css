@@ -573,6 +573,29 @@ td small { font-size: 12px; }
 .integrated-chart path { fill: none; stroke: var(--integrated-green); stroke-width: 4; }
 .integrated-chart circle { fill: #fff; stroke: var(--integrated-green); stroke-width: 3; }
 .integrated-chart text { fill: var(--muted); font-size: 11px; }
+.integrated-chart .axis-tick line { stroke: #dfe6e5; stroke-width: 1; }
+.integrated-chart .axis-tick text { font-size: 10px; }
+.integrated-chart .peak circle { fill: #f0a341; stroke: #b96e16; }
+.integrated-chart .point-label { fill: var(--integrated-navy); font-size: 10px; font-weight: 800; }
+.integrated-chart .month-label { font-size: 10px; }
+.trend-filter-bar { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 14px; padding: 13px 15px; background: #fff; border: 1px solid var(--line); }
+.trend-filter-bar > div { display: flex; align-items: center; gap: 5px; }
+.trend-filter-bar span { margin-right: 5px; color: var(--muted); font-size: 12px; font-weight: 800; }
+.trend-filter-bar button { min-height: 36px; padding: 0 10px; border: 1px solid var(--line); background: #fff; color: var(--integrated-navy); font-weight: 750; }
+.trend-filter-bar button.active { border-color: var(--integrated-green); background: var(--integrated-green); color: #fff; }
+.trend-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+.trend-summary .integrated-kpi { min-height: 112px; }
+.trend-visual { padding: 18px; background: #fff; border-top: 4px solid var(--integrated-green); }
+.trend-visual .panel-heading span { color: var(--muted); font-size: 11px; }
+.trend-visual .panel-heading i { display: inline-block; width: 9px; height: 9px; margin-right: 4px; border-radius: 50%; background: #f0a341; }
+.trend-table { margin-top: 14px; background: #fff; }
+.trend-table > div { min-height: 46px; padding: 8px 14px; display: grid; grid-template-columns: 100px 120px 130px 1fr; align-items: center; gap: 12px; border-top: 1px solid var(--line); font-size: 13px; }
+.trend-table .trend-table-head { min-height: 40px; background: var(--integrated-navy); color: #fff; font-size: 11px; }
+.trend-table em { font-style: normal; font-weight: 800; }
+.trend-table em.up { color: #d34d4d; }
+.trend-table em.down { color: #3975a8; }
+.trend-table span { height: 9px; background: #e8eeee; }
+.trend-table span i { display: block; height: 100%; background: linear-gradient(90deg, var(--integrated-green), #56b7a6); }
 .keyword-band { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
 .keyword-band span { padding: 8px 10px; border: 1px solid var(--line); background: #fff; color: var(--muted); font-size: 12px; }
 .keyword-band b { margin-right: 8px; color: var(--ink); }
@@ -653,6 +676,12 @@ td small { font-size: 12px; }
   .data-period-strip span { display: block; margin: 4px 0; }
   .briefing-grid, .operations-grid, .context-columns { grid-template-columns: 1fr; }
   .official-only-grid { grid-template-columns: 1fr; }
+  .trend-filter-bar { display: block; }
+  .trend-filter-bar > div { margin: 7px 0; overflow-x: auto; }
+  .trend-filter-bar button { flex: 0 0 auto; min-height: 44px; }
+  .trend-summary { grid-template-columns: 1fr 1fr; }
+  .trend-table > div { grid-template-columns: 75px 90px 1fr; }
+  .trend-table > div > :last-child { grid-column: 1 / -1; width: 100%; }
   .latest-check-table > div { grid-template-columns: 1fr 90px; }
   .latest-check-table > div > :nth-child(3), .latest-check-table > div > :nth-child(4) { grid-column: auto; }
   .latest-check-table .latest-check-head { display: none; }
