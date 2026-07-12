@@ -271,7 +271,7 @@ export default function UnifiedApp() {
           <img src={yonginBrand} alt="용인특례시 통합도시브랜드" />
           <div>
             <strong>Y:Q</strong>
-            <span>민원 의사결정 AI</span>
+            <span>민원 검토·보고 업무도구</span>
           </div>
         </div>
         <nav aria-label="Y:Q 주요 업무">
@@ -300,11 +300,11 @@ export default function UnifiedApp() {
       <main data-active-page={active}>
         <header className="topbar integrated-topbar">
           <div>
-            <span className="product-kicker">YONGIN DECISION INTELLIGENCE</span>
-            <h1>민원 현황을 다음 행정 행동으로</h1>
+            <span className="product-kicker">Y:Q WORKSPACE</span>
+            <h1>용인시 민원 검토 대시보드</h1>
             <p>
-              다년 공공데이터와 용인시 최신 지표를 출처별로 분리해 함께
-              판단합니다.
+              장기 민원, 최신 공개 현황, 부서·지역 근거와 담당자 검토 상태를
+              관리합니다.
             </p>
           </div>
           <button
@@ -339,7 +339,7 @@ export default function UnifiedApp() {
         <section id="overview" className="section-block">
           <div className="section-title">
             <span>공공데이터 기반 핵심 분석</span>
-            <h2>장기 기준선이 찾은 행정 검토 후보</h2>
+            <h2>장기 민원 우선검토 현황</h2>
             <p>
               2020~2025년 민원 원자료로 규모·증가·반복·부서 부담을 분석합니다.
             </p>
