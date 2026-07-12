@@ -29,7 +29,7 @@ try {
     rows: document.querySelectorAll('tbody tr').length,
     clusters: document.querySelectorAll('.cluster-list article').length,
   }))
-  assert(desktop.sections.length === 11, 'expected eleven workflow sections')
+  assert(desktop.sections.length === 12, 'expected twelve workflow sections')
   assert(!desktop.overflow, 'desktop page overflow')
   assert(desktop.weights.reduce((sum, value) => sum + value, 0) === 100, 'default weights do not total 100')
   assert(desktop.rows === 6, 'priority rows missing')
@@ -110,6 +110,16 @@ try {
   await page.locator('.validation-report button', { hasText: '결과 CSV' }).click()
   const validationDownload = await validationDownloadPromise
   assert((await validationDownload.suggestedFilename()).endsWith('.csv'), 'validation CSV export failed')
+
+  await page.locator('#outcomes').scrollIntoViewIfNeeded()
+  const outcomeInputs = page.locator('.outcome-inputs input')
+  await outcomeInputs.nth(0).fill('자동 검증 이슈')
+  await outcomeInputs.nth(1).fill('100')
+  await outcomeInputs.nth(2).fill('80')
+  await outcomeInputs.nth(5).fill('30')
+  await outcomeInputs.nth(6).fill('20')
+  await page.locator('.outcome-inputs button').click()
+  assert((await page.locator('.outcome-kpis').textContent())?.includes('-20.0%'), 'outcome tracking did not calculate a before-after change')
 
   await page.locator('.source-summary button').click()
   assert((await page.locator('.demo-controller').textContent())?.includes('1/3'), 'demo did not start at step one')

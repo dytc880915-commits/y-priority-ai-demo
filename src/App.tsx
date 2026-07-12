@@ -160,6 +160,7 @@ const navItems = [
   { id: 'detail', label: '이슈 상세', icon: BookOpen },
   { id: 'report', label: '실행 보고서', icon: Download },
   { id: 'validation', label: '사용자 검증', icon: CalendarCheck },
+  { id: 'outcomes', label: '성과 추적', icon: ChartLine },
   { id: 'reference', label: '참고 데이터', icon: Lock },
 ]
 
@@ -469,6 +470,29 @@ function ReportPanel({ issue, weights }: { issue: RankedIssue; weights: Record<W
   )
 }
 
+type OutcomeRecord = { period: string; complaintBefore: number; complaintAfter: number; satisfactionBefore: number; satisfactionAfter: number; reviewMinutesBefore: number; reviewMinutesAfter: number }
+
+function OutcomeTracker() {
+  const [form, setForm] = useState<OutcomeRecord>({ period: '', complaintBefore: 0, complaintAfter: 0, satisfactionBefore: 0, satisfactionAfter: 0, reviewMinutesBefore: 0, reviewMinutesAfter: 0 })
+  const [records, setRecords] = useState<OutcomeRecord[]>(() => {
+    try { return JSON.parse(localStorage.getItem('y-priority-outcomes') ?? '[]') as OutcomeRecord[] } catch { return [] }
+  })
+  useEffect(() => { localStorage.setItem('y-priority-outcomes', JSON.stringify(records)) }, [records])
+  const update = (key: keyof OutcomeRecord, value: string) => setForm((current) => ({ ...current, [key]: key === 'period' ? value : Math.max(0, Number(value)) }))
+  const add = () => {
+    if (!form.period || !form.complaintBefore || !form.complaintAfter || !form.reviewMinutesBefore || !form.reviewMinutesAfter) return
+    setRecords((current) => [form, ...current])
+    setForm({ period: '', complaintBefore: 0, complaintAfter: 0, satisfactionBefore: 0, satisfactionAfter: 0, reviewMinutesBefore: 0, reviewMinutesAfter: 0 })
+  }
+  const latest = records[0]
+  const change = (before: number, after: number) => before ? ((after - before) / before) * 100 : null
+  return <div className="outcome-tracker">
+    <div className="outcome-intro"><div><span>도입 효과 측정</span><h3>성과는 약속이 아니라 전후 데이터로 보고합니다</h3><p>우선 검토 이슈별 동일 기간을 비교해 민원량 변화, 시민 만족도, 공무원 검토 시간을 함께 기록합니다. 현재 공개 CSV만으로는 도입 효과를 주장하지 않습니다.</p></div><div className="outcome-rule"><b>보고 기준</b><span>동일 지역 · 동일 기간 · 같은 이슈</span><span>실제 설문·업무 기록만 입력</span></div></div>
+    <div className="outcome-inputs"><label><span>비교 기간/이슈</span><input value={form.period} placeholder="예: 2026.08 처인구 침수·배수" onChange={(event) => update('period', event.target.value)} /></label><label><span>개선 전 민원 건수</span><input type="number" min="0" value={form.complaintBefore || ''} onChange={(event) => update('complaintBefore', event.target.value)} /></label><label><span>개선 후 민원 건수</span><input type="number" min="0" value={form.complaintAfter || ''} onChange={(event) => update('complaintAfter', event.target.value)} /></label><label><span>개선 전 만족도(0~100)</span><input type="number" min="0" max="100" value={form.satisfactionBefore || ''} onChange={(event) => update('satisfactionBefore', event.target.value)} /></label><label><span>개선 후 만족도(0~100)</span><input type="number" min="0" max="100" value={form.satisfactionAfter || ''} onChange={(event) => update('satisfactionAfter', event.target.value)} /></label><label><span>개선 전 검토시간(분)</span><input type="number" min="0" value={form.reviewMinutesBefore || ''} onChange={(event) => update('reviewMinutesBefore', event.target.value)} /></label><label><span>개선 후 검토시간(분)</span><input type="number" min="0" value={form.reviewMinutesAfter || ''} onChange={(event) => update('reviewMinutesAfter', event.target.value)} /></label><button type="button" onClick={add}>실제 성과 기록</button></div>
+    {latest ? <><div className="outcome-kpis"><Kpi title="민원량 변화" value={`${change(latest.complaintBefore, latest.complaintAfter)?.toFixed(1)}%`} detail={`${latest.complaintBefore}건 → ${latest.complaintAfter}건`} tone="green" /><Kpi title="시민 만족도 변화" value={latest.satisfactionBefore && latest.satisfactionAfter ? `${(latest.satisfactionAfter - latest.satisfactionBefore).toFixed(1)}점` : '미입력'} detail={latest.satisfactionBefore && latest.satisfactionAfter ? `${latest.satisfactionBefore}점 → ${latest.satisfactionAfter}점` : '실제 설문 연동 필요'} /><Kpi title="검토시간 변화" value={`${change(latest.reviewMinutesBefore, latest.reviewMinutesAfter)?.toFixed(1)}%`} detail={`${latest.reviewMinutesBefore}분 → ${latest.reviewMinutesAfter}분`} tone="green" /></div><p className="outcome-latest">최근 기록: {latest.period} · 이 기록은 브라우저 로컬 저장소에만 보관됩니다.</p></> : <p className="empty-state">도입 전후의 실제 기록이 아직 없습니다. 본선에서는 담당자 과업 시간과 동일 이슈의 민원·만족도 자료를 입력해 효과를 검증합니다.</p>}
+  </div>
+}
+
 type ValidationTask = { id: string; label: string; completed: boolean; errors: number }
 type ValidationRecord = { id: string; createdAt: string; method: '기존 방식' | 'Y-Priority'; role: string; baselineSeconds: number | null; elapsedSeconds: number; completedTasks: number; taskSuccess: string; totalErrors: number; understanding: number; usefulness: number; reuseIntent: string; comment: string; sample: false }
 const validationTasks = [
@@ -587,23 +611,23 @@ export default function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <div className="brand"><img src={yonginBrand} alt="용인시 공식 통합도시브랜드" /><div><strong>Y-Priority AI</strong><span>민원 실행 우선순위</span></div></div>
+        <div className="brand"><img src={yonginBrand} alt="용인시 공식 통합도시브랜드" /><div><strong>Y-Priority AI</strong><span>공무원용 실행 우선순위</span></div></div>
         <nav>{navItems.map((item) => <button key={item.id} type="button" className={activeNav === item.id ? 'active' : ''} onClick={() => { setActiveNav(item.id); scrollToSection(item.id) }}><item.icon />{item.label}</button>)}</nav>
         <div className="source-summary"><span>현재 검증 데이터</span><strong>{formatNumber(data.summary.totalAnalyzedRows)}행</strong><p>두 공개 데이터셋 간 중복 가능</p><button type="button" onClick={nextDemo}><ChartLine /> 3분 시연 {demoIndex < 0 ? '시작' : `${demoIndex + 1}/3`}</button></div>
       </aside>
       <main>
-        <header className="topbar"><div><h1>민원 통계를 실행 검토 순서로 전환</h1><p>CSV 품질부터 변화 신호, 조정 가능한 우선순위, 담당부서 실행 검토서까지 연결합니다.</p></div><div><span><CalendarCheck /> {data.summary.generatedAt}</span><span><Lock /> 로컬·CSV 전용</span></div></header>
+        <header className="topbar"><div><h1>공무원의 다음 검토 순서를 제안합니다</h1><p>시민용 민원 현황 공개를 대체하지 않습니다. 변화 신호와 업무 부담을 해석해 담당부서의 주간 검토·회의 준비를 돕습니다.</p></div><div><span><CalendarCheck /> {data.summary.generatedAt}</span><span><Lock /> 로컬·CSV 전용</span></div></header>
         <div className="context-bar"><div><span>분석 지역</span><div role="group" aria-label="현재 분석 지역">{['전체', ...data.districtAnalysis.map((row) => row.district)].map((district) => <button key={district} type="button" aria-pressed={selectedDistrict === district} onClick={() => setSelectedDistrict(district)}>{district}</button>)}</div></div><p>{selectedDistrict === '전체' ? '전체 공개 새올 처리 행 기준' : `${selectedDistrict}가 처리부서명 또는 민원명에 명시된 행만 사용`} · {data.summary.priorityComparisonPeriod}</p></div>
         <section className="civic-hero" aria-labelledby="civic-hero-title">
           <img src={civicHero} alt="용인의 도시 데이터를 검토 우선순위와 실행 문서로 전환하는 시각화" />
-          <div className="civic-hero-copy"><span>YONGIN CIVIC DECISION SUPPORT</span><h2 id="civic-hero-title">데이터를 더 모으기보다,<br />이번에 확인할 순서를<br />만듭니다.</h2><p>부분 집계를 먼저 차단하고 유사 민원과 변화 신호를 탐색해 담당자가 검토 근거를 직접 조정합니다.</p><div className="hero-actions"><button type="button" onClick={nextDemo}><ChartLine /> 3분 시연 시작</button><button type="button" className="secondary" onClick={() => scrollToSection('priority')}>우선순위 바로 보기</button></div></div>
+          <div className="civic-hero-copy"><span>INTERNAL WORKFLOW AI · NOT A CITIZEN PORTAL</span><h2 id="civic-hero-title">현황을 보여주는 일을 넘어,<br />이번 주 먼저 검토할<br />생활문제를 정합니다.</h2><p>반복·증가·안전·부서 부담을 함께 읽고, 담당자가 근거를 조정해 회의 안건과 실행 검토서로 남깁니다.</p><div className="hero-actions"><button type="button" onClick={nextDemo}><ChartLine /> 실무 시연 시작</button><button type="button" className="secondary" onClick={() => scrollToSection('priority')}>이번 주 검토 후보</button></div></div>
           <div className="hero-finding"><span>{selectedDistrict} 1위 검토 후보</span><strong>{rankedIssues[0]?.issue ?? '검토 후보 없음'}</strong><div><b>{formatNumber(rankedIssues[0]?.currentCount ?? 0)}건</b><b>{formatPercent(rankedIssues[0]?.growthRate ?? 0)}</b><b>{(rankedIssues[0]?.adjustedScore ?? 0).toFixed(1)}점</b></div><small>{data.summary.priorityComparisonPeriod}</small></div>
         </section>
-        <div className="workflow-steps" aria-label="핵심 업무 흐름"><span>01 품질 확인</span><i /><span>02 변화 탐색</span><i /><span>03 기준 조정</span><i /><span>04 원자료 검토</span><i /><span>05 실행 문서</span></div>
+        <div className="workflow-steps" aria-label="공무원 실무 흐름"><span>01 데이터 검증</span><i /><span>02 이번 주 신호 확인</span><i /><span>03 우선순위 조정</span><i /><span>04 부서 검토</span><i /><span>05 회의 안건·실행 문서</span></div>
         <section className="truth-banner"><CircleWarning /><div><strong>의사결정 보조, 자동 결정 아님</strong><span>부분 집계 월은 제외하고 양쪽에 존재하는 동일기간만 비교합니다. AI 군집은 낮은 신뢰도를 숨기지 않고 담당자 검토 대상으로 표시합니다.</span></div></section>
 
         <section id="overview" className="section-block overview-block">
-          <div className="section-title"><span>업무 개요</span><h2>이번 검토에서 바로 확인할 것</h2><p>최신 완전월은 {data.summary.latestCompleteMonth}, 우선순위 비교는 {data.summary.priorityComparisonPeriod}입니다.</p></div>
+          <div className="section-title"><span>실무자 브리핑</span><h2>이번 주 회의에서 먼저 검토할 것</h2><p>최신 완전월은 {data.summary.latestCompleteMonth}, 우선순위 비교는 {data.summary.priorityComparisonPeriod}입니다.</p></div>
           <div className="kpi-grid"><Kpi title="분석 처리 행" value={formatNumber(data.summary.totalAnalyzedRows)} detail="고유 민원 수가 아닌 처리 행 합계" /><Kpi title="부분 집계 제외" value={data.summary.excludedPartialMonths.join(', ')} detail="정상 월·증가율·순위에서 제외" tone="amber" /><Kpi title="규칙 미분류" value={`${data.dataQuality.ruleUnclassifiedShare.toFixed(1)}%`} detail="AI 군집 검토 후보" tone="green" /><Kpi title="우선 검토 후보" value={`${rankedIssues.length}개`} detail={`1위 ${rankedIssues[0]?.issue}`} tone="slate" /></div>
           <div className="trend-panel"><div><h3>{selectedDistrict} 완전 집계 월별 흐름</h3><p>{data.summary.excludedPartialMonths.join(', ')} 제외 · 단위: 건</p></div><LineChart points={sourceMonthly} /></div>
         </section>
@@ -618,9 +642,10 @@ export default function App() {
         <section id="detail" className="section-block"><div className="section-title"><span>이슈 상세</span><h2>점수보다 먼저 확인할 근거와 질문</h2><p>후속 조치는 확정 처방이 아니라 담당부서 원자료 검토 후보입니다.</p></div>{selectedIssue ? <IssueDetail issue={selectedIssue} weights={weights} /> : <p className="empty-state">먼저 우선 검토 이슈를 선택하세요.</p>}</section>
         <section id="report" className="section-block"><div className="section-title"><span>실행 보고서</span><h2>회의 안건으로 바로 전달할 수 있는 형식</h2><p>브라우저 인쇄 기능으로 PDF 저장하거나 UTF-8 HTML 원본을 보관합니다.</p></div>{selectedIssue ? <ReportPanel issue={selectedIssue} weights={weights} /> : <p className="empty-state">보고서를 생성할 이슈가 없습니다.</p>}</section>
         <section id="validation" className="section-block"><div className="section-title"><span>사용자 검증 워크벤치</span><h2>기존 방식과 실제 과업 완료시간을 비교</h2><p>실제 응답만 기록하며 기준 시간이 없으면 비워 둡니다. 예시 응답은 성과로 집계하지 않습니다.</p></div><ValidationWorkbench /></section>
+        <section id="outcomes" className="section-block"><div className="section-title"><span>도입 성과 추적</span><h2>민원 변화와 업무 효율을 한 번에 보고</h2><p>우선순위 기반 조치 전후의 민원량·시민 만족도·공무원 검토 시간을 같은 기준으로 비교해 관리자 보고 근거를 만듭니다.</p></div><OutcomeTracker /></section>
         <section id="reference" className="section-block reference"><div className="section-title"><span>참고 데이터</span><h2>핵심 점수와 분리된 부가 자료</h2><p>CCTV·범죄·합성 제보는 민원 우선순위에 사용하지 않습니다.</p></div><div className="reference-grid"><article><strong>재난 CCTV</strong><p>{formatNumber(data.cctvPoints.length)}개 공개 좌표</p><span>민원 위치와 결합하지 않음</span></article><article><strong>경찰서 집계</strong><p>{data.crimeSummary.length}개 행</p><span>범죄 예측에 사용하지 않음</span></article><article><strong>합성 연동 예시</strong><p>{data.sampleReports.length}개 DEMO</p><span>모든 위치값 null · 실제 신고 아님</span></article></div></section>
         {demoIndex >= 0 ? <div className="demo-controller" role="region" aria-label="3분 시연 컨트롤"><div><span>3분 시연 {demoIndex + 1}/3</span><strong>{demoSteps[demoIndex].title}</strong><p>{demoSteps[demoIndex].description}</p></div><div><button type="button" disabled={demoIndex === 0} onClick={() => goDemo(demoIndex - 1)}>이전</button><button type="button" disabled={demoIndex === demoSteps.length - 1} onClick={() => goDemo(demoIndex + 1)}>다음</button><button type="button" onClick={stopDemo}>시연 초기화</button></div></div> : null}
-        <footer><span>{data.methodology.priorityFormula}</span><span>Y-Priority AI · 기존 용인시 서비스를 보완하는 검토 레이어</span></footer>
+        <footer><span>{data.methodology.priorityFormula}</span><span>Y-Priority AI · 시민용 현황 공개와 분리된 공무원용 판단 보조 레이어</span></footer>
       </main>
     </div>
   )
