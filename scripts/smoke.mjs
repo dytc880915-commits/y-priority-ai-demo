@@ -46,6 +46,10 @@ try {
   assert(keyboardFocus && ['A', 'BUTTON', 'INPUT', 'SELECT'].includes(keyboardFocus.tag), 'keyboard focus did not reach an interactive control')
   assert(keyboardFocus.outlineStyle !== 'none' && keyboardFocus.outlineWidth !== '0px', 'keyboard focus indicator is not visible')
 
+  await page.getByRole('button', { name: '공식 데이터 새로고침' }).click()
+  await page.locator('.refresh-notice.success').waitFor({ timeout: 15000 })
+  assert((await page.locator('.refresh-notice').textContent())?.includes('공식 2026-05 집계를 적용했습니다'), 'live official data refresh failed')
+
   await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '우선검토' }).click()
   const overallFirst = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
   await page.locator('.context-bar button', { hasText: '처인구' }).click()
@@ -159,6 +163,7 @@ try {
   console.log('review_export=passed')
   console.log('validation_workbench=passed')
   console.log('demo_three_steps=passed')
+  console.log('official_live_refresh=passed')
 } finally {
   await browser.close()
 }
