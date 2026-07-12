@@ -253,12 +253,12 @@ function CsvInput() {
       setResult({ status: 'invalid', message: '필수 필드가 부족합니다. 접수일자(또는 접수일), 민원명, 처리부서명(또는 부서)이 필요합니다.', file: file.name, encoding, columns })
       return
     }
-    setResult({ status: 'valid', message: '스키마 검증을 통과했습니다. 대용량 전체 분석은 로컬 Python 스트리밍 파이프라인에서 실행합니다.', file: file.name, encoding, columns })
+    setResult({ status: 'valid', message: '스키마 검증을 통과했습니다. 본선 시연에서는 이 최신 CSV를 로컬 Python 스트리밍 파이프라인으로 분석한 뒤 우선검토 큐와 보고서를 갱신합니다.', file: file.name, encoding, columns })
   }
   return (
     <div className="csv-workbench">
       <div>
-        <h3>용인시 민원 CSV 사전검사</h3>
+        <h3>최신 민원 CSV 불러오기</h3>
         <p>원본 전체를 브라우저 메모리에 올리지 않고 첫 64KB로 파일 형식을 확인합니다.</p>
         <input ref={inputRef} type="file" accept=".csv,text/csv" onChange={inspect} aria-label="민원 CSV 파일 선택" />
         <button type="button" className="primary-command" onClick={() => inputRef.current?.click()}><Download /> CSV 선택</button>
@@ -269,7 +269,7 @@ function CsvInput() {
         {result.file ? <span>{result.file} · {result.encoding}</span> : null}
         {result.columns ? <small>{result.columns.join(' · ')}</small> : null}
       </div>
-      <pre>python scripts\analyze_y_priority_data.py</pre>
+      <pre>python scripts\analyze_y_priority_data.py  # 로컬 분석 · 외부 API 없음</pre>
     </div>
   )
 }
@@ -583,9 +583,9 @@ export default function App() {
   useEffect(() => { localStorage.setItem('y-priority-cluster-reviews', JSON.stringify(clusterReviews)) }, [clusterReviews])
   useEffect(() => { localStorage.setItem('y-priority-review-history', JSON.stringify(reviewHistory)) }, [reviewHistory])
   const demoSteps = [
-    { id: 'quality', title: '부분 집계 발견', description: '2025-12를 7.6% 부분 집계로 판정해 추세와 순위에서 제외합니다.' },
-    { id: 'priority', title: '우선순위 변화', description: '규모 가중치를 50%로 조정해 정책 기준에 따른 순위 변화를 확인합니다.' },
-    { id: 'report', title: '실행 검토서', description: '선택 이슈의 질문·조치 후보·KPI를 인쇄 가능한 문서로 저장합니다.' },
+    { id: 'csv-input', title: '최신 CSV 투입', description: '발표 시점에 확보한 민원 CSV의 인코딩과 필수 컬럼을 검사합니다.' },
+    { id: 'priority', title: '우선검토 큐 갱신', description: '로컬 분석 결과에서 TOP 5와 근거를 확인하고 정책 기준에 따라 가중치를 조정합니다.' },
+    { id: 'report', title: '실행 검토서 생성', description: '선택 이슈의 질문·협업 후보·KPI를 관리자용 문서로 저장합니다.' },
   ]
   const goDemo = (index: number) => {
     const bounded = Math.max(0, Math.min(index, demoSteps.length - 1))
@@ -635,11 +635,11 @@ export default function App() {
           <div className="trend-panel"><div><h3>{selectedDistrict} 완전 집계 월별 흐름</h3><p>{data.summary.excludedPartialMonths.join(', ')} 제외 · 단위: 건</p></div><LineChart points={sourceMonthly} /></div>
         </section>
 
-        <section id="ecosystem" className="section-block"><div className="section-title"><span>기존 서비스 연계</span><h2>새 시스템을 하나 더 만드는 대신, 이미 있는 서비스를 연결</h2><p>실제 API 연동은 본선 이후 단계이며 현재는 공개 CSV와 시연용 연결로 업무 흐름을 검증합니다.</p></div><div className="ecosystem-grid"><article><span>시민 접점 · 운영 중</span><strong>조아용 민원상담·콜센터</strong><p>시민 질문, 생활불편 신고, 민원 접수</p></article><article><span>시민 공개 · 운영 중</span><strong>데이터로 보는 용인</strong><p>민원 현황, 추이, 분류, 주요 키워드 공개</p></article><article className="core"><span>우리 제안 · MVP 구현</span><strong>Y:Q</strong><p>우선검토 큐, 판단 근거, 협업 부서, 실행 검토서</p></article><article><span>공무원 도구 · 연동 설계</span><strong>자치법규·AI 기자·출장보고</strong><p>승인된 이슈의 법규 검토, 안내문, 현장 보고 후속 업무</p></article><article><span>관리자 보고 · MVP 구현</span><strong>성과 환류</strong><p>민원량, 만족도, 검토시간, 재접수율 전후 비교</p></article></div></section>
+        <section id="ecosystem" className="section-block"><div className="section-title"><span>현실적인 도입 방식</span><h2>내부 시스템 연계 없이, 최신 CSV 배치 분석부터 시작</h2><p>본선 범위는 CSV 투입·로컬 분석·우선검토·보고서 생성입니다. API 연계는 도입 결정 이후 선택 가능한 확장안으로만 제시합니다.</p></div><div className="ecosystem-grid"><article><span>시민 접점 · 운영 중</span><strong>조아용 민원상담·콜센터</strong><p>시민 질문, 생활불편 신고, 민원 접수</p></article><article><span>데이터 확보 · 현재 가능</span><strong>최신 공개·제공 CSV</strong><p>발표 시점 최신 파일을 담당자가 직접 투입</p></article><article className="core"><span>본선 시연 · 구현 범위</span><strong>Y:Q 로컬 분석</strong><p>품질 검사, 우선검토 큐, 판단 근거, 실행 검토서</p></article><article><span>후속 업무 · 수동 전달</span><strong>이슈카드 내보내기</strong><p>법규 검토, 안내문, 현장 보고에 필요한 공통 근거</p></article><article><span>관리자 보고 · MVP 구현</span><strong>성과 환류</strong><p>민원량, 만족도, 검토시간, 재접수율 전후 비교</p></article></div></section>
 
         <section id="district" className="section-block"><div className="section-title"><span>지역 비교</span><h2>명시된 근거만으로 세 구를 비교</h2><p>주소가 없는 행을 임의 배분하지 않고 처리부서명·민원명에 구 이름이 명시된 행만 사용합니다.</p></div><DistrictPanel districts={data.districtAnalysis} selected={selectedDistrict} onSelect={setSelectedDistrict} />{districtData ? <div className="district-breakdown"><div><strong>{selectedDistrict} 주요 카테고리</strong>{districtData.categorySummary.slice(0, 5).map((row) => <p key={row.category}><span>{row.category}</span><b>{formatNumber(row.currentCount)}건</b><em>{formatPercent(row.growthRate)}</em></p>)}</div><div><strong>{selectedDistrict} 부서 부담</strong>{districtData.departmentBurden.slice(0, 5).map((row) => <p key={row.department}><span>{row.department}</span><b>{formatNumber(row.count)}행</b><em>{row.topCategory}</em></p>)}</div></div> : null}</section>
 
-        <section id="csv-input" className="section-block"><div className="section-title"><span>CSV 불러오기</span><h2>먼저 파일이 분석 가능한지 확인</h2><p>공공데이터 API 없이 용인시 공개 CSV를 로컬 스트리밍 파이프라인으로 처리합니다.</p></div><CsvInput /></section>
+        <section id="csv-input" className="section-block"><div className="section-title"><span>본선 시연 STEP 1</span><h2>발표 시점 최신 CSV를 직접 투입</h2><p>용인시 내부 API 권한을 전제로 하지 않습니다. 확보한 CSV를 로컬 스트리밍 파이프라인으로 처리합니다.</p></div><CsvInput /></section>
         <section id="quality" className="section-block"><div className="section-title"><span>데이터 품질</span><h2>부분 월과 비교기간을 분석 전에 차단</h2><p>원본 파일과 산출물 사이의 판단 근거를 재현할 수 있습니다.</p></div><QualityPanel quality={data.dataQuality} /></section>
         <section id="signals" className="section-block"><div className="section-title"><span>변화 신호</span><h2>규칙 기준선과 로컬 AI를 함께 검토</h2><p>급증 여부는 최신 완전월 기준이며, 군집은 빈도 상위 민원명의 유사 표현을 탐색합니다.</p></div>{selectedDistrict !== '전체' ? <p className="scope-notice"><CircleWarning /> 이상징후와 AI 군집은 지역 판정 행만으로 재학습하지 않고 전체 원본 기준을 유지합니다.</p> : null}<div className="two-column"><div><div className="subheading"><h3>급증 이상징후</h3><span>{data.methodology.anomalyDetection}</span></div><SignalTable signals={data.anomalySignals} /></div><div><div className="subheading"><h3>유사 민원 군집</h3><span>{data.methodology.classification}</span></div><ClusterList clusters={data.aiClusters} /></div></div></section>
         <section id="cluster-review" className="section-block"><div className="section-title"><span>사람 중심 AI 검토</span><h2>군집을 수정·승인하고 변경 근거를 남깁니다</h2><p>AI 결과를 자동 확정하지 않으며 모든 변경은 브라우저 로컬 저장소와 내보내기 파일에 기록됩니다.</p></div><ClusterReviewWorkbench reviews={clusterReviews} history={reviewHistory} onSave={saveReview} onReset={resetReviews} onExport={exportReviews} /></section>
