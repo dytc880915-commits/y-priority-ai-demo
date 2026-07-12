@@ -53,7 +53,7 @@ try {
   assert((await page.locator('#priority .section-title span').textContent())?.includes('처인구'), 'district filter did not update priority scope')
   const districtFirst = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
   assert(await page.locator('.district-grid article.selected').count() === 1, 'district comparison selection missing')
-  assert(overallFirst !== districtFirst || (await page.locator('#overview .trend-panel h3').textContent())?.includes('처인구'), 'district data did not update')
+  assert(overallFirst !== districtFirst || (await page.locator('#priority .section-title span').textContent())?.includes('처인구'), 'district data did not update')
   await page.locator('.context-bar button', { hasText: '전체' }).click()
 
   await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '데이터 준비' }).click()

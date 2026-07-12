@@ -8,6 +8,7 @@ import CircleWarning from 'coolicons-react/src/outline/Warning/CircleWarning.jsx
 import BookOpen from 'coolicons-react/src/outline/Interface/BookOpen.jsx'
 import Download from 'coolicons-react/src/outline/Interface/Download.jsx'
 import dashboardData from './data/dashboard-data.json'
+import currentDashboardData from './data/current-dashboard-data.json'
 import yonginBrand from './assets/yongin-integrated-brand.jpg'
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>
@@ -130,8 +131,25 @@ type DashboardData = {
   sampleReports: SampleReport[]
   methodology: { classification: string; anomalyDetection: string; priorityFormula: string; limits: string[] }
 }
+type CurrentDashboardData = {
+  sourcePage: string
+  capturedAt: string
+  latestMonth: string
+  latestMonthTotal: number
+  latestMonthRate: number
+  yearToDateTotal: number
+  detailRows: number
+  matchedRows: number
+  unmatchedRows: number
+  monthly: Array<{ month: string; count: number; changeRate: number }>
+  categories: Array<{ category: string; count: number }>
+  keywords: Array<{ keyword: string; count: number; month: string }>
+  currentQueue: Array<{ rank: number; issue: string; category: string; count: number; share: number; impact: string; basis: string }>
+  limitations: string[]
+}
 
 const data = dashboardData as DashboardData
+const currentData = currentDashboardData as CurrentDashboardData
 const defaultWeights: Record<WeightKey, number> = {
   volume: 25,
   momentum: 25,
@@ -578,7 +596,8 @@ export default function App() {
   })
   const districtData = data.districtAnalysis.find((row) => row.district === selectedDistrict)
   const sourceIssues = districtData?.priorityIssues ?? data.priorityIssues
-  const sourceMonthly = districtData?.monthlyComplaints ?? data.monthlyComplaints
+  const currentMonthly = currentData.monthly.map((row) => ({ month: `${row.month.slice(0, 4)}-${row.month.slice(4)}`, count: row.count }))
+  const currentCategoryTotal = currentData.categories.reduce((sum, row) => sum + row.count, 0)
   const rankedIssues = useMemo(() => {
     const baseRanks = new Map(sourceIssues.map((issue, index) => [issue.issue, index + 1]))
     const ranked = sourceIssues.map((issue) => ({ ...issue, adjustedScore: (Object.keys(weights) as WeightKey[]).reduce((score, key) => score + issue.componentValues[key] * weights[key], 0), baseRank: baseRanks.get(issue.issue) ?? 0, rankDelta: 0 }))
@@ -636,17 +655,17 @@ export default function App() {
       <aside className="sidebar">
         <div className="brand"><img src={yonginBrand} alt="용인시 공식 통합도시브랜드" /><div><strong>Y:Q</strong><span>용인 생활이슈 우선검토 AI</span></div></div>
         <nav aria-label="Y:Q 주요 업무">{navGroups.map((group) => <button key={group.id} type="button" aria-current={activeGroup.id === group.id ? 'page' : undefined} className={activeGroup.id === group.id ? 'active' : ''} onClick={() => navigateTo(group.defaultPage)}><group.icon />{group.label}</button>)}</nav>
-        <div className="source-summary"><span>현재 검증 데이터</span><strong>{formatNumber(data.summary.totalAnalyzedRows)}행</strong><p>두 공개 데이터셋 간 중복 가능</p><button type="button" onClick={nextDemo}><ChartLine /> 3분 시연 {demoIndex < 0 ? '시작' : `${demoIndex + 1}/3`}</button></div>
+        <div className="source-summary"><span>공식 최신 데이터</span><strong>2026년 5월</strong><p>{formatNumber(currentData.latestMonthTotal)}건 · 상세 {formatNumber(currentData.detailRows)}건</p><button type="button" onClick={nextDemo}><ChartLine /> 3분 시연 {demoIndex < 0 ? '시작' : `${demoIndex + 1}/3`}</button></div>
       </aside>
       <main data-active-page={activeNav}>
-        <header className="topbar"><div><span className="product-kicker">YONGIN ACTION QUEUE</span><h1>민원 현황을 공무원의 실행 대기열로</h1><p>현재 화면은 확보한 공개 CSV로 검증한 결과이며, 운영 시 최신 CSV를 넣어 같은 방식으로 다시 산출합니다.</p></div><div><span><CalendarCheck /> 분석 실행 {data.summary.generatedAt}</span><span><Lock /> 데이터 기준 {data.summary.latestCompleteMonth}</span></div></header>
-        <div className="context-bar"><div><span>분석 지역</span><div role="group" aria-label="현재 분석 지역">{['전체', ...data.districtAnalysis.map((row) => row.district)].map((district) => <button key={district} type="button" aria-pressed={selectedDistrict === district} onClick={() => setSelectedDistrict(district)}>{district}</button>)}</div></div><p>과거 공개데이터 검증 · {selectedDistrict === '전체' ? '전체 새올 처리 행' : `${selectedDistrict} 명시 행`} · {data.summary.priorityComparisonPeriod}</p></div>
+        <header className="topbar"><div><span className="product-kicker">YONGIN ACTION QUEUE</span><h1>민원 현황을 공무원의 실행 대기열로</h1><p>용인시 공식 대시보드 최신 동향과 과거 전체 CSV 분석을 구분해 보여줍니다.</p></div><div><span><CalendarCheck /> 공식 최신 {currentData.latestMonth.slice(0, 4)}-{currentData.latestMonth.slice(4)}</span><span><Lock /> 과거 분석 {data.summary.latestCompleteMonth}</span></div></header>
+        <div className="context-bar"><div><span>분석 지역</span><div role="group" aria-label="현재 분석 지역">{['전체', ...data.districtAnalysis.map((row) => row.district)].map((district) => <button key={district} type="button" aria-pressed={selectedDistrict === district} onClick={() => setSelectedDistrict(district)}>{district}</button>)}</div></div><p>{activeNav === 'overview' ? `용인시 공식 대시보드 ${currentData.latestMonth.slice(0, 4)}-${currentData.latestMonth.slice(4)} · 전체 지역` : `과거 전체 CSV · ${selectedDistrict === '전체' ? '전체 새올 처리 행' : `${selectedDistrict} 명시 행`} · ${data.summary.priorityComparisonPeriod}`}</p></div>
         <nav className="subpage-tabs" aria-label={`${activeGroup.label} 세부 화면`}>{activeGroup.pages.map((pageId) => { const item = navItems.find((candidate) => candidate.id === pageId); return item ? <button key={item.id} type="button" aria-current={activeNav === item.id ? 'page' : undefined} onClick={() => navigateTo(item.id)}>{item.label}</button> : null })}</nav>
         <section hidden={activeNav !== 'overview'} className="weekly-briefing" aria-labelledby="weekly-briefing-title">
-          <div className="briefing-heading"><div><span>과거 공개데이터 검증 · {selectedDistrict}</span><h2 id="weekly-briefing-title">우선검토 큐 TOP 5</h2><p>{data.summary.priorityComparisonPeriod} 결과입니다. 2026 최신 현황이 아니며 최신 CSV 투입 시 자동 재산출됩니다.</p></div><div className="briefing-actions"><button type="button" onClick={nextDemo}><ChartLine /> 3분 실무 시연</button><button type="button" className="secondary" onClick={() => navigateTo('report')}>관리자 보고 준비</button></div></div>
+          <div className="briefing-heading"><div><span>데이터로 보는 용인 · {currentData.latestMonth.slice(0, 4)}년 {Number(currentData.latestMonth.slice(4))}월</span><h2 id="weekly-briefing-title">공식 최신 민원 현황 TOP 5</h2><p>공식 분류별 처리 건수입니다. 아직 다요소 우선순위 점수가 아닌 검토 전 현황입니다.</p></div><div className="briefing-actions"><button type="button" onClick={nextDemo}><ChartLine /> 3분 실무 시연</button><button type="button" className="secondary" onClick={() => navigateTo('priority')}>과거 우선순위 비교</button></div></div>
           <div className="briefing-layout">
-            <div className="action-queue">{rankedIssues.slice(0, 5).map((issue, index) => <button key={issue.issue} type="button" className={selectedIssue?.issue === issue.issue ? 'selected' : ''} onClick={() => { setSelectedIssueName(issue.issue); navigateTo('detail') }}><b>{String(index + 1).padStart(2, '0')}</b><span><strong>{issue.issue}</strong><small>{issue.rationale}</small></span><em>{formatPercent(issue.growthRate)}</em><i>{issue.dominantDepartment}</i><u>{issue.adjustedScore.toFixed(1)}점</u></button>)}</div>
-            <aside className="manager-brief"><span>관리자 3문장 브리핑</span><h3>{rankedIssues[0]?.issue ?? '검토 후보 없음'}</h3><p><b>왜 지금</b>{rankedIssues[0] ? `${formatNumber(rankedIssues[0].currentCount)}건, ${formatPercent(rankedIssues[0].growthRate)} 변화가 확인됐습니다.` : '분석 가능한 후보가 없습니다.'}</p><p><b>누구와</b>{rankedIssues[0]?.dominantDepartment ?? '담당부서 검토 필요'} 중심의 협업 검토가 필요합니다.</p><p><b>다음 행동</b>대표 원자료 확인 후 회의 안건과 실행 검토서를 생성합니다.</p><small>자동 결정 아님 · {data.summary.priorityComparisonPeriod}</small></aside>
+            <div className="action-queue current">{currentData.categories.slice(0, 5).map((row, index) => <button key={row.category} type="button" onClick={() => navigateTo('priority')}><b>{String(index + 1).padStart(2, '0')}</b><span><strong>{row.category}</strong><small>2026년 5월 공식 분류별 처리현황</small></span><em>{formatNumber(row.count)}건</em><i>공식 집계</i><u>{(row.count / currentCategoryTotal * 100).toFixed(1)}%</u></button>)}</div>
+            <aside className="manager-brief"><span>최신 데이터 범위</span><h3>{currentData.keywords[0]?.keyword ?? '키워드 없음'}</h3><p><b>최신 월 전체</b>{formatNumber(currentData.latestMonthTotal)}건 · 전월 대비 {formatPercent(currentData.latestMonthRate)}</p><p><b>키워드 상세 공개</b>{formatNumber(currentData.detailRows)}건 중 상위 키워드 {formatNumber(currentData.keywords[0]?.count ?? 0)}건</p><p><b>해석 주의</b>처리부서와 전년 동기 상세가 없어 최신 화면만으로 우선순위를 자동 확정하지 않습니다.</p><small>출처: 데이터로 보는 용인 · 수집 {currentData.capturedAt.slice(0, 10)}</small></aside>
           </div>
           <div className="system-handoff"><span>시민 접점<small>조아용·콜센터·국민신문고·새올</small></span><i>→</i><span>시민용 공개<small>데이터로 보는 용인</small></span><i>→</i><strong>Y:Q<small>우선검토·협업·보고</small></strong><i>→</i><span>후속 업무 AI<small>법규·AI 기자·출장보고</small></span><i>→</i><span>성과 환류<small>민원·만족도·검토시간</small></span></div>
         </section>
@@ -654,9 +673,9 @@ export default function App() {
         <section hidden={activeNav !== 'overview'} className="truth-banner"><CircleWarning /><div><strong>의사결정 보조, 자동 결정 아님</strong><span>부분 집계 월은 제외하고 양쪽에 존재하는 동일기간만 비교합니다. AI 군집은 낮은 신뢰도를 숨기지 않고 담당자 검토 대상으로 표시합니다.</span></div></section>
 
         <section hidden={activeNav !== 'overview'} id="overview" className="section-block overview-block">
-          <div className="section-title"><span>실무자 브리핑</span><h2>이번 주 회의에서 먼저 검토할 것</h2><p>최신 완전월은 {data.summary.latestCompleteMonth}, 우선순위 비교는 {data.summary.priorityComparisonPeriod}입니다.</p></div>
-          <div className="kpi-grid"><Kpi title="분석 처리 행" value={formatNumber(data.summary.totalAnalyzedRows)} detail="고유 민원 수가 아닌 처리 행 합계" /><Kpi title="부분 집계 제외" value={data.summary.excludedPartialMonths.join(', ')} detail="정상 월·증가율·순위에서 제외" tone="amber" /><Kpi title="규칙 미분류" value={`${data.dataQuality.ruleUnclassifiedShare.toFixed(1)}%`} detail="AI 군집 검토 후보" tone="green" /><Kpi title="우선 검토 후보" value={`${rankedIssues.length}개`} detail={`1위 ${rankedIssues[0]?.issue}`} tone="slate" /></div>
-          <div className="trend-panel"><div><h3>{selectedDistrict} 완전 집계 월별 흐름</h3><p>{data.summary.excludedPartialMonths.join(', ')} 제외 · 단위: 건</p></div><LineChart points={sourceMonthly} /></div>
+          <div className="section-title"><span>공식 최신 동향</span><h2>2026년 5월 용인시 민원 현황</h2><p>공식 대시보드 API 응답을 CSV로 보존해 동일 화면 수치를 재현했습니다.</p></div>
+          <div className="kpi-grid"><Kpi title="2026년 5월" value={`${formatNumber(currentData.latestMonthTotal)}건`} detail={`전월 대비 ${formatPercent(currentData.latestMonthRate)}`} /><Kpi title="2026년 누계" value={`${formatNumber(currentData.yearToDateTotal)}건`} detail="1월부터 5월까지 부분연도" tone="green" /><Kpi title="키워드 상세 공개" value={`${formatNumber(currentData.detailRows)}건`} detail="월 전체 건수와 다른 공개 상세 범위" tone="amber" /><Kpi title="최다 공식 분류" value={currentData.categories[0]?.category ?? '-'} detail={`${formatNumber(currentData.categories[0]?.count ?? 0)}건`} tone="slate" /></div>
+          <div className="trend-panel"><div><h3>공식 최근 12개월 민원 추이</h3><p>2025-06~2026-05 · 콜센터·국민신문고·새올행정시스템</p></div><LineChart points={currentMonthly} /></div>
         </section>
 
         <section id="ecosystem" className="section-block"><div className="section-title"><span>현실적인 도입 방식</span><h2>내부 시스템 연계 없이, 최신 CSV 배치 분석부터 시작</h2><p>본선 범위는 CSV 투입·로컬 분석·우선검토·보고서 생성입니다. API 연계는 도입 결정 이후 선택 가능한 확장안으로만 제시합니다.</p></div><div className="ecosystem-grid"><article><span>시민 접점 · 운영 중</span><strong>조아용 민원상담·콜센터</strong><p>시민 질문, 생활불편 신고, 민원 접수</p></article><article><span>데이터 확보 · 현재 가능</span><strong>최신 공개·제공 CSV</strong><p>발표 시점 최신 파일을 담당자가 직접 투입</p></article><article className="core"><span>본선 시연 · 구현 범위</span><strong>Y:Q 로컬 분석</strong><p>품질 검사, 우선검토 큐, 판단 근거, 실행 검토서</p></article><article><span>후속 업무 · 수동 전달</span><strong>이슈카드 내보내기</strong><p>법규 검토, 안내문, 현장 보고에 필요한 공통 근거</p></article><article><span>관리자 보고 · MVP 구현</span><strong>성과 환류</strong><p>민원량, 만족도, 검토시간, 재접수율 전후 비교</p></article></div></section>

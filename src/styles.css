@@ -364,6 +364,7 @@ body { font-size: 16px; }
 .action-queue span strong { font-size: 16px; }
 .action-queue span small { margin-top: 4px; overflow: hidden; font-size: 13px; line-height: 1.4; text-overflow: clip; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .action-queue em { font-size: 14px; }
+.action-queue.current em { color: var(--teal); }
 .action-queue i { font-size: 13px; }
 .action-queue u { font-size: 14px; }
 .manager-brief > span { font-size: 12px; }

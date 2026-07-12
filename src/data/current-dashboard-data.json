@@ -1,0 +1,254 @@
+{
+  "sourcePage": "https://data.yongin.go.kr/ctzn/dashboard/cvlcptDsbd.do?menuCode=CTZ00000067",
+  "capturedAt": "2026-07-12T14:45:03+09:00",
+  "latestMonth": "202605",
+  "latestMonthTotal": 68753,
+  "latestMonthRate": -17.21,
+  "yearToDateTotal": 363132,
+  "detailRows": 6435,
+  "matchedRows": 2914,
+  "unmatchedRows": 3521,
+  "sourceCounts": {
+    "국민신문고": 816,
+    "용인시": 1404,
+    "새올행정시스템": 4215
+  },
+  "yearly": [
+    {
+      "year": "2024",
+      "count": 789374
+    },
+    {
+      "year": "2025",
+      "count": 641674
+    },
+    {
+      "year": "2026",
+      "count": 363132
+    }
+  ],
+  "monthly": [
+    {
+      "month": "202506",
+      "count": 55478,
+      "changeRate": -11.62
+    },
+    {
+      "month": "202507",
+      "count": 39615,
+      "changeRate": -28.59
+    },
+    {
+      "month": "202508",
+      "count": 34102,
+      "changeRate": -13.92
+    },
+    {
+      "month": "202509",
+      "count": 73295,
+      "changeRate": 114.93
+    },
+    {
+      "month": "202510",
+      "count": 46257,
+      "changeRate": -36.89
+    },
+    {
+      "month": "202511",
+      "count": 64976,
+      "changeRate": 40.47
+    },
+    {
+      "month": "202512",
+      "count": 50038,
+      "changeRate": -22.99
+    },
+    {
+      "month": "202601",
+      "count": 71826,
+      "changeRate": 43.54
+    },
+    {
+      "month": "202602",
+      "count": 62874,
+      "changeRate": -12.46
+    },
+    {
+      "month": "202603",
+      "count": 76634,
+      "changeRate": 21.89
+    },
+    {
+      "month": "202604",
+      "count": 83045,
+      "changeRate": 8.37
+    },
+    {
+      "month": "202605",
+      "count": 68753,
+      "changeRate": -17.21
+    }
+  ],
+  "categories": [
+    {
+      "category": "도로교통",
+      "count": 12642
+    },
+    {
+      "category": "보건복지",
+      "count": 9173
+    },
+    {
+      "category": "일반행정",
+      "count": 7581
+    },
+    {
+      "category": "산업환경",
+      "count": 6884
+    },
+    {
+      "category": "도시건축",
+      "count": 5545
+    },
+    {
+      "category": "교육문화",
+      "count": 115
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "양육 수당",
+      "count": 1120,
+      "month": "202605"
+    },
+    {
+      "keyword": "보육 양육",
+      "count": 1118,
+      "month": "202605"
+    },
+    {
+      "keyword": "지방세 감면",
+      "count": 1029,
+      "month": "202605"
+    },
+    {
+      "keyword": "재직 증명서",
+      "count": 812,
+      "month": "202605"
+    },
+    {
+      "keyword": "건강 보험료",
+      "count": 811,
+      "month": "202605"
+    },
+    {
+      "keyword": "경력 재직",
+      "count": 810,
+      "month": "202605"
+    },
+    {
+      "keyword": "보육 종사자",
+      "count": 808,
+      "month": "202605"
+    },
+    {
+      "keyword": "종사자 경력",
+      "count": 808,
+      "month": "202605"
+    },
+    {
+      "keyword": "장애인 증명서",
+      "count": 568,
+      "month": "202605"
+    },
+    {
+      "keyword": "납부 확인",
+      "count": 489,
+      "month": "202605"
+    },
+    {
+      "keyword": "고유 피해",
+      "count": 485,
+      "month": "202605"
+    },
+    {
+      "keyword": "피해 지원금",
+      "count": 483,
+      "month": "202605"
+    },
+    {
+      "keyword": "지방 소득세",
+      "count": 413,
+      "month": "202605"
+    },
+    {
+      "keyword": "보험료 지원금",
+      "count": 412,
+      "month": "202605"
+    },
+    {
+      "keyword": "장애인 등록증",
+      "count": 376,
+      "month": "202605"
+    },
+    {
+      "keyword": "보험료 소득",
+      "count": 364,
+      "month": "202605"
+    },
+    {
+      "keyword": "소득 감소",
+      "count": 353,
+      "month": "202605"
+    },
+    {
+      "keyword": "감소 건강",
+      "count": 343,
+      "month": "202605"
+    },
+    {
+      "keyword": "신규 동물",
+      "count": 323,
+      "month": "202605"
+    },
+    {
+      "keyword": "동물 신규",
+      "count": 323,
+      "month": "202605"
+    }
+  ],
+  "currentQueue": [
+    {
+      "rank": 1,
+      "issue": "복지·돌봄 서비스 수요",
+      "category": "복지/보건",
+      "count": 2893,
+      "share": 45.0,
+      "impact": "취약계층 생활 지원",
+      "basis": "2026년 5월 키워드별 상세 민원에서 최초 일치 규칙 기준"
+    },
+    {
+      "rank": 2,
+      "issue": "도로·교통 시설 수요",
+      "category": "도로/교통",
+      "count": 19,
+      "share": 0.3,
+      "impact": "차량·보행 안전",
+      "basis": "2026년 5월 키워드별 상세 민원에서 최초 일치 규칙 기준"
+    },
+    {
+      "rank": 3,
+      "issue": "불법·질서 단속 수요",
+      "category": "안전/방범",
+      "count": 2,
+      "share": 0.0,
+      "impact": "생활질서·안전",
+      "basis": "2026년 5월 키워드별 상세 민원에서 최초 일치 규칙 기준"
+    }
+  ],
+  "limitations": [
+    "상세 데이터는 월 전체 민원 건수가 아니라 키워드별 상세 공개 건수",
+    "처리부서 컬럼 없음",
+    "2026년 전년 동기 상세 원문은 동일 API에서 제공하지 않음"
+  ]
+}
