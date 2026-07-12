@@ -6,8 +6,8 @@
   "latestMonthRate": -17.21,
   "yearToDateTotal": 363132,
   "detailRows": 6435,
-  "matchedRows": 2914,
-  "unmatchedRows": 3521,
+  "matchedRows": 5949,
+  "unmatchedRows": 486,
   "sourceCounts": {
     "국민신문고": 816,
     "용인시": 1404,
@@ -219,31 +219,76 @@
   ],
   "currentQueue": [
     {
-      "rank": 1,
-      "issue": "복지·돌봄 서비스 수요",
-      "category": "복지/보건",
-      "count": 2893,
-      "share": 45.0,
-      "impact": "취약계층 생활 지원",
-      "basis": "2026년 5월 키워드별 상세 민원에서 최초 일치 규칙 기준"
+      "issue": "보육·양육 지원",
+      "count": 1943,
+      "share": 30.2,
+      "impact": "양육가구·보육 종사자 지원",
+      "matchedKeywords": [
+        "양육",
+        "보육",
+        "수당",
+        "종사자"
+      ],
+      "attentionScore": 96.0,
+      "basis": "2026년 5월 상세 민원의 키워드 일치 빈도 80% + 군집 키워드 폭 20%",
+      "rank": 1
     },
     {
-      "rank": 2,
-      "issue": "도로·교통 시설 수요",
-      "category": "도로/교통",
-      "count": 19,
-      "share": 0.3,
-      "impact": "차량·보행 안전",
-      "basis": "2026년 5월 키워드별 상세 민원에서 최초 일치 규칙 기준"
+      "issue": "건강보험·피해지원금",
+      "count": 1293,
+      "share": 20.1,
+      "impact": "지원 대상 판정과 이의신청",
+      "matchedKeywords": [
+        "건강 보험료",
+        "보험료",
+        "피해 지원금",
+        "고유 피해",
+        "소득 감소"
+      ],
+      "attentionScore": 73.2,
+      "basis": "2026년 5월 상세 민원의 키워드 일치 빈도 80% + 군집 키워드 폭 20%",
+      "rank": 2
     },
     {
-      "rank": 3,
-      "issue": "불법·질서 단속 수요",
-      "category": "안전/방범",
-      "count": 2,
-      "share": 0.0,
-      "impact": "생활질서·안전",
-      "basis": "2026년 5월 키워드별 상세 민원에서 최초 일치 규칙 기준"
+      "issue": "지방세 감면·소득세",
+      "count": 1442,
+      "share": 22.4,
+      "impact": "세무 감면·신고 안내",
+      "matchedKeywords": [
+        "지방세 감면",
+        "지방 소득세"
+      ],
+      "attentionScore": 67.4,
+      "basis": "2026년 5월 상세 민원의 키워드 일치 빈도 80% + 군집 키워드 폭 20%",
+      "rank": 3
+    },
+    {
+      "issue": "재직·경력·장애 증명",
+      "count": 948,
+      "share": 14.7,
+      "impact": "증명 발급·자격 확인",
+      "matchedKeywords": [
+        "재직 증명서",
+        "경력 재직",
+        "장애인 증명서",
+        "장애인 등록증"
+      ],
+      "attentionScore": 55.0,
+      "basis": "2026년 5월 상세 민원의 키워드 일치 빈도 80% + 군집 키워드 폭 20%",
+      "rank": 4
+    },
+    {
+      "issue": "동물 등록·신규 신고",
+      "count": 323,
+      "share": 5.0,
+      "impact": "동물 등록 행정",
+      "matchedKeywords": [
+        "신규 동물",
+        "동물 신규"
+      ],
+      "attentionScore": 21.3,
+      "basis": "2026년 5월 상세 민원의 키워드 일치 빈도 80% + 군집 키워드 폭 20%",
+      "rank": 5
     }
   ],
   "limitations": [

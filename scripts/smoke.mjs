@@ -1,12 +1,5 @@
-import fs from 'node:fs/promises'
-import os from 'node:os'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 
-const here = path.dirname(fileURLToPath(import.meta.url))
-const appRoot = path.resolve(here, '..')
-const projectRoot = path.resolve(appRoot, '..')
 const url = process.env.Y_PRIORITY_URL || 'http://127.0.0.1:5177/'
 
 function assert(condition, message) {
@@ -14,7 +7,7 @@ function assert(condition, message) {
 }
 
 const browser = await chromium.launch({ headless: true })
-const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, acceptDownloads: true })
 const errors = []
 page.on('console', (message) => {
   if (message.type() === 'error') errors.push(message.text())
@@ -22,148 +15,85 @@ page.on('console', (message) => {
 
 try {
   await page.goto(url, { waitUntil: 'networkidle' })
-  const desktop = await page.evaluate(() => ({
-    sections: [...document.querySelectorAll('section[id]')].map((section) => section.id),
+  const initial = await page.evaluate(() => ({
+    sections: [...document.querySelectorAll('main > section[id]')].map((section) => ({
+      id: section.id,
+      visible: getComputedStyle(section).display !== 'none',
+    })),
     overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
-    weights: [...document.querySelectorAll('.weight-controls input')].map((input) => Number(input.value)),
-    rows: document.querySelectorAll('tbody tr').length,
-    clusters: document.querySelectorAll('.cluster-list article').length,
   }))
-  assert(desktop.sections.length === 13, 'expected thirteen workflow sections')
-  assert(desktop.sections.includes('ecosystem'), 'service ecosystem section missing')
-  assert(await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button').count() === 6, 'sidebar should expose six work groups')
-  assert(!desktop.overflow, 'desktop page overflow')
-  assert(desktop.weights.reduce((sum, value) => sum + value, 0) === 100, 'default weights do not total 100')
-  assert(desktop.rows === 6, 'priority rows missing')
-  assert(desktop.clusters >= 3, 'AI clusters missing')
+  assert(initial.sections.length === 6, 'expected six official-data workflow pages')
+  assert(initial.sections.filter((section) => section.visible).length === 1, 'exactly one workflow page should be visible')
+  assert(initial.sections.find((section) => section.id === 'overview')?.visible, 'overview should be the initial page')
+  assert(await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button').count() === 6, 'sidebar should expose six pages')
+  assert(!initial.overflow, 'desktop page overflow')
+  assert((await page.locator('#overview').textContent())?.includes('68,753건'), 'latest official monthly total missing')
+  assert((await page.locator('#overview').textContent())?.includes('363,132건'), 'official year-to-date total missing')
+  assert(await page.locator('#overview .official-overview-grid > div:first-child button').count() === 5, 'official category top five missing')
+  assert(await page.locator('#overview .official-overview-grid > div:last-child button').count() === 5, 'current issue queue top five missing')
+
   await page.keyboard.press('Tab')
-  const keyboardFocus = await page.evaluate(() => {
+  const focus = await page.evaluate(() => {
     const active = document.activeElement
     if (!(active instanceof HTMLElement)) return null
     const style = getComputedStyle(active)
-    return { tag: active.tagName, outlineStyle: style.outlineStyle, outlineWidth: style.outlineWidth }
+    return { tag: active.tagName, outline: style.outlineStyle, width: style.outlineWidth }
   })
-  assert(keyboardFocus && ['A', 'BUTTON', 'INPUT', 'SELECT'].includes(keyboardFocus.tag), 'keyboard focus did not reach an interactive control')
-  assert(keyboardFocus.outlineStyle !== 'none' && keyboardFocus.outlineWidth !== '0px', 'keyboard focus indicator is not visible')
+  assert(focus && ['A', 'BUTTON', 'INPUT'].includes(focus.tag), 'keyboard focus did not reach a control')
+  assert(focus.outline !== 'none' && focus.width !== '0px', 'keyboard focus indicator missing')
+
+  await page.getByRole('button', { name: '이슈 분석' }).click()
+  assert(new URL(page.url()).hash === '#signals', 'page navigation did not update hash')
+  assert(await page.locator('#signals').evaluate((node) => getComputedStyle(node).display !== 'none'), 'signals page did not open')
+  assert(await page.locator('#signals .official-analysis-grid > div:first-child p').count() === 6, 'official categories missing')
+  assert(await page.locator('#signals .keyword-grid span').count() > 0, 'official keywords missing')
+  assert(await page.locator('#signals svg circle').count() === 12, 'official monthly trend missing')
 
   await page.getByRole('button', { name: '공식 데이터 새로고침' }).click()
-  await page.locator('.refresh-notice.success').waitFor({ timeout: 15000 })
-  assert((await page.locator('.refresh-notice').textContent())?.includes('공식 2026-05 집계를 적용했습니다'), 'live official data refresh failed')
+  await page.locator('.refresh-notice.success').waitFor({ timeout: 20000 })
+  assert((await page.locator('.refresh-notice').textContent())?.includes('공식 2026-05 집계를 적용했습니다'), 'live official refresh failed')
 
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '우선검토' }).click()
-  const overallFirst = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
-  await page.locator('.context-bar button', { hasText: '처인구' }).click()
-  await page.waitForTimeout(100)
-  assert((await page.locator('#priority .section-title span').textContent())?.includes('처인구'), 'district filter did not update priority scope')
-  const districtFirst = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
-  assert(await page.locator('.district-grid article.selected').count() === 1, 'district comparison selection missing')
-  assert(overallFirst !== districtFirst || (await page.locator('#priority .section-title span').textContent())?.includes('처인구'), 'district data did not update')
-  await page.locator('.context-bar button', { hasText: '전체' }).click()
-
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '데이터 준비' }).click()
-  const validCsv = path.join(projectRoot, 'data', 'extracted', 'yongin_saeol_minwon', '새올 민원 처리 현황(2025).csv')
-  await page.locator('input[type=file]').setInputFiles(validCsv)
-  await page.locator('.csv-result.valid').waitFor({ timeout: 5000 })
-  assert(await page.locator('.csv-result').evaluate((element) => element.classList.contains('valid')), 'valid CSV rejected')
-
-  const invalidCsv = path.join(os.tmpdir(), 'y-priority-invalid.csv')
-  await fs.writeFile(invalidCsv, 'foo,bar\n1,2\n', 'utf8')
-  await page.locator('input[type=file]').setInputFiles(invalidCsv)
-  await page.locator('.csv-result.invalid').waitFor({ timeout: 5000 })
-  assert(await page.locator('.csv-result').evaluate((element) => element.classList.contains('invalid')), 'invalid CSV accepted')
-
+  await page.getByRole('button', { name: '검토 큐' }).click()
+  assert(await page.locator('#priority .current-review-list button').count() === 5, 'review queue should contain five official-detail clusters')
+  await page.locator('#priority .current-review-detail button', { hasText: '승인' }).click()
+  assert((await page.locator('#priority .current-review-list button').first().textContent())?.includes('승인'), 'review status not applied')
   await page.reload({ waitUntil: 'networkidle' })
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '우선검토' }).click()
-  const firstRankBefore = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
-  await page.locator('.weight-controls input').first().fill('50')
-  await page.locator('.weight-controls input').first().dispatchEvent('change')
-  const adjustedWeights = await page.locator('.weight-controls input').evaluateAll((inputs) => inputs.map((input) => Number(input.value)))
-  const firstRankAfter = await page.locator('tbody tr').first().locator('td:nth-child(2) button').textContent()
-  assert(adjustedWeights.reduce((sum, value) => sum + value, 0) === 100, 'adjusted weights do not total 100')
-  assert(firstRankBefore !== firstRankAfter, 'weight change did not affect ranking')
-  const reportLink = page.locator('.report-actions a')
-  assert((await reportLink.getAttribute('download'))?.endsWith('.html'), 'report download filename missing')
-  const reportHref = await reportLink.getAttribute('href')
-  assert(reportHref?.startsWith('data:text/html;charset=utf-8,'), 'UTF-8 report data URI missing')
-  assert((await reportLink.textContent())?.includes('HTML 저장'), 'report download label missing')
-  const reportColors = await reportLink.evaluate((element) => { const style = getComputedStyle(element); return [style.color, style.backgroundColor] })
-  assert(reportColors[0] !== reportColors[1], 'report download label has no visible contrast')
-  const reportDocument = decodeURIComponent(reportHref.split(',')[1] ?? '')
-  assert(reportDocument.includes('@media print') && reportDocument.includes('.no-print'), 'print-ready report CSS missing')
+  await page.getByRole('button', { name: '검토 큐' }).click()
+  assert((await page.locator('#priority .current-review-list button').first().textContent())?.includes('승인'), 'review status did not persist')
 
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '우선검토' }).click()
-  await page.getByRole('navigation', { name: '우선검토 세부 화면' }).getByRole('button', { name: 'AI 검토' }).click()
-  await page.locator('.review-form input').first().fill('테스트 검토 군집')
-  await page.locator('.review-form label.wide input').fill('자동 테스트 변경 근거')
-  await page.locator('.review-actions button').click()
-  assert((await page.locator('.review-diff > div:last-child b').textContent()) === '테스트 검토 군집', 'cluster review edit not applied')
-  await page.reload({ waitUntil: 'networkidle' })
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '우선검토' }).click()
-  await page.getByRole('navigation', { name: '우선검토 세부 화면' }).getByRole('button', { name: 'AI 검토' }).click()
-  assert((await page.locator('.review-list button').first().locator('strong').textContent()) === '테스트 검토 군집', 'cluster review did not persist')
+  await page.getByRole('button', { name: '실행 보고' }).click()
   const downloadPromise = page.waitForEvent('download')
-  await page.locator('.review-history button', { hasText: 'CSV' }).click()
-  const reviewDownload = await downloadPromise
-  assert((await reviewDownload.suggestedFilename()).endsWith('.csv'), 'review CSV export failed')
-  await page.locator('.review-history button', { hasText: '초기화' }).click()
+  await page.locator('#report button', { hasText: '브리핑 저장' }).click()
+  const download = await downloadPromise
+  assert((await download.suggestedFilename()).endsWith('.txt'), 'briefing text download failed')
 
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '성과 검증' }).click()
-  await page.locator('.validation-setup input').first().fill('행정 업무 경험자')
-  await page.locator('.validation-rating select').nth(0).selectOption('4')
-  await page.locator('.validation-rating select').nth(1).selectOption('5')
-  await page.locator('.validation-rating select').nth(2).selectOption({ label: '있음' })
-  await page.locator('.timer-actions button', { hasText: '새 검증 시작' }).click()
-  for (const button of await page.locator('.validation-tasks button').all()) await button.click()
-  await page.waitForTimeout(1100)
-  await page.locator('.timer-actions button', { hasText: '검증 종료·저장' }).click()
-  assert((await page.locator('.validation-report').textContent())?.includes('1명'), 'validation record not aggregated')
-  const validationDownloadPromise = page.waitForEvent('download')
-  await page.locator('.validation-report button', { hasText: '결과 CSV' }).click()
-  const validationDownload = await validationDownloadPromise
-  assert((await validationDownload.suggestedFilename()).endsWith('.csv'), 'validation CSV export failed')
-
-  await page.getByRole('navigation', { name: 'Y:Q 주요 업무' }).getByRole('button', { name: '성과 검증' }).click()
-  await page.getByRole('navigation', { name: '성과 검증 세부 화면' }).getByRole('button', { name: '성과 추적' }).click()
-  const outcomeInputs = page.locator('.outcome-inputs input')
-  await outcomeInputs.nth(0).fill('자동 검증 이슈')
-  await outcomeInputs.nth(1).fill('100')
-  await outcomeInputs.nth(2).fill('80')
-  await outcomeInputs.nth(5).fill('30')
-  await outcomeInputs.nth(6).fill('20')
-  await page.locator('.outcome-inputs button').click()
-  assert((await page.locator('.outcome-kpis').textContent())?.includes('-20.0%'), 'outcome tracking did not calculate a before-after change')
-
-  await page.locator('.source-summary button').click()
-  assert((await page.locator('.demo-controller').textContent())?.includes('1/3'), 'demo did not start at step one')
-  await page.locator('.demo-controller button', { hasText: '다음' }).click()
-  assert((await page.locator('.demo-controller').textContent())?.includes('2/3'), 'demo next step failed')
-  await page.locator('.demo-controller button', { hasText: '시연 초기화' }).click()
-  assert(await page.locator('.demo-controller').count() === 0, 'demo reset failed')
+  await page.getByRole('button', { name: '성과 기록' }).click()
+  const inputs = page.locator('#outcomes input')
+  await inputs.nth(0).fill('보육 지원')
+  await inputs.nth(1).fill('100')
+  await inputs.nth(2).fill('80')
+  await inputs.nth(3).fill('25')
+  assert((await page.locator('#outcomes .outcome-kpis').textContent())?.includes('-20.0%'), 'before-after outcome calculation failed')
 
   await page.setViewportSize({ width: 375, height: 812 })
   const mobile = await page.evaluate(() => ({
     overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
-    navHeights: [...document.querySelectorAll('nav button')].map((button) => Math.round(button.getBoundingClientRect().height)),
+    navHeights: [...document.querySelectorAll('.sidebar nav button')].map((button) => Math.round(button.getBoundingClientRect().height)),
   }))
   assert(!mobile.overflow, 'mobile page overflow')
   assert(mobile.navHeights.every((height) => height >= 44), 'mobile navigation target below 44px')
   assert(errors.length === 0, `console errors: ${errors.join(' | ')}`)
 
-  console.log('OK browser smoke passed')
-  console.log(`sections=${desktop.sections.length}`)
-  console.log(`priority_rows=${desktop.rows}`)
-  console.log(`ai_clusters_visible=${desktop.clusters}`)
+  console.log('OK official-data-only browser smoke passed')
+  console.log('pages=6')
+  console.log('official_latest=2026-05:68753')
+  console.log('official_ytd=363132')
+  console.log('live_refresh=passed')
+  console.log('review_persistence=passed')
+  console.log('report_download=passed')
   console.log('desktop_overflow=false')
   console.log('mobile_overflow=false')
   console.log('console_errors=0')
-  console.log('keyboard_focus=passed')
-  console.log('print_report=passed')
-  console.log('district_filter=passed')
-  console.log('cluster_review_persistence=passed')
-  console.log('review_export=passed')
-  console.log('validation_workbench=passed')
-  console.log('demo_three_steps=passed')
-  console.log('official_live_refresh=passed')
 } finally {
   await browser.close()
 }

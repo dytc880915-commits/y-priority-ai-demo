@@ -144,7 +144,7 @@ type CurrentDashboardData = {
   monthly: Array<{ month: string; count: number; changeRate: number }>
   categories: Array<{ category: string; count: number }>
   keywords: Array<{ keyword: string; count: number; month: string }>
-  currentQueue: Array<{ rank: number; issue: string; category: string; count: number; share: number; impact: string; basis: string }>
+  currentQueue: Array<{ rank: number; issue: string; category?: string; count: number; share: number; impact: string; basis: string; matchedKeywords?: string[]; attentionScore?: number }>
   limitations: string[]
 }
 
